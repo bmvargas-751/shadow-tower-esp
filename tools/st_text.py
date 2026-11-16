@@ -83,7 +83,7 @@ def encmap(font):
 
 # --- Lectura -------------------------------------------------------------------
 def slots(entry, base=0):
-    assert struct.unpack_from('<I', entry, base)[0] == TEXT_END, 'no es un bloque de texto'
+    assert struct.unpack_from('<I', entry, base)[0] > TEXT_BASE, 'no es un bloque de texto'
     offs = struct.unpack_from(f'<{NSLOTS}H', entry, base + 4)
     out = []
     for i in range(NSLOTS - 1):
@@ -181,9 +181,14 @@ def load_cfg():
     return json.load(open(os.path.join(ROOT, 'loc.json'), encoding='utf-8'))
 
 
+def source_path():
+    """El original del texto codificado: el primer archivo de `source` en loc.json."""
+    src = load_cfg()['source']
+    return os.path.normpath(os.path.join(ROOT, src[0] if isinstance(src, list) else src))
+
+
 def export():
-    cfg = load_cfg()
-    src = os.path.normpath(os.path.join(ROOT, cfg['source']))
+    src = source_path()
     rows = []
     for prefix, files, e, base, font, _ in BLOCKS:
         ents = tfile.entries(open(os.path.join(ORIG, files[0]), 'rb').read())
@@ -204,8 +209,7 @@ def export():
 
 def load_translation(use_en):
     if use_en:
-        src = os.path.normpath(os.path.join(ROOT, load_cfg()['source']))
-        return {r['key']: r['en'] for r in map(json.loads, open(src, encoding='utf-8'))}
+        return {r['key']: r['en'] for r in map(json.loads, open(source_path(), encoding='utf-8'))}
     out = {}
     tdir = os.path.join(ROOT, load_cfg()['translation'])
     for dp, _, fs in os.walk(tdir):

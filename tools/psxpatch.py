@@ -2,7 +2,7 @@
 """Reemplaza archivos dentro de una imagen de PS1 MODE2/2352 y recalcula EDC/ECC.
 
 Uso:
-  psxpatch.py verify IMAGEN.bin [N]               recalcula EDC/ECC de N sectores Form 1 y compara
+  psxpatch.py verify IMAGEN.bin [N]               recalcula EDC/ECC de N sectores Form 1 (o hasta el final) y compara
   psxpatch.py put IMAGEN.bin RUTA_EN_ISO ARCHIVO  escribe ARCHIVO en el lugar de RUTA_EN_ISO
 
 `put` modifica IMAGEN.bin en el lugar: se usa sobre una copia, nunca sobre el original.
@@ -80,6 +80,8 @@ def verify(img, n):
         for lba in range(16, 16 + n):
             f.seek(lba * SECTOR)
             orig = f.read(SECTOR)
+            if len(orig) < SECTOR:
+                break
             if not is_form1(orig):
                 continue
             s = bytearray(orig)

@@ -124,3 +124,15 @@ Descartado (2026-11-16): las pocas cadenas que el escaneo encontró en `EQUIP.T`
 - **Letra:** la del original es de máquina de escribir y solo trae las letras de esas 11 líneas. El español se dibuja completo con **Special Elite** (`tools/fonts/`, Apache 2.0, Astigmatic), tamaño 14, centrada en celdas fijas de 9 px como el original, con la paleta de la pantalla. El parche lleva solo las imágenes, no la fuente. Si no convence, la alternativa es reusar las letras del juego y dibujar las que faltan (unas 40).
 - Caja: hasta 3 renglones de 28 caracteres, centrados a la altura de los del original.
 - **Ida y vuelta idéntica** (`roundtrip`); `hooks.py` controla letras y caja de `intro#`.
+
+### Imagen de prueba 2 (`tools/st_testbuild.py`, 2026-11-16) — pendiente de revisar en DuckStation
+
+`../shadow-tower-esp-local/test/shadow-tower-prueba-2.cue`. Qué mirar y qué significa:
+
+| Prueba | Dónde se ve | Bien | Mal |
+|---|---|---|---|
+| Á (código 168) y É (300) en la fuente del texto codificado | menú: «STÁTUS», «MAGIC LÉFT» | el juego acepta códigos altos: las letras españolas se agregan en la lámina | qué letra o basura sale en su lugar |
+| Fuente de `STAT.T` 3 movida a `0xA600` (64 filas) y nombres de objetos 171+ más allá de `0x4600` | nombres de objetos y equipo | todos bien: hay lugar de sobra para los nombres | todos mal: no respeta el puntero/altura; solo los altos mal: no lee más allá de `0x4600` |
+| Diálogos redibujados | cualquier conversación («Prueba talk N: …») | se lee, sin cortes | letras cortadas, caja que se pasa |
+| Descripciones de equipo y criaturas redibujadas | menú de equipo y libro de criaturas («PRUEBA EQUIP N - …») | tildes visibles en las mayúsculas | marcas que no se ven |
+| Introducción redibujada | al empezar partida nueva («Pantalla N: …») | Special Elite se lee y combina | — |
