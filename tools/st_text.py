@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Adaptador de Shadow Tower: texto codificado de STAT.T (nombres, estados, menús).
+"""Adaptador de Shadow Tower: texto codificado (nombres, estados, menús) de STAT.T, FDAT.T y VS_ETC.T.
 
 Uso (desde la raíz del proyecto):
   st_text.py export                  escribe el original en el `source` de loc.json
@@ -7,12 +7,12 @@ Uso (desde la raíz del proyecto):
                                      (--en: sin traducción, con el inglés; para la ida y vuelta)
   st_text.py roundtrip               export + import --en y compara byte por byte con el original
 
-Formato de cada entrada de texto de STAT.T (ver TECH.md):
-  0x0000  u32 = 0x4600 (puntero al bloque de la fuente)
+Formato de un bloque de texto (ver TECH.md), relativo a su comienzo:
+  0x0000  u32 = 0x4600 (largo del bloque)
   0x0004  u16[1536] desplazamientos en bytes, relativos a 0x0C04; casilla i = [off[i], off[i+1])
   0x0C04  cadenas en u16: renglones terminados en 0000 0001, la cadena cierra con FFFF
   ...     ceros hasta 0x4600
-  0x4600  u32 0, u32 tamaño, TIM 4 bpp 256×256 con la fuente de esa entrada
+En STAT.T, después del bloque viene la fuente de esa entrada (TIM 4 bpp 256×256).
 """
 import json
 import os
@@ -28,7 +28,6 @@ LOCAL = os.path.join(os.path.dirname(ROOT), 'shadow-tower-esp-local')
 ORIG = os.path.join(LOCAL, 'files')
 OUT = os.path.join(LOCAL, 'build', 'files')
 
-STAT_FILES = ['ST/COM/STAT.T', 'ST/VS/STAT.T']  # el de VS es copia idéntica
 TEXT_BASE = 0x0C04
 TEXT_END = 0x4600
 NSLOTS = 1536
@@ -52,8 +51,21 @@ FONT_B.update({0x17 + i: c for i, c in enumerate('ABCDEFGHIJKLMNOPQRSTUVWXYZ')})
 EXTRA_A = {}
 EXTRA_B = {}
 
-ENTRIES = {0: 'A', 1: 'B', 2: 'B', 3: 'A', 4: 'B', 8: 'B'}
-COPIES = {10: 2}  # la entrada 10 es copia exacta de la 2
+# Bloques de texto: (prefijo de clave, archivos donde se escribe, entrada .T, desplazamiento, fuente, copias)
+# Son todos los del juego (búsqueda del 2026-11-16 en todos los .T). VS/STAT.T es copia de COM/STAT.T;
+# la entrada 10 de STAT.T es copia de la 2.
+STAT = ['ST/COM/STAT.T', 'ST/VS/STAT.T']
+BLOCKS = [
+    ('stat/00', STAT, 0, 0, 'A', []),
+    ('stat/01', STAT, 1, 0, 'B', []),
+    ('stat/02', STAT, 2, 0, 'B', [10]),
+    ('stat/03', STAT, 3, 0, 'A', []),
+    ('stat/04', STAT, 4, 0, 'B', []),
+    ('stat/08', STAT, 8, 0, 'B', []),
+    ('fdat/480', ['ST/COM/FDAT.T'], 480, 0x7488, 'A', []),
+    ('vs_etc/15', ['ST/VS/VS_ETC.T'], 15, 0, 'B', []),
+]
+FILES = sorted({f for b in BLOCKS for f in b[1]})
 
 LINE_END = (0x0000, 0x0001)
 STR_END = 0xFFFF
@@ -70,12 +82,13 @@ def encmap(font):
 
 
 # --- Lectura -------------------------------------------------------------------
-def slots(entry):
-    offs = struct.unpack_from(f'<{NSLOTS}H', entry, 4)
+def slots(entry, base=0):
+    assert struct.unpack_from('<I', entry, base)[0] == TEXT_END, 'no es un bloque de texto'
+    offs = struct.unpack_from(f'<{NSLOTS}H', entry, base + 4)
     out = []
     for i in range(NSLOTS - 1):
         a, b = offs[i], offs[i + 1]
-        out.append(list(struct.unpack_from(f'<{(b - a) // 2}H', entry, TEXT_BASE + a)) if b > a else None)
+        out.append(list(struct.unpack_from(f'<{(b - a) // 2}H', entry, base + TEXT_BASE + a)) if b > a else None)
     return out
 
 
@@ -142,8 +155,8 @@ def build_string(text, orig_units, font, key):
     return units + rest + [STR_END]
 
 
-def rebuild_entry(entry, font, texts, prefix):
-    sl = slots(entry)
+def rebuild_entry(entry, font, texts, prefix, base=0):
+    sl = slots(entry, base)
     data = bytearray()
     offs = []
     for i, units in enumerate(sl):
@@ -158,8 +171,8 @@ def rebuild_entry(entry, font, texts, prefix):
         raise SystemExit(f'{prefix}: el texto no cabe ({TEXT_BASE + len(data):#x} > {TEXT_END:#x}); '
                          f'sobran {TEXT_BASE + len(data) - TEXT_END} bytes')
     out = bytearray(entry)
-    struct.pack_into(f'<{NSLOTS}H', out, 4, *offs)
-    out[TEXT_BASE:TEXT_END] = bytes(data) + bytes(TEXT_END - TEXT_BASE - len(data))
+    struct.pack_into(f'<{NSLOTS}H', out, base + 4, *offs)
+    out[base + TEXT_BASE:base + TEXT_END] = bytes(data) + bytes(TEXT_END - TEXT_BASE - len(data))
     return bytes(out)
 
 
@@ -171,17 +184,16 @@ def load_cfg():
 def export():
     cfg = load_cfg()
     src = os.path.normpath(os.path.join(ROOT, cfg['source']))
-    d = open(os.path.join(ORIG, STAT_FILES[0]), 'rb').read()
-    ents = tfile.entries(d)
     rows = []
-    for e, font in ENTRIES.items():
-        prefix = f'stat/{e:02d}'
-        for i, units in enumerate(slots(ents[e][3])):
+    for prefix, files, e, base, font, _ in BLOCKS:
+        ents = tfile.entries(open(os.path.join(ORIG, files[0]), 'rb').read())
+        name = os.path.basename(files[0])
+        for i, units in enumerate(slots(ents[e][3], base)):
             if units is None:
                 continue
             lines, rest = split_lines(units)
             rows.append({'key': f'{prefix}#{i:04d}', 'en': to_text(lines, rest, font),
-                         'note': f'STAT.T entrada {e}, casilla {i}, fuente {font}, {len(lines)} renglones'})
+                         'note': f'{name} entrada {e}, casilla {i}, fuente {font}, {len(lines)} renglones'})
     os.makedirs(os.path.dirname(src), exist_ok=True)
     with open(src, 'w', encoding='utf-8') as w:
         for r in rows:
@@ -208,30 +220,29 @@ def load_translation(use_en):
 
 def import_(use_en=False):
     texts = load_translation(use_en)
-    d = open(os.path.join(ORIG, STAT_FILES[0]), 'rb').read()
-    ents = tfile.entries(d)
-    new = {}
-    for e, font in ENTRIES.items():
-        new[e] = rebuild_entry(ents[e][3], font, texts, f'stat/{e:02d}')
-    for dst, src_e in COPIES.items():
-        new[dst] = new[src_e]
-    out = bytearray(d)
-    for i, a, n, blob in ents:
-        if i in new:
-            assert len(new[i]) == len(blob)
-            out[a * 2048:(a + n) * 2048] = new[i]
-    for f in STAT_FILES:
+    data = {f: bytearray(open(os.path.join(ORIG, f), 'rb').read()) for f in FILES}
+    for prefix, files, e, base, font, copies in BLOCKS:
+        src = data[files[0]]
+        ents = tfile.entries(bytes(src))
+        new = rebuild_entry(ents[e][3], font, texts, prefix, base)
+        for f in files:
+            ents_f = tfile.entries(bytes(data[f]))
+            for target in [e] + copies:
+                _, a, n, blob = ents_f[target]
+                assert len(new) == len(blob)
+                data[f][a * 2048:(a + n) * 2048] = new
+    for f in FILES:
         p = os.path.join(OUT, f)
         os.makedirs(os.path.dirname(p), exist_ok=True)
-        open(p, 'wb').write(out)
-    print(f'STAT.T reconstruido en {OUT} ({len(texts)} textos disponibles)')
+        open(p, 'wb').write(data[f])
+    print(f'{len(FILES)} archivos reconstruidos en {OUT} ({len(texts)} textos disponibles)')
 
 
 def roundtrip():
     export()
     import_(use_en=True)
     ok = True
-    for f in STAT_FILES:
+    for f in FILES:
         same = open(os.path.join(ORIG, f), 'rb').read() == open(os.path.join(OUT, f), 'rb').read()
         print(f'{f}: {"idéntico" if same else "DISTINTO"}')
         ok &= same

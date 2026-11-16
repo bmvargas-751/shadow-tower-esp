@@ -67,3 +67,26 @@ Descartado (2026-11-16): las pocas cadenas que el escaneo encontró en `EQUIP.T`
   - Control: `0000` fin de cadena; `0001` aparece 22 veces dentro de las cadenas (probablemente salto de línea, por confirmar); `FFFF` separa.
   - Letras nuevas: irían en las filas libres (códigos desde 168 = fila 4). **Por confirmar en el juego** que la rutina de dibujo acepte códigos ≥ 168 (que calcule y con la fórmula y no los recorte a 8 bits ni a 84). Es la primera prueba de la pseudolocalización.
 - La letra de las imágenes: ancho fijo, celda de 6 px, unos 10 px de alto, antialias con 14 tonos (índice 0xF = fondo).
+
+### Adaptador del texto codificado (`tools/st_text.py`, 2026-11-16)
+
+- Bloques de texto (búsqueda en todos los `.T`; no hay otros):
+
+| Prefijo de clave | Archivo, entrada, desplazamiento | Fuente | Cadenas | Libre |
+|---|---|---|---:|---:|
+| `stat/00` | `STAT.T` 0, 0 | A | 236 | 7602 B |
+| `stat/01` | `STAT.T` 1, 0 | B | 107 | 12266 B |
+| `stat/02` | `STAT.T` 2, 0 (la 10 es copia) | B | 153 | 11052 B |
+| `stat/03` | `STAT.T` 3, 0 | A | 380 | **162 B** |
+| `stat/04` | `STAT.T` 4, 0 | B | 380 | **200 B** |
+| `stat/08` | `STAT.T` 8, 0 | B | 81 | 12440 B |
+| `fdat/480` | `FDAT.T` 480, `0x7488` | A | 236 | 8482 B |
+| `vs_etc/15` | `VS_ETC.T` 15, 0 | B | 81 | 12484 B |
+
+- Formato del bloque: u32 `0x4600`; u16[1536] desplazamientos (relativos a `+0xC04`; casilla i = [off[i], off[i+1]), vacía si son iguales; la cola repite el final); cadenas; ceros hasta `+0x4600`. Cada cadena: renglones terminados en `0000 0001`, cierre `FFFF`. Una cadena (`stat/00#0312`) trae un `0001` suelto antes del `FFFF`: el adaptador lo conserva.
+- Clave: `prefijo#casilla` (la casilla es el número que usa el juego). Texto: renglones unidos con `\n` (sin los vacíos del final); al importar se rellenan hasta la cantidad del original (más renglones = error). Códigos sin letra: `{XXXX}`.
+- Fuente B (entradas 1, 2, 4, 8, 10 de `STAT.T` y `VS_ETC.T`): celdas 12×10, 18 por fila, celda = código − 2; A = `0x17`, espacio = `0x31`. Cada entrada tiene su propia lámina con algunos signos extra (flechas, «lb», `: ? ( ) "`), que por ahora salen como `{XXXX}`.
+- **Ida y vuelta idéntica** de los cuatro archivos (`STAT.T` ×2, `FDAT.T`, `VS_ETC.T`), también recodificando todo desde el texto: `python3 -I tools/st_text.py roundtrip`.
+- **Solo mayúsculas:** ninguna de las dos fuentes tiene minúsculas ni tildes. `tools/hooks.py` (`missing_chars`) avisa de cada letra que falte.
+- **Espacio:** `stat/03` y `stat/04` (nombres de objetos y equipo) casi no tienen lugar libre. Opciones por probar: achicar la lámina de la fuente de esa entrada (usa ~48 de 256 filas) y correr el bloque, si el juego respeta el puntero `0x4600`.
+- `stat/03` y `stat/04` coinciden en 353 de 380 casillas, y `stat/08` y `vs_etc/15` en 73 de 81; no se copian automáticamente (las diferencias pueden ser a propósito).
