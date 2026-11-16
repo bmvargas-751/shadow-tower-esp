@@ -2,7 +2,10 @@
   "name": "Shadow Tower",
   "source_language": "en",
   "target_language": "es",
-  "source": "../shadow-tower-esp-local/source.jsonl",
+  "source": [
+    "../shadow-tower-esp-local/source.jsonl",
+    "../shadow-tower-esp-local/image_source.jsonl"
+  ],
   "translation": "translation",
   "work": "build/work/batches",
   "sections": [
@@ -37,6 +40,24 @@
       "prefixes": [
         "stat/08#",
         "vs_etc/15#"
+      ]
+    },
+    {
+      "name": "Diálogos",
+      "prefixes": [
+        "talk#"
+      ]
+    },
+    {
+      "name": "Descripciones de equipo",
+      "prefixes": [
+        "equip#"
+      ]
+    },
+    {
+      "name": "Descripciones de criaturas",
+      "prefixes": [
+        "crt#"
       ]
     }
   ],

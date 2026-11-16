@@ -90,3 +90,19 @@ Descartado (2026-11-16): las pocas cadenas que el escaneo encontró en `EQUIP.T`
 - **Solo mayúsculas:** ninguna de las dos fuentes tiene minúsculas ni tildes. `tools/hooks.py` (`missing_chars`) avisa de cada letra que falte.
 - **Espacio:** `stat/03` y `stat/04` (nombres de objetos y equipo) casi no tienen lugar libre. Opciones por probar: achicar la lámina de la fuente de esa entrada (usa ~48 de 256 filas) y correr el bloque, si el juego respeta el puntero `0x4600`.
 - `stat/03` y `stat/04` coinciden en 353 de 380 casillas, y `stat/08` y `vs_etc/15` en 73 de 81; no se copian automáticamente (las diferencias pueden ser a propósito).
+
+### Texto en imágenes: reconocedor (`tools/st_image.py`, 2026-11-16)
+
+- Exporta a `../shadow-tower-esp-local/image_source.jsonl` (segunda fuente en `loc.json`).
+
+| Prefijo | Origen | Imagen | Celda | Textos |
+|---|---|---|---|---:|
+| `talk` | `TALKMSG.T` | TIM 4 bpp 256×256 | 6×12, mayúsculas y minúsculas | 112 |
+| `equip` | `EQUIP.T` | TIM 4 bpp 256×50 y 240×50 | 10×10, solo mayúsculas | 321 |
+| `crt` | `CRT.T` (TIM incrustado tras el retrato) | TIM 4 bpp 256×50 | 10×10, misma letra que `equip` | 151 |
+
+- Método: brillo por píxel desde la paleta de cada imagen, umbral elegido por imagen (12/16/20/24: hay diálogos con trazo más grueso); paso vertical por imagen (117 diálogos con 12 px, 3 con 11, 1 con 10); origen x por renglón; la columna 0 de cada celda se ignora (restos del signo anterior). Huella sha1 de cada celda → letra en `tools/glyph_labels/` (solo huellas, sin píxeles del juego). Sin etiqueta: plantilla más parecida (Hamming ≤ 6, ±2 filas); pedazos marcados `{?}` para que nunca se asignen a una letra.
+- Resultado: `equip` 100 % por etiqueta; `crt` 12 039 por etiqueta y 3 por parecido; `talk` 6172 por etiqueta y 26 por parecido (revisados a ojo en láminas). Sin `{?}` en la salida.
+- Formato del texto: `talk` en un párrafo (el dibujador corta de nuevo); `equip`/`crt` con la prosa en un párrafo y cada línea de datos («LENGTH…», «CRITICAL 5») en su renglón.
+- Riesgo: errores de reconocimiento sueltos en letras poco frecuentes. Si el revisor ve una palabra rara en el inglés, comprobar contra la imagen.
+- Falta: `OPTXT.MIC` (introducción, 7 pantallas, otra letra), los paneles de 16 bpp con texto de `EQUIP.T` y el **dibujador** (importar): volver a dibujar el texto traducido con la misma letra.
