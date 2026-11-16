@@ -17,7 +17,7 @@ Plantilla del kit: los números quedan; lo de cada regla se completa con lo que 
 
 ## Caracteres
 
-- **T-5** Solo se usan caracteres que tiene la fuente del juego. Completar: si la fuente tiene las letras españolas (á é í ó ú ü ñ, sus mayúsculas, ¿ ¡) o hay que agregarlas, y qué comillas y apóstrofo tiene. (`caracteres`)
+- **T-5** Solo se usan caracteres que tiene la fuente del juego. Texto codificado (nombres, menús): solo mayúsculas, sin tildes por ahora (se agregan en la lámina; prueba de la Á pendiente en el juego). Texto en imágenes: los diálogos tienen mayúsculas, minúsculas y las letras españolas (dibujadas para el proyecto); equipo y criaturas, solo mayúsculas con Á É Í Ó Ú Ñ Ü. Apóstrofo `'`; comillas `"` (dibujadas para el proyecto en los diálogos). `tools/hooks.py` avisa de cada letra que falte. (`caracteres`)
 
 ## Qué se traduce
 
@@ -106,3 +106,13 @@ Descartado (2026-11-16): las pocas cadenas que el escaneo encontró en `EQUIP.T`
 - Formato del texto: `talk` en un párrafo (el dibujador corta de nuevo); `equip`/`crt` con la prosa en un párrafo y cada línea de datos («LENGTH…», «CRITICAL 5») en su renglón.
 - Riesgo: errores de reconocimiento sueltos en letras poco frecuentes. Si el revisor ve una palabra rara en el inglés, comprobar contra la imagen.
 - Falta: `OPTXT.MIC` (introducción, 7 pantallas, otra letra), los paneles de 16 bpp con texto de `EQUIP.T` y el **dibujador** (importar): volver a dibujar el texto traducido con la misma letra.
+
+### Texto en imágenes: dibujador (`tools/st_render.py`, 2026-11-16)
+
+- `glyphs` arma las plantillas de color (brillo relativo por píxel, la variante más votada de cada letra, alineada por la línea de base) en `../shadow-tower-esp-local/glyphs/` (salen del juego: no van al repo).
+- **Letras propias** (dibujadas para el proyecto, en el código): en la letra de los diálogos, las que el inglés nunca usa (z, J, Q, R, X, Z, dígitos menos el 7, `: ; - " ( ) /`) y las españolas (á é í ó ú ñ ü, Á É Í Ó Ú Ñ Ü, ¿ ¡). En la letra de equipo/criaturas (solo mayúsculas): Á É Í Ó Ú Ñ Ü; la letra se baja un píxel (se quita su fila más redundante) y la marca va en una sola fila arriba, con una fila de aire. **Por ver en el juego.**
+- Caja: diálogos hasta 33 caracteres y 5 renglones; el bloque se alinea a la izquierda y se centra en la caja (x = 5 + 6·k, k = redondeo de (123 − 3n)/6, n = renglón más largo), como el original. Equipo/criaturas: desde x = 9, hasta 24 caracteres (23 en las de 240 px) y 5 renglones. Corte por palabras; `\n` fuerza un renglón.
+- Color: cada píxel toma el índice de la paleta de la imagen con el brillo más parecido; el fondo es el índice más común.
+- Prueba de geometría (`test`): redibujar el inglés con los cortes del original da las mismas celdas en el 100 % de los diálogos, 98,3 % de criaturas y 89,8 % de equipo (los renglones que el original corrió un píxel).
+- **Ida y vuelta idéntica** de `TALKMSG.T`, `EQUIP.T` y `CRT.T`: un texto que no cambió conserva su imagen original (`roundtrip`).
+- `tools/hooks.py`: `missing_chars` y `check` (caja, T-3) también para `talk`, `equip` y `crt`.
