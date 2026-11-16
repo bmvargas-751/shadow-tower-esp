@@ -144,3 +144,19 @@ Descartado (2026-11-16): las pocas cadenas que el escaneo encontró en `EQUIP.T`
 | `prueba-3a` | Á (168) y É (300) en la entrada 0 («STÁTUS», «MAGIC LÉFT») | los códigos altos no sirven: buscar otra forma de agregar letras |
 | `prueba-3b` | fuente de la entrada 3 corrida a `0x4780` (256 filas); casillas 686, 687 y 999 más allá de `0x4600` | el juego no respeta el puntero de la cabecera |
 | `prueba-3c` | fuente de la entrada 3 recortada a 64 filas, en su lugar | el juego no respeta la altura del TIM |
+
+### Gráficos con texto (inventario, 2026-11-16)
+
+Palabras dibujadas con letras decorativas; no pasan por el reconocedor. Cada palabra ocupa un rectángulo que el código usa por coordenadas: el reemplazo tiene que caber en el mismo rectángulo (o hay que cambiar las coordenadas en `ST.EXE`).
+
+| Gráfico | Archivo | Formato | Traducir |
+|---|---|---|---|
+| PAUSE, Menu, BUTTON, HP/MP, DATA LOAD, OPTIONS, SAVE, ITEM, USE, EQUIP, TRADE, FOR, HP POTION, BUY, REPAIR, CONFIGURATION, SOUL POD | `ST/COM/STAT.T` entrada 6 (copia en `ST/VS/STAT.T`) | TIM 4 bpp 256×128 | sí (prioridad) |
+| ITEM BAG, CREATURE VS | `ST/COM/STAT.T` entrada 7 | TIM 4 bpp 256×64 | sí |
+| NO EQUIP | `ST/COM/EQUIP.T` entrada 1 | TIM 16 bpp 292×124 | sí |
+| PUSH START (92×15); NEW / LOAD / VS (44×46) | `ST/TITLE/TITLE.MIC` | TIM 16 bpp | sí |
+| Now Loading (sobre una ilustración) | `LOAD02.TIM` | TIM 16 bpp 320×120 | sí |
+| PLAYER 1, PLAYER 2, VS, LOADING... | `ST/VS/VS_ETC.T` entradas 31–35 | TIM 16 bpp 64×240 (tiras) | sí (modo VS) |
+| Logo SHADOW TOWER, FROM SOFTWARE, avisos de copyright | `TITLE.MIC`, `FLOGO320.TIM`, `COPYRIGT.TIM`, `STR/*.STR` | 16 bpp / video | no (marcas y avisos legales) |
+
+Plan: medir el rectángulo de cada palabra (componentes conexas de la lámina), elegir con el usuario la traducción corta de cada una (con el glosario) y dibujarla con una letra parecida, en la misma paleta y sin pasarse del rectángulo.
