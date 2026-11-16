@@ -248,6 +248,8 @@ def export():
             rows.append({'key': f'{prefix}#{i:04d}', 'en': layout(font, text),
                          'note': f'{os.path.basename(FONTS[font][0])} entrada {i}, imagen {t["w"]}×{t["h"]}'})
         print(font, dict(rd.stats))
+    import st_intro
+    rows += st_intro.source_rows()
     p = os.path.join(LOCAL, 'image_source.jsonl')
     with open(p, 'w', encoding='utf-8') as w:
         for r in rows:

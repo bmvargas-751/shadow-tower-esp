@@ -105,7 +105,7 @@ Descartado (2026-11-16): las pocas cadenas que el escaneo encontró en `EQUIP.T`
 - Resultado: `equip` 100 % por etiqueta; `crt` 12 039 por etiqueta y 3 por parecido; `talk` 6172 por etiqueta y 26 por parecido (revisados a ojo en láminas). Sin `{?}` en la salida.
 - Formato del texto: `talk` en un párrafo (el dibujador corta de nuevo); `equip`/`crt` con la prosa en un párrafo y cada línea de datos («LENGTH…», «CRITICAL 5») en su renglón.
 - Riesgo: errores de reconocimiento sueltos en letras poco frecuentes. Si el revisor ve una palabra rara en el inglés, comprobar contra la imagen.
-- Falta: `OPTXT.MIC` (introducción, 7 pantallas, otra letra), los paneles de 16 bpp con texto de `EQUIP.T` y el **dibujador** (importar): volver a dibujar el texto traducido con la misma letra.
+- Falta: los paneles de 16 bpp con texto de `EQUIP.T`.
 
 ### Texto en imágenes: dibujador (`tools/st_render.py`, 2026-11-16)
 
@@ -116,3 +116,11 @@ Descartado (2026-11-16): las pocas cadenas que el escaneo encontró en `EQUIP.T`
 - Prueba de geometría (`test`): redibujar el inglés con los cortes del original da las mismas celdas en el 100 % de los diálogos, 98,3 % de criaturas y 89,8 % de equipo (los renglones que el original corrió un píxel).
 - **Ida y vuelta idéntica** de `TALKMSG.T`, `EQUIP.T` y `CRT.T`: un texto que no cambió conserva su imagen original (`roundtrip`).
 - `tools/hooks.py`: `missing_chars` y `check` (caja, T-3) también para `talk`, `equip` y `crt`.
+
+### Introducción (`tools/st_intro.py`, 2026-11-16)
+
+- `ST/OPTXT/OPTXT.MIC`: bloques `[u32 tamaño][TIM]` desde el byte 0. Seis pantallas de texto (TIM 4 bpp 256×240, 1 o 2 renglones centrados, paleta de 16 tonos) y un fondo (16 bpp 320×240, sin texto).
+- El inglés (6 pantallas, 11 renglones) se transcribió a mano en `../shadow-tower-esp-local/optxt_transcript.json`; `st_image.py export` lo suma a `image_source.jsonl` con las claves `intro#0`…`intro#5`. El original trae la errata «challange» (pantalla 6).
+- **Letra:** la del original es de máquina de escribir y solo trae las letras de esas 11 líneas. El español se dibuja completo con **Special Elite** (`tools/fonts/`, Apache 2.0, Astigmatic), tamaño 14, centrada en celdas fijas de 9 px como el original, con la paleta de la pantalla. El parche lleva solo las imágenes, no la fuente. Si no convence, la alternativa es reusar las letras del juego y dibujar las que faltan (unas 40).
+- Caja: hasta 3 renglones de 28 caracteres, centrados a la altura de los del original.
+- **Ida y vuelta idéntica** (`roundtrip`); `hooks.py` controla letras y caja de `intro#`.

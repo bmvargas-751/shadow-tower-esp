@@ -10,6 +10,12 @@
   "work": "build/work/batches",
   "sections": [
     {
+      "name": "Introducción",
+      "prefixes": [
+        "intro#"
+      ]
+    },
+    {
       "name": "Interfaz y menús",
       "prefixes": [
         "stat/00#",

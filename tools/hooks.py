@@ -36,7 +36,10 @@ def _images():
 
 def missing_chars(key, es):
     """Caracteres de la traducción que la fuente de ese texto no tiene (T-5)."""
-    if _prefix(key) in IMAGE_FONTS:
+    if _prefix(key) == 'intro':
+        import st_intro
+        have = st_intro.CHARSET
+    elif _prefix(key) in IMAGE_FONTS:
         have = _image_glyphs(IMAGE_FONTS[_prefix(key)])
     else:
         font = _text_font(key)
@@ -52,6 +55,14 @@ def missing_chars(key, es):
 
 def check(key, item, es):
     """Texto en imágenes: que entre en la caja (renglones y ancho, T-3)."""
+    if _prefix(key) == 'intro' and not missing_chars(key, es):
+        import st_intro
+        try:
+            n = int(key.rsplit('#', 1)[1])
+            st_intro.layout(es, st_intro.screens(open(st_intro.ORIG, 'rb').read())[n][1])
+        except ValueError as e:
+            return [('caja', 'T-3', str(e))]
+        return []
     if _prefix(key) not in IMAGE_FONTS or missing_chars(key, es):
         return []
     import st_render
