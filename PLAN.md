@@ -33,8 +33,25 @@ Antes de esto no se decide nada más.
 
 ### Fase 2. Inventario y presupuesto
 
-- [ ] Volumen por sección (`loc.py progress`).
-- [ ] Costo estimado por sección, antes de empezarla.
+- [x] Volumen por sección (`loc.py progress`).
+- [x] Costo estimado por sección, antes de empezarla.
+
+Estimación (2026-11-16): referencia del kit de ~43 000 tokens por agente cada 250 líneas de ~60 caracteres, más ~15 000 fijos por lote y agente (documentos); tres agentes por lote (traductor, revisor, corrector). Se cuentan los textos únicos, porque el kit copia los repetidos.
+
+| Sección | Líneas | Únicas | Caracteres | Tokens estimados |
+|---|---:|---:|---:|---:|
+| Introducción | 6 | 6 | 232 | ~47k |
+| Interfaz y menús | 472 | 337 | 5014 | ~127k |
+| Estadísticas | 107 | 81 | 989 | ~52k |
+| Nombres de criaturas | 153 | 149 | 1442 | ~57k |
+| Objetos y equipo | 760 | 324 | 10956 | ~134k |
+| Modo VS | 162 | 72 | 1666 | ~53k |
+| Diálogos | 112 | 111 | 7557 | ~110k |
+| Descripciones de equipo | 321 | 265 | 15328 | ~206k |
+| Descripciones de criaturas | 151 | 151 | 14432 | ~169k |
+| **Total** | **2244** | **1496** | **57616** | **~950k** |
+
+Más el editor, las líneas delicadas y el set de oro (fase 4). Las secciones chicas (introducción, VS, estadísticas) conviene juntarlas en un mismo lote para no pagar el costo fijo varias veces.
 
 ### Fase 3. Documentos
 
