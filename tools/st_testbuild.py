@@ -2,7 +2,10 @@
 """Imagen de prueba combinada para DuckStation (no toca translation/).
 
 Uso (desde la raíz del proyecto):
-  st_testbuild.py   → ../shadow-tower-esp-local/test/shadow-tower-prueba-2.{bin,cue}
+  st_testbuild.py          → ../shadow-tower-esp-local/test/shadow-tower-prueba-2.{bin,cue} (todo junto)
+  st_testbuild.py glyphs   → prueba-3a: solo Á/É en la entrada 0 de STAT.T
+  st_testbuild.py move     → prueba-3b: solo la fuente de la entrada 3 movida a 0x4780 (256 filas)
+  st_testbuild.py shrink   → prueba-3c: solo la fuente de la entrada 3 recortada a 64 filas (en 0x4600)
 
 Qué prueba:
   1. Letras nuevas en la fuente del texto codificado (STAT.T entrada 0): Á en el código 168 y É en el 300;
@@ -112,7 +115,9 @@ def rebuild_text(entry, font, texts, prefix, text_end, filler=None):
     return len(data)
 
 
-def build_stat():
+def build_stat(variant='all'):
+    """variant: all | glyphs (solo Á/É en la entrada 0) | move (fuente de la entrada 3 a 0x4780, 256 filas)
+    | shrink (fuente de la entrada 3 en 0x4600, recortada a 64 filas)."""
     src = {}
     import json
     for r in map(json.loads, open(st_text.source_path(), encoding='utf-8')):
@@ -122,6 +127,9 @@ def build_stat():
     # entrada 0: Á y É
     _, a0, n0, _ = ents[0]
     e0 = bytearray(d[a0 * 2048:(a0 + n0) * 2048])
+    do_glyphs = variant in ('all', 'glyphs')
+    if not do_glyphs:
+        return _stat_entry3(d, ents, variant)
     put_glyph(e0, st_text.TEXT_END, 0x21, 168)
     put_glyph(e0, st_text.TEXT_END, 0x25, 300)
     st_text.EXTRA_A.update({'Á': 168, 'É': 300})
@@ -132,14 +140,29 @@ def build_stat():
     rebuild_text(e0, 'A', texts, 'stat/00', st_text.TEXT_END)
     d[a0 * 2048:(a0 + n0) * 2048] = e0
     print('STAT.T entrada 0: Á (168) y É (300);', len(texts), 'cadenas cambiadas')
-    # entrada 3: fuente movida y relleno
+    if variant == 'glyphs':
+        return _write_stat(d)
+    return _stat_entry3(d, ents, variant)
+
+
+def _stat_entry3(d, ents, variant):
+    if variant == 'move':
+        ptr, h, filler = 0x4780, 256, (FILLER_SLOT, 0xC0)
+    elif variant == 'shrink':
+        ptr, h, filler = st_text.TEXT_END, NEW_FONT_H, None
+    else:
+        ptr, h, filler = NEW_FONT_PTR, NEW_FONT_H, (FILLER_SLOT, FILLER_UNITS)
     _, a3, n3, _ = ents[3]
     e3 = bytearray(d[a3 * 2048:(a3 + n3) * 2048])
-    relocate_font(e3, NEW_FONT_PTR, NEW_FONT_H)
-    used = rebuild_text(e3, 'A', {}, 'stat/03', NEW_FONT_PTR, filler=(FILLER_SLOT, FILLER_UNITS))
+    relocate_font(e3, ptr, h)
+    used = rebuild_text(e3, 'A', {}, 'stat/03', ptr, filler=filler)
     d[a3 * 2048:(a3 + n3) * 2048] = e3
-    print(f'STAT.T entrada 3: fuente en {NEW_FONT_PTR:#x} ({NEW_FONT_H} filas); texto hasta '
+    print(f'STAT.T entrada 3: fuente en {ptr:#x} ({h} filas); texto hasta '
           f'{st_text.TEXT_BASE + used:#x} (antes el límite era {st_text.TEXT_END:#x})')
+    return _write_stat(d)
+
+
+def _write_stat(d):
     out = {}
     for f in ('ST/COM/STAT.T', 'ST/VS/STAT.T'):
         p = os.path.join(BUILD, f)
@@ -177,15 +200,21 @@ def build_images():
 
 
 def main():
+    global BUILD
+    variant = sys.argv[1] if len(sys.argv) > 1 else 'all'
+    name = NAME if variant == 'all' else {'glyphs': 'shadow-tower-prueba-3a', 'move': 'shadow-tower-prueba-3b',
+                                          'shrink': 'shadow-tower-prueba-3c'}[variant]
+    BUILD = os.path.join(TEST, 'build-' + name)
     os.makedirs(TEST, exist_ok=True)
-    files = build_stat()
-    files.update(build_images())
-    img = os.path.join(TEST, NAME + '.bin')
+    files = build_stat(variant)
+    if variant == 'all':
+        files.update(build_images())
+    img = os.path.join(TEST, name + '.bin')
     shutil.copyfile(os.path.join(LOCAL, 'original.bin'), img)
     for iso_path, src in files.items():
         psxpatch.put(img, iso_path, src)
-    with open(os.path.join(TEST, NAME + '.cue'), 'w') as w:
-        w.write(f'FILE "{NAME}.bin" BINARY\n  TRACK 01 MODE2/2352\n    INDEX 01 00:00:00\n')
+    with open(os.path.join(TEST, name + '.cue'), 'w') as w:
+        w.write(f'FILE "{name}.bin" BINARY\n  TRACK 01 MODE2/2352\n    INDEX 01 00:00:00\n')
     # verificación: lo que quedó en la imagen es lo que se escribió
     with open(img, 'rb') as f:
         for p, lba, sz in psxiso_walk(f):

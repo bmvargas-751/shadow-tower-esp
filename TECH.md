@@ -136,3 +136,11 @@ Descartado (2026-11-16): las pocas cadenas que el escaneo encontró en `EQUIP.T`
 | Diálogos redibujados | cualquier conversación («Prueba talk N: …») | se lee, sin cortes | letras cortadas, caja que se pasa |
 | Descripciones de equipo y criaturas redibujadas | menú de equipo y libro de criaturas («PRUEBA EQUIP N - …») | tildes visibles en las mayúsculas | marcas que no se ven |
 | Introducción redibujada | al empezar partida nueva («Pantalla N: …») | Special Elite se lee y combina | — |
+
+**Resultado de la prueba 2 (2026-11-16, usuario en DuckStation):** la introducción se ve bien (Special Elite, tildes, ñ, ¿¡). **Al abrir el menú el emulador se cierra.** El código de `ST.EXE` no usa `0x4600` como constante (no aparece en ninguna instrucción). Para aislar la causa, tres imágenes con un solo cambio cada una (`st_testbuild.py glyphs|move|shrink`):
+
+| Imagen | Cambio | Si el menú se cae |
+|---|---|---|
+| `prueba-3a` | Á (168) y É (300) en la entrada 0 («STÁTUS», «MAGIC LÉFT») | los códigos altos no sirven: buscar otra forma de agregar letras |
+| `prueba-3b` | fuente de la entrada 3 corrida a `0x4780` (256 filas); casillas 686, 687 y 999 más allá de `0x4600` | el juego no respeta el puntero de la cabecera |
+| `prueba-3c` | fuente de la entrada 3 recortada a 64 filas, en su lugar | el juego no respeta la altura del TIM |
