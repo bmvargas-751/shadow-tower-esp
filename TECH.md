@@ -59,5 +59,8 @@ Descartado (2026-11-16): las pocas cadenas que el escaneo encontró en `EQUIP.T`
 
 - Tabla de mayúsculas (lo que se ve): código = ASCII − 0x20 (A = 0x21 … Z = 0x3A), espacio = 0x20. Fin de cadena: `0000 0001 FFFF` (por confirmar qué hace cada código).
 - Tabla de minúsculas (a = 0x17 …, espacio = 0x31): en `STAT.T` entradas 1, 2, 4, 8 y 10; parecen identificadores internos (por confirmar si se ven en pantalla).
-- La fuente de esta tabla **no se encontró** por análisis estático: no es un TIM de ningún `.T`, ni de `FN.`, ni la letra de las imágenes en 4 bpp (que solo aparece en `EQUIP.T`, `TALKMSG.T` y `CRT.T`). Siguiente paso: volcar la VRAM con DuckStation en un menú con nombres de objetos para ver la fuente cargada y buscarla en los archivos (T-5).
+- **Fuente de esta tabla (encontrada 2026-11-16):** TIM incrustado en `ST/COM/STAT.T`, entrada 0, desplazamiento `0x4608` de la entrada (`0x4E08` del archivo), 4 bpp, 256×256, paleta de 16 colores, sin comprimir. `ST/VS/STAT.T` tiene la misma copia. Se ubicó con la VRAM de un save state (`tools/dsstate.py`); en el juego se carga hacia x ≈ 944–1023, y = 256.
+  - Trae dos juegos de letras: uno compacto (mayúsculas, números, `+-*/.,?!#%'() |:;<>"[]=`) y otro ancho y espaciado (mayúsculas, números, `/~+-.%`), más el glifo «lb».
+  - **Sin minúsculas ni letras con tilde.** Solo se usan las primeras ~48 filas: el resto (≈200 filas) está libre para glifos nuevos (Á É Í Ó Ú Ñ Ü ¿ ¡).
+  - Pendiente: dónde está la tabla código → posición del glifo (probablemente en `ST.EXE` o en la misma entrada 0) y si acepta códigos nuevos.
 - La letra de las imágenes: ancho fijo, celda de 6 px, unos 10 px de alto, antialias con 14 tonos (índice 0xF = fondo).
