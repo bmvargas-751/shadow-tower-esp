@@ -155,18 +155,46 @@ def build_string(text, orig_units, font, key):
     return units + rest + [STR_END]
 
 
-def rebuild_entry(entry, font, texts, prefix, base=0):
-    sl = slots(entry, base)
+def _pack(sl, font, texts, prefix, dedupe):
+    """Cadenas y desplazamientos. Con dedupe, las casillas con el mismo texto apuntan a una sola copia.
+    POR PROBAR EN EL JUEGO (prueba 6): que el juego lea cada casilla hasta su FFFF y no calcule largos ni casillas
+    vacías restando desplazamientos."""
     data = bytearray()
     offs = []
+    seen = {}
     for i, units in enumerate(sl):
-        offs.append(len(data))
         if units is None:
+            offs.append(len(data))
             continue
         key = f'{prefix}#{i:04d}'
         new_units = build_string(texts[key], units, font, key) if key in texts else units
-        data += struct.pack(f'<{len(new_units)}H', *new_units)
+        blob = struct.pack(f'<{len(new_units)}H', *new_units)
+        if dedupe and blob in seen:
+            offs.append(seen[blob])
+            continue
+        offs.append(len(data))
+        seen.setdefault(blob, len(data))
+        data += blob
     offs.append(len(data))
+    return data, offs
+
+
+def _monotonic_fix(offs, end):
+    """Con casillas compartidas, el largo de la casilla i ya no es off[i+1] - off[i]; se supone (por probar) que el
+    juego lee hasta el FFFF. La última casilla y la cola siguen marcando el final de los datos."""
+    offs = list(offs)
+    offs[-1] = end
+    return offs
+
+
+def rebuild_entry(entry, font, texts, prefix, base=0):
+    sl = slots(entry, base)
+    data, offs = _pack(sl, font, texts, prefix, dedupe=False)
+    if TEXT_BASE + len(data) > TEXT_END:
+        # no entra: las casillas repetidas comparten una sola copia (los desplazamientos dejan de ser crecientes,
+        # pero cada casilla sigue apuntando a su texto)
+        data, offs = _pack(sl, font, texts, prefix, dedupe=True)
+        offs = _monotonic_fix(offs, len(data))
     if TEXT_BASE + len(data) > TEXT_END:
         raise SystemExit(f'{prefix}: el texto no cabe ({TEXT_BASE + len(data):#x} > {TEXT_END:#x}); '
                          f'sobran {TEXT_BASE + len(data) - TEXT_END} bytes')

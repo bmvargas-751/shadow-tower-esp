@@ -170,3 +170,11 @@ Prueba 4 (pendiente): `prueba-4` (todo junto, con sumas corregidas) y `4a/4b/4c`
 **Resultado de la prueba 4 (2026-11-16):** con las sumas corregidas, el menú abre sin caerse. «STÁTUS» y «MAGIC LÉFT» salen con un hueco en lugar de la Á (168) y la É (300): el juego acepta códigos altos, pero dibuja la letra desde una lámina que no la tenía. Hipótesis: el menú dibuja con la lámina de otra entrada de fuente A (la 3, que en la prueba 4 estaba achicada a 64 filas y sin las letras nuevas).
 
 Prueba 5 (pendiente): Á (168) y É (169) en las láminas de las entradas 0 **y** 3, ambas en la fila 4 (dentro de las 64 filas); lo demás como en la 4. Si siguen en blanco: save state con el menú abierto para ver qué lámina está en la VRAM.
+
+**Resultado de la prueba 5 (2026-11-16, estados 9 y 10 del usuario):**
+- «STÁTUS»/«MAGIC LÉFT» siguen con hueco. La VRAM del estado 9 tiene la lámina de la entrada 0 **entera** (256 filas, con la Á en la fila 4) en (960, 256): la letra está cargada, pero **la rutina de dibujo no dibuja códigos ≥ 168** (4 filas × 42 celdas). Las letras nuevas van en celdas libres por debajo de 168 que ninguna cadena usa: **25, 61, 150, 151, 154–167** (18 celdas, en las láminas de las entradas 0 y 3). Las celdas 93–95 están vacías pero las usan cadenas de `stat/00` (casillas 800–801): son códigos especiales, no se tocan.
+- Los nombres de objetos de las casillas 292–302 y la descripción 676 se ven bien aunque estaban más allá de `0x4600`: **el juego lee el texto movido**. En la RAM del estado 10 está la entrada 3 completa (texto incluido); el juego reemplaza la palabra de cabecera por otro valor al cargar.
+- Al pasar a «Soul Pod» (casilla 310, descripción 684, sin códigos especiales) la pantalla sale con basura. Causa no aislada (fuente movida/achicada). **Se descarta mover o achicar la fuente.**
+- **Espacio sin mover la fuente:** deduplicar (las casillas con el mismo texto apuntan a una copia). En `stat/03` y `stat/04` deja ~2500 B libres (21–23 % del texto). `st_text.rebuild_entry` deduplica solo si un bloque no entra (la ida y vuelta sigue idéntica). Por probar en el juego.
+
+Prueba 6 (pendiente): Á en la celda 154 y É en la 25 (entradas 0 y 3), fuente sin mover, **deduplicación forzada en las entradas 3 y 4** (mismo texto visible) y el texto en imágenes redibujado.

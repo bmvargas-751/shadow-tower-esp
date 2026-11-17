@@ -6,6 +6,8 @@ Uso (desde la raíz del proyecto):
   st_testbuild.py glyphs   → prueba-5a: solo Á/É en la entrada 0 de STAT.T
   st_testbuild.py move     → prueba-5b: solo la fuente de la entrada 3 movida a 0x4780 (256 filas)
   st_testbuild.py shrink   → prueba-5c: solo la fuente de la entrada 3 recortada a 64 filas (en 0x4600)
+  st_testbuild.py v6       → prueba-6: Á en la celda 154 y É en la 25 (entradas 0 y 3), sin mover la fuente,
+                             deduplicación forzada en las entradas 3 y 4, y el texto en imágenes redibujado
 Todas las entradas modificadas llevan su suma de verificación recalculada (tfile.fix_checksums).
 
 Qué prueba:
@@ -40,6 +42,7 @@ TEST = os.path.join(LOCAL, 'test')
 BUILD = os.path.join(TEST, 'build2')
 NAME = 'shadow-tower-prueba-2'
 
+CODES = {}
 NEW_FONT_PTR = 0xA600
 NEW_FONT_H = 64
 FILLER_SLOT = 171
@@ -128,21 +131,46 @@ def build_stat(variant='all'):
     # entrada 0: Á y É
     _, a0, n0, _ = ents[0]
     e0 = bytearray(d[a0 * 2048:(a0 + n0) * 2048])
-    do_glyphs = variant in ('all', 'glyphs')
+    do_glyphs = variant in ('all', 'glyphs', 'v6')
+    if variant == 'v6':
+        # prueba 6: celdas libres por debajo de 168 (el juego no dibuja códigos >= 168); sin mover la fuente
+        CODES.update({'Á': 154, 'É': 25})
+    else:
+        CODES.update({'Á': 168, 'É': 169})
     if not do_glyphs:
         return _stat_entry3(d, ents, variant)
     # Á y É en la fila 4 de la lámina (códigos 168 y 169), que entra también en una lámina de 64 filas
-    put_glyph(e0, st_text.TEXT_END, 0x21, 168)
-    put_glyph(e0, st_text.TEXT_END, 0x25, 169)
-    st_text.EXTRA_A.update({'Á': 168, 'É': 169})
+    put_glyph(e0, st_text.TEXT_END, 0x21, CODES['Á'])
+    put_glyph(e0, st_text.TEXT_END, 0x25, CODES['É'])
+    st_text.EXTRA_A.update(CODES)
     texts = {}
     for k, v in src.items():
         if k.startswith('stat/00#') and v in ('STATUS', 'MAGIC LEFT'):
             texts[k] = {'STATUS': 'STÁTUS', 'MAGIC LEFT': 'MAGIC LÉFT'}[v]
     rebuild_text(e0, 'A', texts, 'stat/00', st_text.TEXT_END)
     d[a0 * 2048:(a0 + n0) * 2048] = e0
-    print('STAT.T entrada 0: Á (168) y É (169);', len(texts), 'cadenas cambiadas')
+    print(f"STAT.T entrada 0: Á ({CODES['Á']}) y É ({CODES['É']});", len(texts), 'cadenas cambiadas')
     if variant == 'glyphs':
+        return _write_stat(d)
+    if variant == 'v6':
+        # las mismas letras en la lámina de la entrada 3, sin moverla
+        _, a3, n3, _ = ents[3]
+        e3 = bytearray(d[a3 * 2048:(a3 + n3) * 2048])
+        put_glyph(e3, st_text.TEXT_END, 0x21, CODES['Á'])
+        put_glyph(e3, st_text.TEXT_END, 0x25, CODES['É'])
+        d[a3 * 2048:(a3 + n3) * 2048] = e3
+        print('STAT.T entrada 3: mismas letras, fuente sin mover')
+        # deduplicación forzada en las entradas 3 y 4 (mismo texto visible): ¿el juego la tolera?
+        for e, font in ((3, 'A'), (4, 'B')):
+            _, a, n, _ = ents[e]
+            ent = bytearray(d[a * 2048:(a + n) * 2048])
+            sl = st_text.slots(bytes(ent))
+            data, offs = st_text._pack(sl, font, {}, f'stat/{e:02d}', dedupe=True)
+            offs = st_text._monotonic_fix(offs, len(data))
+            struct.pack_into(f'<{st_text.NSLOTS}H', ent, 4, *offs)
+            ent[st_text.TEXT_BASE:st_text.TEXT_END] = bytes(data) + bytes(st_text.TEXT_END - st_text.TEXT_BASE - len(data))
+            d[a * 2048:(a + n) * 2048] = ent
+            print(f'STAT.T entrada {e}: deduplicada, texto {len(data)} B')
         return _write_stat(d)
     return _stat_entry3(d, ents, variant)
 
@@ -210,11 +238,11 @@ def main():
     global BUILD
     variant = sys.argv[1] if len(sys.argv) > 1 else 'all'
     name = {'all': 'shadow-tower-prueba-5', 'glyphs': 'shadow-tower-prueba-5a', 'move': 'shadow-tower-prueba-5b',
-            'shrink': 'shadow-tower-prueba-5c'}[variant]
+            'shrink': 'shadow-tower-prueba-5c', 'v6': 'shadow-tower-prueba-6'}[variant]
     BUILD = os.path.join(TEST, 'build-' + name)
     os.makedirs(TEST, exist_ok=True)
     files = build_stat(variant)
-    if variant == 'all':
+    if variant in ('all', 'v6'):
         files.update(build_images())
     img = os.path.join(TEST, name + '.bin')
     shutil.copyfile(os.path.join(LOCAL, 'original.bin'), img)
