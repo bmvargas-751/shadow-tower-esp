@@ -191,13 +191,46 @@
 {"key": "fdat/480#0738", "es": "ESTATUA DEL SUEÑO"}
 {"key": "fdat/480#0740", "es": "TORRE OSCURA"}
 {"key": "fdat/480#0741", "es": "TORRE OSCURA"}
+{"key": "fdat/480#0800", "es": "NUEVO JUEGO"}
+{"key": "fdat/480#0801", "es": "CARGAR JUEGO"}
 {"key": "fdat/480#0850", "es": "¿GUARDAR DATOS?"}
 {"key": "fdat/480#0851", "es": "SÍ"}
 {"key": "fdat/480#0852", "es": "NO"}
+{"key": "fdat/480#0900", "es": "CASCO/"}
+{"key": "fdat/480#0901", "es": "ARMADURA/"}
+{"key": "fdat/480#0902", "es": "???/"}
+{"key": "fdat/480#0903", "es": "???/"}
+{"key": "fdat/480#0904", "es": "MANO DER./"}
+{"key": "fdat/480#0905", "es": "RESERVA DER./"}
+{"key": "fdat/480#0906", "es": "MANO IZQ./"}
+{"key": "fdat/480#0907", "es": "RESERVA IZQ./"}
+{"key": "fdat/480#0908", "es": "BRAZALETE DER./"}
+{"key": "fdat/480#0909", "es": "BRAZALETE IZQ./"}
+{"key": "fdat/480#0910", "es": "AMU/"}
+{"key": "fdat/480#0911", "es": "ANILLO DER./"}
+{"key": "fdat/480#0912", "es": "MAGIA DER./"}
+{"key": "fdat/480#0913", "es": "ANILLO IZQ./"}
+{"key": "fdat/480#0914", "es": "MAGIA IZQ./"}
+{"key": "fdat/480#0915", "es": "PESO DEL EQUIPO"}
 {"key": "fdat/480#0916", "es": "EXPLOSIÓN"}
+{"key": "fdat/480#0917", "es": "FENÓMENO AZUL"}
 {"key": "fdat/480#0918", "es": "LLAMARADA"}
+{"key": "fdat/480#0919", "es": "RÁFAGA DE AIRE"}
+{"key": "fdat/480#0920", "es": "AVISPÓN"}
+{"key": "fdat/480#0921", "es": "SABLE DE TRUENO"}
 {"key": "fdat/480#0922", "es": "LLUVIA DE BURBUJAS"}
+{"key": "fdat/480#0923", "es": "OBRA MAESTRA"}
+{"key": "fdat/480#0924", "es": "TORMENTA DE RAYOS"}
+{"key": "fdat/480#0925", "es": "OCASO DE LA ÓRBITA"}
+{"key": "fdat/480#0926", "es": "GLÁNDULA VENENOSA"}
+{"key": "fdat/480#0927", "es": "NIEVE VERDE"}
 {"key": "fdat/480#0928", "es": "JUICIO"}
+{"key": "fdat/480#0929", "es": "VOZ DEL CORO"}
+{"key": "fdat/480#0930", "es": "SULLIVAN"}
+{"key": "fdat/480#0931", "es": "JUSTICIA"}
+{"key": "fdat/480#0932", "es": "AGUTION"}
 {"key": "fdat/480#0933", "es": "MULTIPOLAR"}
 {"key": "fdat/480#0934", "es": "SIN EQUIPO"}
+{"key": "fdat/480#0935", "es": "SIN SELECCIÓN"}
+{"key": "fdat/480#0936", "es": "COSTO DE PM"}
 {"key": "fdat/480#0999", "es": "ERRORERRORERROR"}

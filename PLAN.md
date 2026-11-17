@@ -75,9 +75,9 @@ Obligatorio: sin él, `loc.py prepare` no arma lotes.
 ### Fase 6. Traducción
 
 - [x] Introducción (2026-11-17: chicas-001).
-- [ ] Interfaz y menús
+- [x] Interfaz y menús (2026-11-17: piloto-menus, menus-001 y criaturas-001).
 - [x] Estadísticas (2026-11-17: chicas-001).
-- [ ] Nombres de criaturas
+- [x] Nombres de criaturas (2026-11-17: criaturas-001).
 - [ ] Objetos y equipo
 - [x] Modo VS (2026-11-17: chicas-001).
 - [x] Diálogos (2026-11-17: piloto-dialogos y diálogos-001).
