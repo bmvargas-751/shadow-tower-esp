@@ -24,3 +24,6 @@ Lo que el usuario decidió, con fecha, para no volver a discutirlo. Una regla de
 - **2026-11-17** Trato al jugador: *tú* por defecto; *usted* en Auriel, Apollos, el Caballero de Ébano y las voces G7 y G27 (registro formal).
 - **2026-11-17** El protagonista es masculino («un joven guerrero»). Apollos, el Caballero de Ébano, Disfraz y Necron, masculinos (el juego no los marca). Auriel y Akryal, femeninas; Abraxus, masculino (los marca el juego).
 - **2026-11-17** «demoness» → «diablesa» (Auriel). «MEMORY CARD» queda en inglés. La traducción de referencia del caso O-6 del set de oro dice «demonia» porque es anterior a esta decisión; el caso solo controla el trato, así que no se cambia (cambiarlo obliga a aprobar y probar el set otra vez).
+- **2026-11-17** Piloto: END GAME → SALIR; TRADE → INTERCAMBIAR; DARK como elemento → OSCURIDAD (como estado sigue CEGUERA); `equip#0117` sin punto final para que entre en 5 renglones.
+- **2026-11-17** Glosario: los afijos que concuerdan van en minúscula (el control del kit solo reconoce género y número en minúscula); las filas con paréntesis en «Inglés» (DARK (estado), R (ranura), ON (opción)…) quedan fuera del control automático; los nombres sin artículo (rey Edward, Caos…).
+- **2026-11-17** Medidas en pies y pulgadas: la exportación las da con ′ y ″ (no comillas).
