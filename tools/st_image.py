@@ -224,6 +224,10 @@ def layout(font, lines_):
     ls = [l.strip() for l in lines_ if l.strip()]
     if not ls:
         return ''
+    if font != 'talk':
+        # medidas: el original dibuja pies y pulgadas con " y ' (invertidos: 2"11' = 2 pies 11 pulgadas);
+        # se exportan como los signos tipográficos (″ ′), que es lo que son, para que no pasen por comillas
+        ls = [re.sub(r"(\d)'", '\\1′', re.sub(r'(\d)"', '\\1″', l)) for l in ls]
     if font == 'talk':
         out = ls[0]
         for l in ls[1:]:

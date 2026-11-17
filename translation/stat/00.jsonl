@@ -1,0 +1,49 @@
+{"key": "stat/00#0000", "es": "PV"}
+{"key": "stat/00#0001", "es": "PM"}
+{"key": "stat/00#0002", "es": "PA"}
+{"key": "stat/00#0003", "es": "CUNES"}
+{"key": "stat/00#0004", "es": "ESTADO"}
+{"key": "stat/00#0005", "es": "MAGIA IZQ."}
+{"key": "stat/00#0006", "es": "MAGIA DER."}
+{"key": "stat/00#0007", "es": "CORTE"}
+{"key": "stat/00#0008", "es": "GOLPE"}
+{"key": "stat/00#0009", "es": "ESTOCADA"}
+{"key": "stat/00#0010", "es": "MAG ESCUDO"}
+{"key": "stat/00#0011", "es": "USAR OBJETO"}
+{"key": "stat/00#0012", "es": "EQUIPAR"}
+{"key": "stat/00#0013", "es": "ORDENAR OBJETOS"}
+{"key": "stat/00#0014", "es": "BESTIARIO"}
+{"key": "stat/00#0015", "es": "INFO EQUIPO"}
+{"key": "stat/00#0016", "es": "OPCIONES"}
+{"key": "stat/00#0017", "es": "CARGAR DATOS"}
+{"key": "stat/00#0018", "es": "SALIR"}
+{"key": "stat/00#0019", "es": "NORMAL"}
+{"key": "stat/00#0020", "es": "VENENO"}
+{"key": "stat/00#0021", "es": "PARÁLISIS"}
+{"key": "stat/00#0022", "es": "CEGUERA"}
+{"key": "stat/00#0023", "es": "LENTO"}
+{"key": "stat/00#0024", "es": "MALDICIÓN"}
+{"key": "stat/00#0025", "es": "NINGUNO"}
+{"key": "stat/00#0026", "es": "FUEGO"}
+{"key": "stat/00#0027", "es": "HIELO"}
+{"key": "stat/00#0028", "es": "VENENO"}
+{"key": "stat/00#0029", "es": "ÁCIDO"}
+{"key": "stat/00#0030", "es": "SAGRADO"}
+{"key": "stat/00#0031", "es": "OSCURIDAD"}
+{"key": "stat/00#0100", "es": "CUNES"}
+{"key": "stat/00#0101", "es": "PV RESTANTES"}
+{"key": "stat/00#0102", "es": "         C"}
+{"key": "stat/00#0103", "es": "FUE       ESP\nVEL       CON\nDEF       ARM\nEQU       PUR\nCOR       PAR\nGOL       DIS\nEST       ALM"}
+{"key": "stat/00#0104", "es": "PESO"}
+{"key": "stat/00#0105", "es": "COMPRAR"}
+{"key": "stat/00#0106", "es": "REPARAR"}
+{"key": "stat/00#0107", "es": "INTERCAMBIAR"}
+{"key": "stat/00#0108", "es": "CANCELAR"}
+{"key": "stat/00#0109", "es": "DUR"}
+{"key": "stat/00#0200", "es": "AJUSTAR MÚSICA"}
+{"key": "stat/00#0328", "es": "PA"}
+{"key": "stat/00#0500", "es": "USAR OBJETO"}
+{"key": "stat/00#0534", "es": "CORTE"}
+{"key": "stat/00#0535", "es": "GOLPE"}
+{"key": "stat/00#0536", "es": "ESTOCADA"}
+{"key": "stat/00#0601", "es": "CUNES"}

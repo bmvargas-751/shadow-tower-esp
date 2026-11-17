@@ -14,7 +14,7 @@ Términos fijos de la traducción. La guía de estilo está en [STYLE.md](STYLE.
 
 ## Términos
 
-*Decidido* por el usuario (G-2), con fecha. No hay traducción oficial (PLAN), así que no hay filas *oficial*. `loc.py` lee toda tabla cuya cabecera empiece por `| Inglés |`.
+*Decidido* por el usuario (G-2), con fecha. Los afijos van en minúscula para que `loc.py check` acepte su género y número (en el juego, todo va en mayúsculas). Lo que lleva un paréntesis en «Inglés» (contexto) no se controla solo. No hay traducción oficial (PLAN), así que no hay filas *oficial*. `loc.py` lee toda tabla cuya cabecera empiece por `| Inglés |`.
 
 | Inglés | Español | Fuente | Nota |
 |---|---|---|---|
@@ -104,15 +104,18 @@ Términos fijos de la traducción. La guía de estilo está en [STYLE.md](STYLE.
 | HP LEFT | PV RESTANTES | decidido 2026-11-16 | Tienda. |
 | BUY | COMPRAR | decidido 2026-11-16 | Tienda; también gráfico dibujado. |
 | REPAIR | REPARAR | decidido 2026-11-16 | Tienda; también gráfico dibujado. |
-| ON / OFF | SÍ / NO | decidido 2026-11-16 | Opciones de configuración. |
+| ON (opción) | SÍ | decidido 2026-11-16 | Opciones de configuración. |
+| OFF (opción) | NO | decidido 2026-11-16 | Opciones de configuración. |
 | NO EQUIP | SIN EQUIPO | decidido 2026-11-16 | Ranura vacía; también panel dibujado. |
-| 1P / 2P | J1 / J2 | decidido 2026-11-16 | Jugador 1 y 2 (modo VS, memory card). |
-| R / L | DER. / IZQ. | decidido 2026-11-16 | Ranuras de equipo: R HAND → MANO DER. |
-| SET | RONDA | decidido 2026-11-16 | Modo VS: 3 SETS → 3 RONDAS. |
+| 1P | J1 | decidido 2026-11-16 | Jugador 1 y 2 (modo VS, memory card). |
+| 2P | J2 | decidido 2026-11-16 | Jugador 1 y 2 (modo VS, memory card). |
+| R (ranura) | DER. | decidido 2026-11-16 | Ranuras de equipo: R HAND → MANO DER. |
+| L (ranura) | IZQ. | decidido 2026-11-16 | Ranuras de equipo: R HAND → MANO DER. |
+| SET (modo VS) | RONDA | decidido 2026-11-16 | Modo VS: 3 SETS → 3 RONDAS. |
 | REQUEST ITEM | PEDIR OBJETO | decidido 2026-11-16 | Modo VS: 1P REQUEST ITEM → J1 PIDE OBJETO. |
 | APPEARANCE HISTORY | APARICIONES | decidido 2026-11-16 | Modo VS (forma corta); NO APPEARANCE → SIN APARICIONES. |
 | CAPTURED | CAPTURA | decidido 2026-11-16 | Modo VS; revisar en pantalla. |
-| DARK | CEGUERA | decidido 2026-11-16 | Estado (el que ciega). |
+| DARK (estado) | CEGUERA | decidido 2026-11-16 | Estado (el que ciega). Como afijo de equipo, DARK → OSCURO. |
 | LENGTH | LONGITUD | decidido 2026-11-16 | Dato de equipo; pies y pulgadas → centímetros aproximados (E-63). |
 | CRITICAL | CRÍTICO | decidido 2026-11-16 | Dato de equipo. |
 | ACID ATTACK | ATAQUE DE ÁCIDO | decidido 2026-11-16 | Dato de equipo. |
@@ -131,10 +134,12 @@ Términos fijos de la traducción. La guía de estilo está en [STYLE.md](STYLE.
 | HP RECOVERY | RECUPERACIÓN DE PV | decidido 2026-11-16 | Dato de equipo. |
 | MP RECOVERY | RECUPERACIÓN DE PM | decidido 2026-11-16 | Dato de equipo. |
 | MP USED | COSTO DE PM | decidido 2026-11-16 | Costo de cada magia. |
-| TWILIGHT ITEM / WEAPON | OBJETO / ARMA CREPUSCULAR | decidido 2026-11-16 | Categoría de equipo. |
+| TWILIGHT ITEM | OBJETO CREPUSCULAR | decidido 2026-11-16 | Categoría de equipo. |
+| TWILIGHT WEAPON | ARMA CREPUSCULAR | decidido 2026-11-16 | Categoría de equipo. |
 | ILLUMINATING ITEM | OBJETO LUMINOSO | decidido 2026-11-16 | Equipo que da luz. |
-| ONE-HANDED / TWO-HANDED | DE UNA MANO / DE DOS MANOS | decidido 2026-11-16 | Equipo. |
-| SEAL | SELLAR / SELLO | decidido 2026-11-16 | SEALS MAGIC → SELLA LA MAGIA. |
+| ONE-HANDED | DE UNA MANO | decidido 2026-11-16 | Equipo. |
+| TWO-HANDED | DE DOS MANOS | decidido 2026-11-16 | Equipo. |
+| SEAL | SELLAR | decidido 2026-11-16 | SEALS MAGIC → SELLA LA MAGIA. (también: SELLO) |
 | DRAIN FIELD | CAMPO DE ABSORCIÓN | decidido 2026-11-16 | Habilidad de criatura. |
 | CURSE FIELD | CAMPO DE MALDICIÓN | decidido 2026-11-16 | Habilidad de criatura. |
 | DARK GAS | GAS OSCURO | decidido 2026-11-16 | Ciega; los demás: GAS VENENOSO, GAS ÁCIDO, GAS PARALIZANTE. |
@@ -178,33 +183,33 @@ Términos fijos de la traducción. La guía de estilo está en [STYLE.md](STYLE.
 | SUMMONER | DE INVOCADOR | decidido 2026-11-16 | Accesorio. |
 | PRIEST | DE SACERDOTE | decidido 2026-11-16 | Accesorio. |
 | SORCERER | DE HECHICERO | decidido 2026-11-16 | Accesorio. |
-| DEADLY | MORTAL | decidido 2026-11-16 | Afijo de arma (concuerda con el objeto). |
-| LETHAL | LETAL | decidido 2026-11-16 | Afijo de arma (concuerda con el objeto). |
-| KEENEST | AFILADO/A | decidido 2026-11-16 | Afijo de arma (concuerda con el objeto). |
-| CRUSHING | APLASTANTE | decidido 2026-11-16 | Afijo de arma (concuerda con el objeto). |
-| SWIFT | VELOZ | decidido 2026-11-16 | Afijo de arma (concuerda con el objeto). |
-| MIGHTY | PODEROSO/A | decidido 2026-11-16 | Afijo de arma (concuerda con el objeto). |
-| GUARDIAN | GUARDIÁN/GUARDIANA | decidido 2026-11-16 | Afijo de arma (concuerda con el objeto). |
-| FIERY | ÍGNEO/A | decidido 2026-11-16 | Afijo (concuerda con el objeto). |
-| FROSTY | GÉLIDO/A | decidido 2026-11-16 | Afijo (concuerda con el objeto). |
-| CAUSTIC | CÁUSTICO/A | decidido 2026-11-16 | Afijo (concuerda con el objeto). |
-| SHINING | RADIANTE | decidido 2026-11-16 | Afijo (concuerda con el objeto). |
-| HOLY (afijo) | SAGRADO/A | decidido 2026-11-16 | Afijo (concuerda con el objeto). |
-| DARK (afijo) | OSCURO/A | decidido 2026-11-16 | Afijo (concuerda con el objeto). |
-| MAGICAL | MÁGICO/A | decidido 2026-11-16 | Afijo (concuerda con el objeto). |
-| MYSTIC | MÍSTICO/A | decidido 2026-11-16 | Afijo (concuerda con el objeto). |
-| HARDEN | REFORZADO/A | decidido 2026-11-16 | Afijo (concuerda con el objeto). |
-| DEVIL | DIABÓLICO/A | decidido 2026-11-16 | Afijo (concuerda con el objeto). |
-| OF RESIST | DE RESISTENCIA | decidido 2026-11-16 | Afijo OF. |
-| OF CURING | DE CURACIÓN | decidido 2026-11-16 | Afijo OF. |
-| OF COMPOSURE | DE SERENIDAD | decidido 2026-11-16 | Afijo OF. |
-| OF BALANCE | DE EQUILIBRIO | decidido 2026-11-16 | Afijo OF. |
-| OF PROTECT | DE PROTECCIÓN | decidido 2026-11-16 | Afijo OF. |
-| OF HONOR | DE HONOR | decidido 2026-11-16 | Afijo OF. |
-| OF RAGE | DE FURIA | decidido 2026-11-16 | Afijo OF. |
-| OF POWER | DE PODER | decidido 2026-11-16 | Afijo OF. |
-| OF MOVEMENT | DE MOVIMIENTO | decidido 2026-11-16 | Afijo OF. |
-| OF RECOVERY | DE RECUPERACIÓN | decidido 2026-11-16 | Afijo OF. |
+| DEADLY | mortal | decidido 2026-11-16 | Afijo de arma (concuerda con el objeto). |
+| LETHAL | letal | decidido 2026-11-16 | Afijo de arma (concuerda con el objeto). |
+| KEENEST | afilado | decidido 2026-11-16 | Afijo de arma (concuerda con el objeto). Concuerda con el objeto (femenino si el objeto lo es). |
+| CRUSHING | aplastante | decidido 2026-11-16 | Afijo de arma (concuerda con el objeto). |
+| SWIFT | veloz | decidido 2026-11-16 | Afijo de arma (concuerda con el objeto). |
+| MIGHTY | poderoso | decidido 2026-11-16 | Afijo de arma (concuerda con el objeto). Concuerda con el objeto (femenino si el objeto lo es). |
+| GUARDIAN | guardián | decidido 2026-11-16 | Afijo de arma (concuerda con el objeto). Concuerda con el objeto (femenino si el objeto lo es). |
+| FIERY | ígneo | decidido 2026-11-16 | Afijo (concuerda con el objeto). Concuerda con el objeto (femenino si el objeto lo es). |
+| FROSTY | gélido | decidido 2026-11-16 | Afijo (concuerda con el objeto). Concuerda con el objeto (femenino si el objeto lo es). |
+| CAUSTIC | cáustico | decidido 2026-11-16 | Afijo (concuerda con el objeto). Concuerda con el objeto (femenino si el objeto lo es). |
+| SHINING | radiante | decidido 2026-11-16 | Afijo (concuerda con el objeto). |
+| HOLY (afijo, ver HOLY) | sagrado/a | decidido 2026-11-16 | Afijo (concuerda con el objeto). |
+| DARK (afijo) | oscuro | decidido 2026-11-16 | Afijo de equipo; concuerda con el objeto. Fuera del control automático: DARK solo también es el estado (CEGUERA). |
+| MAGICAL | mágico | decidido 2026-11-16 | Afijo (concuerda con el objeto). Concuerda con el objeto (femenino si el objeto lo es). |
+| MYSTIC | místico | decidido 2026-11-16 | Afijo (concuerda con el objeto). Concuerda con el objeto (femenino si el objeto lo es). |
+| HARDEN | reforzado | decidido 2026-11-16 | Afijo (concuerda con el objeto). Concuerda con el objeto (femenino si el objeto lo es). |
+| DEVIL | diabólico | decidido 2026-11-16 | Afijo (concuerda con el objeto). Concuerda con el objeto (femenino si el objeto lo es). |
+| OF RESIST | de resistencia | decidido 2026-11-16 | Afijo OF. |
+| OF CURING | de curación | decidido 2026-11-16 | Afijo OF. |
+| OF COMPOSURE | de serenidad | decidido 2026-11-16 | Afijo OF. |
+| OF BALANCE | de equilibrio | decidido 2026-11-16 | Afijo OF. |
+| OF PROTECT | de protección | decidido 2026-11-16 | Afijo OF. |
+| OF HONOR | de honor | decidido 2026-11-16 | Afijo OF. |
+| OF RAGE | de furia | decidido 2026-11-16 | Afijo OF. |
+| OF POWER | de poder | decidido 2026-11-16 | Afijo OF. |
+| OF MOVEMENT | de movimiento | decidido 2026-11-16 | Afijo OF. |
+| OF RECOVERY | de recuperación | decidido 2026-11-16 | Afijo OF. |
 | SOUL POD | FRASCO DE ALMA | decidido 2026-11-16 | Objeto. |
 | HUMAN WORLD | MUNDO HUMANO | decidido 2026-11-16 | Mundo. |
 | EARTH WORLD | MUNDO DE TIERRA | decidido 2026-11-16 | Mundo; «the Earth» en diálogos → la Tierra. |
@@ -256,20 +261,24 @@ Términos fijos de la traducción. La guía de estilo está en [STYLE.md](STYLE.
 | Auriel | Auriel | decidido 2026-11-16 | Personaje y criatura (nombre inventado). |
 | Kells | Kells | decidido 2026-11-16 | Personaje: «el rey Kells». |
 | Apollos | Apollos | decidido 2026-11-16 | Personaje: «el capitán Apollos». |
-| King Edward | el rey Edward | decidido 2026-11-16 | En el bestiario: REY EDWARD. |
-| the King | el Rey | decidido 2026-11-16 | Título usado como nombre, con mayúscula. |
+| King Edward | rey Edward | decidido 2026-11-16 | En el bestiario: REY EDWARD. |
+| the King | Rey | decidido 2026-11-16 | Título usado como nombre, con mayúscula. |
 | Abraxus | Abraxus | decidido 2026-11-16 | Personaje y criatura. |
 | Ebony Knight | Caballero de Ébano | decidido 2026-11-16 | Personaje y criatura (CABALLERO DE ÉBANO). |
 | Disguise | Disfraz | decidido 2026-11-16 | Nombre con que se presenta un personaje; también criatura. |
 | Necron | Necron | decidido 2026-11-16 | Personaje y criatura. |
-| Chaos | el Caos | decidido 2026-11-16 | Con mayúscula. |
+| Chaos | Caos | decidido 2026-11-16 | Con mayúscula. |
 | Akryal | Akryal | decidido 2026-11-16 | Personaje y criatura. |
-| Master (título) | el Amo | decidido 2026-11-16 | Como título de alguien; MASTER en nombres → MAESTRO. |
-| Death | la Muerte | decidido 2026-11-16 | Con mayúscula. |
-| Knowledge | el Conocimiento | decidido 2026-11-16 | KEY OF KNOWLEDGE → LLAVE DEL SABER (corta); Wisdom → sabiduría. |
+| Master (título) | Amo | decidido 2026-11-16 | Como título de alguien; MASTER en nombres → MAESTRO. |
+| Death | Muerte | decidido 2026-11-16 | Con mayúscula. |
+| Knowledge | Conocimiento | decidido 2026-11-16 | KEY OF KNOWLEDGE → LLAVE DEL SABER (corta); Wisdom → sabiduría. |
 | Hallow Mage | Mago Sagrado | decidido 2026-11-16 | Personaje y criatura (MAGO SAGRADO); revisar en pantalla. |
-| The Apocalypse | el Apocalipsis | decidido 2026-11-16 |  |
-| DUHRIN / NYET / BALRON / GORGORAL / GARGARAL | iguales | decidido 2026-11-16 | Criaturas (nombres inventados). |
+| The Apocalypse | Apocalipsis | decidido 2026-11-16 |  |
+| DUHRIN | DUHRIN | decidido 2026-11-16 | Criaturas (nombres inventados). |
+| NYET | NYET | decidido 2026-11-16 | Criaturas (nombres inventados). |
+| BALRON | BALRON | decidido 2026-11-16 | Criaturas (nombres inventados). |
+| GORGORAL | GORGORAL | decidido 2026-11-16 | Criaturas (nombres inventados). |
+| GARGARAL | GARGARAL | decidido 2026-11-16 | Criaturas (nombres inventados). |
 | ACID SLIME | LIMO ÁCIDO | decidido 2026-11-16 | Criatura. |
 | ACID SKULL | CALAVERA ÁCIDA | decidido 2026-11-16 | Criatura. |
 | BARREL SNAIL | CARACOL BARRIL | decidido 2026-11-16 | Criatura. |
@@ -293,15 +302,20 @@ Términos fijos de la traducción. La guía de estilo está en [STYLE.md](STYLE.
 | FIREBALL | BOLA DE FUEGO | decidido 2026-11-16 | Magia; SHOOTS FIREBALLS en la prosa. |
 | EXPLOSIVE | EXPLOSIÓN | decidido 2026-11-16 | Magia. |
 | BLAZE | LLAMARADA | decidido 2026-11-16 | Magia. |
-| ICE SABER / ICE SABRE | SABLE DE HIELO | decidido 2026-11-16 | Magia (las dos grafías del original). |
+| ICE SABER | SABLE DE HIELO | decidido 2026-11-16 | Magia (las dos grafías del original). |
+| ICE SABRE | SABLE DE HIELO | decidido 2026-11-16 | Magia (las dos grafías del original). |
 | QUEEN EYES | OJOS DE REINA | decidido 2026-11-16 | Magia. |
 | DUAL POISON | VENENO DOBLE | decidido 2026-11-16 | Magia. |
 | BUBBLE SHOWER | LLUVIA DE BURBUJAS | decidido 2026-11-16 | Magia. |
 | CORROSIVE ELEMENTS | ELEMENTOS CORROSIVOS | decidido 2026-11-16 | Magia. |
-| JUDGEMENT / JUDGMENT | JUICIO | decidido 2026-11-16 | Magia (las dos grafías). |
+| JUDGEMENT | JUICIO | decidido 2026-11-16 | Magia (las dos grafías). |
+| JUDGMENT | JUICIO | decidido 2026-11-16 | Magia (las dos grafías). |
 | CLEANSING RAY | RAYO PURIFICADOR | decidido 2026-11-16 | Magia. |
 | SLAYER | EXTERMINIO | decidido 2026-11-16 | Magia. |
 | UNHOLY SPRIT | ESPÍRITU IMPÍO | decidido 2026-11-16 | Magia (sprit: errata de spirit). |
 | MULTIPOLAR | MULTIPOLAR | decidido 2026-11-16 | Magia (igual al inglés). |
 | demoness | diablesa | decidido 2026-11-17 | Cómo se presenta Auriel («la diablesa Auriel»). |
 | MEMORY CARD | MEMORY CARD | decidido 2026-11-17 | Nombre del accesorio de la consola: queda en inglés. |
+| END GAME | SALIR | decidido 2026-11-17 | Comando del menú de pausa. |
+| TRADE | INTERCAMBIAR | decidido 2026-11-17 | Comando de la tienda. |
+| DARK (elemento) | OSCURIDAD | decidido 2026-11-17 | En la lista de elementos (junto a ACID, HOLY); como estado es CEGUERA. |
