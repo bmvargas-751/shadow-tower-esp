@@ -1,8 +1,8 @@
 # Cambios
 
-## 1.0 — sin publicar
+## 0.9.0 — 2026-11-17
 
-Primera versión: el juego completo en español neutro.
+Versión de prueba: el juego completo en español neutro, todavía sin revisar entero en el juego. Puede haber textos cortados o que no entren en su cuadro; avísanos en los *issues* del repositorio.
 
 - Menús, interfaz, mensajes del sistema y modo VS.
 - Objetos, equipo, magias, estadísticas, criaturas y lugares.
