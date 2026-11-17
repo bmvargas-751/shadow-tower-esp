@@ -253,6 +253,13 @@ def export():
         print(font, dict(rd.stats))
     import st_intro
     rows += st_intro.source_rows()
+    # quién habla en cada caja (el juego no lo dice; lo dedujo el perfilador, ver characters/)
+    hp = os.path.join(ROOT, 'characters', 'hablantes.json')
+    if os.path.exists(hp):
+        who = json.load(open(hp, encoding='utf-8'))
+        for r in rows:
+            if r['key'] in who:
+                r['speaker'] = who[r['key']]
     p = os.path.join(LOCAL, 'image_source.jsonl')
     with open(p, 'w', encoding='utf-8') as w:
         for r in rows:

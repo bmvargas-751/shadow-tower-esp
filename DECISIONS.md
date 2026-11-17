@@ -20,3 +20,6 @@ Lo que el usuario decidió, con fecha, para no volver a discutirlo. Una regla de
 - **2026-11-16** SHADOW TOWER se traduce como lugar y en los datos guardados: TORRE DE LAS SOMBRAS. El logo del título no se toca.
 - **2026-11-16** Títulos delante de un nombre en minúscula a media frase («el rey Kells», «el capitán Apollos»); usados como nombre, con mayúscula («el Rey», «el Amo»).
 - **2026-11-16** GLOSSARY.md: se quita G-1 (no hay traducción oficial, PLAN).
+- **2026-11-17** Fichas de personajes (characters/): 7 personajes, el narrador, una voz compartida para las 96 cajas sin hablante identificado y la ficha del jugador. El juego no dice quién habla: lo dedujo el perfilador (`characters/hablantes.json`, que la exportación agrega como `speaker`).
+- **2026-11-17** Trato al jugador: *tú* por defecto; *usted* en Auriel, Apollos, el Caballero de Ébano y las voces G7 y G27 (registro formal).
+- **2026-11-17** El protagonista es masculino («un joven guerrero»). Apollos, el Caballero de Ébano, Disfraz y Necron, masculinos (el juego no los marca). Auriel y Akryal, femeninas; Abraxus, masculino (los marca el juego).

@@ -56,7 +56,7 @@ Más el editor, las líneas delicadas y el set de oro (fase 4). Las secciones ch
 ### Fase 3. Documentos
 
 - [x] Glosario: el terminólogo propone las filas. (2026-11-16: 285 filas aprobadas por el usuario, por secciones.)
-- [ ] Fichas de personajes: el perfilador, antes de cada sección.
+- [x] Fichas de personajes: el perfilador, antes de cada sección. (2026-11-17: todos los diálogos de una vez; género y trato aprobados.)
 - [x] DECISIONS.md y PENDING.md al día.
 
 ### Fase 4. Set de oro
