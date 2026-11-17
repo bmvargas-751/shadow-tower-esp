@@ -166,3 +166,7 @@ Plan: medir el rectángulo de cada palabra (componentes conexas de la lámina), 
 **Causa: suma de verificación por entrada.** Cada entrada de todos los `.T` termina en una palabra de 32 bits = `0x12345678` + suma de todas las palabras de la entrada salvo la última (rutina en `ST.EXE` `0x80015B80`; compara con `xor` y devuelve error). Se cumple en 4909 de 4961 entradas, y en el 100 % de las que tocamos (`STAT.T`, `TALKMSG.T`, `EQUIP.T`, `CRT.T`, `VS_ETC.T`, `FDAT.T` 480). Las tres pruebas cambiaban entradas sin recalcularla. `tfile.fix_checksums` la recalcula; `st_text`, `st_render` y `st_testbuild` la usan. `OPTXT.MIC` no es un `.T` y no la tiene (la introducción funcionó).
 
 Prueba 4 (pendiente): `prueba-4` (todo junto, con sumas corregidas) y `4a/4b/4c` (los mismos cambios que 3a/3b/3c), por si hay que aislar de nuevo.
+
+**Resultado de la prueba 4 (2026-11-16):** con las sumas corregidas, el menú abre sin caerse. «STÁTUS» y «MAGIC LÉFT» salen con un hueco en lugar de la Á (168) y la É (300): el juego acepta códigos altos, pero dibuja la letra desde una lámina que no la tenía. Hipótesis: el menú dibuja con la lámina de otra entrada de fuente A (la 3, que en la prueba 4 estaba achicada a 64 filas y sin las letras nuevas).
+
+Prueba 5 (pendiente): Á (168) y É (169) en las láminas de las entradas 0 **y** 3, ambas en la fila 4 (dentro de las 64 filas); lo demás como en la 4. Si siguen en blanco: save state con el menú abierto para ver qué lámina está en la VRAM.

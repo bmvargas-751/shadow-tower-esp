@@ -2,14 +2,14 @@
 """Imagen de prueba combinada para DuckStation (no toca translation/).
 
 Uso (desde la raíz del proyecto):
-  st_testbuild.py          → ../shadow-tower-esp-local/test/shadow-tower-prueba-4.{bin,cue} (todo junto)
-  st_testbuild.py glyphs   → prueba-4a: solo Á/É en la entrada 0 de STAT.T
-  st_testbuild.py move     → prueba-4b: solo la fuente de la entrada 3 movida a 0x4780 (256 filas)
-  st_testbuild.py shrink   → prueba-4c: solo la fuente de la entrada 3 recortada a 64 filas (en 0x4600)
+  st_testbuild.py          → ../shadow-tower-esp-local/test/shadow-tower-prueba-5.{bin,cue} (todo junto)
+  st_testbuild.py glyphs   → prueba-5a: solo Á/É en la entrada 0 de STAT.T
+  st_testbuild.py move     → prueba-5b: solo la fuente de la entrada 3 movida a 0x4780 (256 filas)
+  st_testbuild.py shrink   → prueba-5c: solo la fuente de la entrada 3 recortada a 64 filas (en 0x4600)
 Todas las entradas modificadas llevan su suma de verificación recalculada (tfile.fix_checksums).
 
 Qué prueba:
-  1. Letras nuevas en la fuente del texto codificado (STAT.T entrada 0): Á en el código 168 y É en el 300;
+  1. Letras nuevas en la fuente del texto codificado (STAT.T entradas 0 y 3): Á en el código 168 y É en el 169;
      «STATUS» → «STÁTUS» y «MAGIC LEFT» → «MAGIC LÉFT».
   2. Más espacio para los nombres de objetos (STAT.T entrada 3): la lámina de la fuente se achica de 256 a 64
      filas y su bloque se mueve de 0x4600 a 0xA600 (la cabecera apunta ahí); un relleno de 4 KB en la casilla
@@ -131,16 +131,17 @@ def build_stat(variant='all'):
     do_glyphs = variant in ('all', 'glyphs')
     if not do_glyphs:
         return _stat_entry3(d, ents, variant)
+    # Á y É en la fila 4 de la lámina (códigos 168 y 169), que entra también en una lámina de 64 filas
     put_glyph(e0, st_text.TEXT_END, 0x21, 168)
-    put_glyph(e0, st_text.TEXT_END, 0x25, 300)
-    st_text.EXTRA_A.update({'Á': 168, 'É': 300})
+    put_glyph(e0, st_text.TEXT_END, 0x25, 169)
+    st_text.EXTRA_A.update({'Á': 168, 'É': 169})
     texts = {}
     for k, v in src.items():
         if k.startswith('stat/00#') and v in ('STATUS', 'MAGIC LEFT'):
             texts[k] = {'STATUS': 'STÁTUS', 'MAGIC LEFT': 'MAGIC LÉFT'}[v]
     rebuild_text(e0, 'A', texts, 'stat/00', st_text.TEXT_END)
     d[a0 * 2048:(a0 + n0) * 2048] = e0
-    print('STAT.T entrada 0: Á (168) y É (300);', len(texts), 'cadenas cambiadas')
+    print('STAT.T entrada 0: Á (168) y É (169);', len(texts), 'cadenas cambiadas')
     if variant == 'glyphs':
         return _write_stat(d)
     return _stat_entry3(d, ents, variant)
@@ -156,6 +157,10 @@ def _stat_entry3(d, ents, variant):
     _, a3, n3, _ = ents[3]
     e3 = bytearray(d[a3 * 2048:(a3 + n3) * 2048])
     relocate_font(e3, ptr, h)
+    if variant == 'all':
+        # las mismas letras en la lámina de la entrada 3 (también fuente A): el menú puede usar cualquiera
+        put_glyph(e3, ptr, 0x21, 168)
+        put_glyph(e3, ptr, 0x25, 169)
     used = rebuild_text(e3, 'A', {}, 'stat/03', ptr, filler=filler)
     d[a3 * 2048:(a3 + n3) * 2048] = e3
     print(f'STAT.T entrada 3: fuente en {ptr:#x} ({h} filas); texto hasta '
@@ -204,8 +209,8 @@ def build_images():
 def main():
     global BUILD
     variant = sys.argv[1] if len(sys.argv) > 1 else 'all'
-    name = {'all': 'shadow-tower-prueba-4', 'glyphs': 'shadow-tower-prueba-4a', 'move': 'shadow-tower-prueba-4b',
-            'shrink': 'shadow-tower-prueba-4c'}[variant]
+    name = {'all': 'shadow-tower-prueba-5', 'glyphs': 'shadow-tower-prueba-5a', 'move': 'shadow-tower-prueba-5b',
+            'shrink': 'shadow-tower-prueba-5c'}[variant]
     BUILD = os.path.join(TEST, 'build-' + name)
     os.makedirs(TEST, exist_ok=True)
     files = build_stat(variant)
