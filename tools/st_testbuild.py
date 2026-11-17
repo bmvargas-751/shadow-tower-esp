@@ -8,8 +8,8 @@ Uso (desde la raíz del proyecto):
   st_testbuild.py shrink   → prueba-5c: solo la fuente de la entrada 3 recortada a 64 filas (en 0x4600)
   st_testbuild.py v6       → prueba-6: Á en la celda 154 y É en la 25 (entradas 0 y 3), sin mover la fuente,
                              deduplicación forzada en las entradas 3 y 4, y el texto en imágenes redibujado
-  st_testbuild.py v7       → prueba-7: las 9 letras españolas de la fuente A con el adaptador real (st_text);
-                             fuente B: Á en la fila 3 (código 56) y É en la celda 0 (código 2); texto en imágenes
+  st_testbuild.py v8       → prueba-8: letras españolas de las fuentes A y B con el adaptador real (st_text) y
+                             el texto en imágenes redibujado
 Todas las entradas modificadas llevan su suma de verificación recalculada (tfile.fix_checksums).
 
 Qué prueba:
@@ -24,7 +24,6 @@ Qué prueba:
   3. Texto en imágenes redibujado: todos los diálogos, descripciones de equipo y de criaturas y las 6 pantallas
      de la introducción llevan una frase de prueba con tildes y su clave.
 """
-import collections
 import os
 import shutil
 import struct
@@ -241,11 +240,11 @@ def main():
     global BUILD
     variant = sys.argv[1] if len(sys.argv) > 1 else 'all'
     name = {'all': 'shadow-tower-prueba-5', 'glyphs': 'shadow-tower-prueba-5a', 'move': 'shadow-tower-prueba-5b',
-            'shrink': 'shadow-tower-prueba-5c', 'v6': 'shadow-tower-prueba-6', 'v7': 'shadow-tower-prueba-7'}[variant]
+            'shrink': 'shadow-tower-prueba-5c', 'v6': 'shadow-tower-prueba-6', 'v8': 'shadow-tower-prueba-8'}[variant]
     BUILD = os.path.join(TEST, 'build-' + name)
     os.makedirs(TEST, exist_ok=True)
-    files = build_v7() if variant == 'v7' else build_stat(variant)
-    if variant in ('all', 'v6', 'v7'):
+    files = build_v8() if variant == 'v8' else build_stat(variant)
+    if variant in ('all', 'v6', 'v8'):
         files.update(build_images())
     img = os.path.join(TEST, name + '.bin')
     shutil.copyfile(os.path.join(LOCAL, 'original.bin'), img)
@@ -266,40 +265,13 @@ def psxiso_walk(f):
 
 
 
-# --- Prueba 7: letras españolas de la fuente A con el adaptador real; fila 3 / celda 0 de la fuente B ----------
-B_TEST = {'Á': 56, 'É': 2}   # Á en la fila 3 (código 56 = celda 54), É en la celda 0 (código 2)
-
-
-def draw_b(entry, src_code, dst_code):
-    """Copia una letra de la fuente B (celda = código − 2; celdas 12×10, 18 por fila) y le pone tilde."""
-    ptr = struct.unpack_from('<I', entry, 0)[0]
-    t = tim.parse(bytes(entry), ptr + 8)
-    base, stride = t['pix_off'], t['w'] // 2
-
-    def get(x, y):
-        b = entry[base + y * stride + x // 2]
-        return (b >> 4) if x & 1 else (b & 15)
-
-    def put(x, y, v):
-        i = base + y * stride + x // 2
-        entry[i] = (entry[i] & 0x0F) | (v << 4) if x & 1 else (entry[i] & 0xF0) | v
-    sc, dc = src_code - 2, dst_code - 2
-    sx, sy, dx, dy = (sc % 18) * 12, (sc // 18) * 10, (dc % 18) * 12, (dc // 18) * 10
-    ink = collections.Counter(get(sx + x, sy + y) for y in range(10) for x in range(12)) 
-    ink.pop(15, None)
-    v = ink.most_common(1)[0][0]
-    for y in range(10):
-        for x in range(12):
-            put(dx + x, dy + y, get(sx + x, sy + y))
-    put(dx + 6, dy, v)
-    put(dx + 7, dy, v)
-
-
-def build_v7():
+# --- Prueba 8: letras españolas de las fuentes A y B con el adaptador real (st_text) -------------------------
+def build_v8():
     import json
     src = {json.loads(l)['key']: json.loads(l)['en'] for l in open(st_text.source_path(), encoding='utf-8')}
     a_test = {'STATUS': 'STÁTUS', 'SLASH': 'ÉÍÓÚ', 'SMASH': 'ÑÜ¿¡', 'PIERCE': 'PIÉRCE'}
-    b_test = {'WEAPON ATTACK': 'WEAPON ÁTTACK', 'MAGIC SPEED': 'MAGIC SPÉED'}
+    b_test = {'WEAPON ATTACK': 'WEAPON ÁTTACK', 'MAGIC SPEED': 'MAGIC SPÉED', 'ARMOR DEFENSE': 'ÍÓÚ DEFENSE',
+              'MAGIC DEFENSE': 'MAGIC DEFÑÜ'}
     a_pre = {p for p, _f, _e, _b, font, _c in st_text.BLOCKS if font == 'A'}
     texts = {}
     for k, v in src.items():
@@ -308,28 +280,11 @@ def build_v7():
             texts[k] = a_test[v]
         if pre == 'stat/01' and v in b_test:
             texts[k] = b_test[v]
-    st_text.EXTRA_B.update(B_TEST)
     st_text.OUT = BUILD
     st_text.load_translation = lambda use_en: texts
     st_text.import_()
     print('textos de prueba:', len(texts))
-    out = {}
-    for f in st_text.STAT:
-        p = os.path.join(BUILD, f)
-        d = bytearray(open(p, 'rb').read())
-        for i, a, n, _ in tfile.entries(bytes(d)):
-            if i in (1, 2, 4, 8, 10):
-                ent = bytearray(d[a * 2048:(a + n) * 2048])
-                draw_b(ent, 0x17, B_TEST['Á'])   # A de la fuente B
-                draw_b(ent, 0x1B, B_TEST['É'])   # E de la fuente B
-                d[a * 2048:(a + n) * 2048] = ent
-        tfile.fix_checksums(d, open(os.path.join(st_text.ORIG, f), 'rb').read())
-        open(p, 'wb').write(d)
-        out[f] = p
-    for f in st_text.FILES:
-        out.setdefault(f, os.path.join(BUILD, f))
-    return out
-
+    return {f: os.path.join(BUILD, f) for f in st_text.FILES}
 
 if __name__ == '__main__':
     main()

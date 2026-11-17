@@ -17,7 +17,7 @@ Plantilla del kit: los números quedan; lo de cada regla se completa con lo que 
 
 ## Caracteres
 
-- **T-5** Solo se usan caracteres que tiene la fuente del juego. Texto codificado (nombres, menús): solo mayúsculas, sin tildes por ahora (se agregan en la lámina; prueba de la Á pendiente en el juego). Texto en imágenes: los diálogos tienen mayúsculas, minúsculas y las letras españolas (dibujadas para el proyecto); equipo y criaturas, solo mayúsculas con Á É Í Ó Ú Ñ Ü. Apóstrofo `'`; comillas `"` (dibujadas para el proyecto en los diálogos). `tools/hooks.py` avisa de cada letra que falte. (`caracteres`)
+- **T-5** Solo se usan caracteres que tiene la fuente del juego. Texto codificado (nombres, menús): solo mayúsculas; fuente A con Á É Í Ó Ú Ñ Ü ¿ ¡ y fuente B con Á É Í Ó Ú Ñ Ü (agregadas en las láminas, ver la prueba 7). Texto en imágenes: los diálogos tienen mayúsculas, minúsculas y las letras españolas (dibujadas para el proyecto); equipo y criaturas, solo mayúsculas con Á É Í Ó Ú Ñ Ü. Apóstrofo `'`; comillas `"` (dibujadas para el proyecto en los diálogos). `tools/hooks.py` avisa de cada letra que falte. (`caracteres`)
 
 ## Qué se traduce
 
@@ -190,3 +190,9 @@ Prueba 6 (pendiente): Á en la celda 154 y É en la 25 (entradas 0 y 3), fuente 
 **Fuente B:** sus 3 filas (18 celdas de 12 px) no tienen celdas libres salvo la celda 0 (código 2). Prueba 7: Á en la fila 3 (código 56) y É en el código 2.
 
 Prueba 7 (pendiente): menú de pausa con «STÁTUS», «ÉÍÓÚ» (en lugar de SLASH), «ÑÜ¿¡» (SMASH) y «PIÉRCE»; panel derecho de la pantalla de equipo con «WEAPON ÁTTACK» y «MAGIC SPÉED» (fuente B); texto en imágenes redibujado (conversaciones).
+
+**Resultado de la prueba 7 (2026-11-16):** las 9 letras de la fuente A se ven en el menú («STÁTUS», «ÉÍÓÚ», «ÑÜ¿¡», «PIÉRCE»): **resuelto**. En la fuente B, la Á en el código 56 (fila 3) se ve («WEAPON ÁTTACK»): el juego dibuja la fila 3 de la lámina B. El código 2 (celda 0) no sirve.
+
+**Letras españolas de la fuente B (`st_text.SPANISH_B`):** Á 56, É 57, Í 58, Ó 59, Ú 60, Ñ 61, Ü 62 (fila 3, libre en todas las láminas B). Se dibujan en las entradas 1, 2, 4, 8 y 10 de `STAT.T` (las dos copias) y en la 15 de `VS_ETC.T`, cuando alguna traducción de fuente B las usa. La letra se baja un píxel (se quita su fila más redundante) y la marca va en la fila 0, con la fila 1 vacía. Sin ¿ ni ¡ (la fuente B no trae ? ni !; `hooks.py` avisa si se usan).
+
+Prueba 8 (pendiente): las 9 letras de A en el menú y las 7 de B en el panel de equipo («WEAPON ÁTTACK», «MAGIC SPÉED», «ÍÓÚ DEFENSE», «MAGIC DEFÑÜ»), con el adaptador real; y el texto en imágenes (conversaciones sin probar todavía).

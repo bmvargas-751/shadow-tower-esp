@@ -26,7 +26,7 @@ Antes de esto no se decide nada más.
 - [x] Extraer los archivos del juego, a una carpeta fuera del repo.
 - [ ] Adaptador: exportar el texto al formato común (`source` de `loc.json`) e importarlo de vuelta. (Texto codificado listo: `tools/st_text.py`, 1654 líneas. Texto en imágenes: `tools/st_image.py` exporta 584 textos y `tools/st_render.py` los vuelve a dibujar; introducción con `tools/st_intro.py`; faltan los paneles de 16 bpp.)
 - [x] Ida y vuelta idéntica: exportar e importar sin cambios da los mismos archivos. (Texto codificado e imágenes: idéntica.)
-- [ ] Caracteres: si la fuente tiene las letras españolas, o cómo se agregan (T-5). (Imágenes: dibujadas. Texto codificado: prueba de la Á en el juego pendiente.)
+- [x] Caracteres: si la fuente tiene las letras españolas, o cómo se agregan (T-5). (Imágenes: dibujadas. Texto codificado: en celdas libres de las láminas A y B, probado en el juego; diseño de B por confirmar en la prueba 8.)
 - [ ] Límites: bytes, ancho y renglones de cada tipo de texto (T-3, T-4), y sus chequeos en `hooks`.
 - [ ] Pseudolocalización: todo el texto más largo y con letras españolas, en el juego, para ver cortes y glifos que faltan.
 - [ ] Completar TECH.md y `loc.json` (`codes`, `fixed_break`, `excluded`, `sections`).
