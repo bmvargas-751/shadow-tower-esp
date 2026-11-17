@@ -21,7 +21,7 @@ Se deciden al ver la pantalla.
 
 ## Alineación con el largo en inglés (prueba 0.9.1, 2026-11-17)
 
-- [ ] (orquestador, técnico): el tipo de criatura de la ficha (alineado a la derecha) y las opciones del menú principal y de OPTIONS (centradas) se ubican con el largo del texto en inglés (TECH.md, «Prueba 0.9.0 en el juego»). No se arregla desde el texto: hay que parchear el código. El usuario pidió las opciones alineadas a la izquierda.
+- [ ] (orquestador, para la prueba en el juego): el tipo de criatura de la ficha, el menú principal, OPTIONS y BUTTON CONFIGURATION se ubicaban con el largo del inglés. `tools/st_exe.py` parchea las tablas de `ST.EXE` (TECH.md): menú y OPTIONS a la izquierda (pedido del usuario), botones centrados, tipo a la derecha. Ver que se vean bien.
 
 ## Formas cortas de la prueba 0.9.0 (2026-11-17)
 

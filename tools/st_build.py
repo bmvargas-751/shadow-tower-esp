@@ -5,8 +5,9 @@ Uso (desde la raíz del proyecto):
   st_build.py [NOMBRE]   → ../shadow-tower-esp-local/test/NOMBRE.{bin,cue} (por defecto shadow-tower-esp)
 
 Pasos:
-  1. Reconstruye los 8 archivos con translation/ (st_text: texto codificado; st_render: diálogos y
-     descripciones; st_intro: introducción) en ../shadow-tower-esp-local/build/files.
+  1. Reconstruye los 9 archivos con translation/ (st_text: texto codificado; st_exe: tablas de posición de los
+     menús en ST.EXE; st_render: diálogos y descripciones; st_intro: introducción) en
+     ../shadow-tower-esp-local/build/files.
   2. Copia original.bin y reemplaza esos archivos (psxpatch recalcula EDC/ECC).
   3. Comprueba que lo que quedó en la imagen es lo que se escribió.
 No toca original.bin ni translation/.
@@ -18,6 +19,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import psxpatch  # noqa: E402
+import st_exe  # noqa: E402
 import st_intro  # noqa: E402
 import st_render  # noqa: E402
 import st_text  # noqa: E402
@@ -28,12 +30,14 @@ TEST = os.path.join(LOCAL, 'test')
 
 def rebuild():
     st_text.import_()
+    st_exe.import_()
     ok = st_render.import_()
     ok = st_intro.import_() and ok
     if not ok:
         sys.exit('hay errores al redibujar; no se arma la imagen')
     files = list(st_text.FILES) + sorted({v[1] for v in st_render.all_images().values()})
     files.append(os.path.relpath(st_intro.OUT, st_text.OUT))
+    files.append('ST.EXE')  # tablas de posición de los menús (st_exe)
     return {f: os.path.join(st_text.OUT, f) for f in files}
 
 
