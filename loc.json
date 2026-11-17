@@ -1,0 +1,78 @@
+{
+  "name": "Shadow Tower",
+  "source_language": "en",
+  "target_language": "es",
+  "source": [
+    "../shadow-tower-esp-local/source.jsonl",
+    "../shadow-tower-esp-local/image_source.jsonl"
+  ],
+  "translation": "translation",
+  "work": "build/work/batches",
+  "sections": [
+    {
+      "name": "Introducción",
+      "prefixes": [
+        "intro#"
+      ]
+    },
+    {
+      "name": "Interfaz y menús",
+      "prefixes": [
+        "stat/00#",
+        "fdat/480#"
+      ]
+    },
+    {
+      "name": "Estadísticas",
+      "prefixes": [
+        "stat/01#"
+      ]
+    },
+    {
+      "name": "Nombres de criaturas",
+      "prefixes": [
+        "stat/02#"
+      ]
+    },
+    {
+      "name": "Objetos y equipo",
+      "prefixes": [
+        "stat/03#",
+        "stat/04#"
+      ]
+    },
+    {
+      "name": "Modo VS",
+      "prefixes": [
+        "stat/08#",
+        "vs_etc/15#"
+      ]
+    },
+    {
+      "name": "Diálogos",
+      "prefixes": [
+        "talk#"
+      ]
+    },
+    {
+      "name": "Descripciones de equipo",
+      "prefixes": [
+        "equip#"
+      ]
+    },
+    {
+      "name": "Descripciones de criaturas",
+      "prefixes": [
+        "crt#"
+      ]
+    }
+  ],
+  "excluded": [],
+  "codes": [
+    "\\{[^{}]*\\}"
+  ],
+  "fixed_break": "\n",
+  "encoding": "utf-16-le",
+  "spanish_checks": true,
+  "hooks": "tools/hooks.py"
+}
