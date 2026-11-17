@@ -7,6 +7,15 @@ Traducción al español neutro de *Shadow Tower* (PlayStation, versión USA, SLU
 - Técnica (formatos, fuentes, pruebas en el juego): [TECH.md](TECH.md)
 - Pendientes del usuario: [PENDING.md](PENDING.md)
 
+## Armar la imagen y el parche
+
+Hace falta la imagen USA en `../shadow-tower-esp-local/original.bin` (SHA-1 `df441bf08b7079f8b3d36f1188f7eedd8cb73c50`).
+
+- `python3 tools/st_build.py` → imagen traducida para probar, en `../shadow-tower-esp-local/test/`.
+- `python3 tools/st_patch.py [VERSIÓN]` → parche `.xdelta` comprobado y paquete `.zip` para publicar, en `../shadow-tower-esp-local/dist/`. Necesita `xdelta3` (`sudo apt install xdelta3`, o la variable `XDELTA3`).
+
+Cómo se aplica el parche: [tools/release/LEEME.txt](tools/release/LEEME.txt). Cambios: [CHANGELOG.md](CHANGELOG.md).
+
 ## Avance
 
 Actualizado: 2026-11-17.
@@ -23,7 +32,7 @@ Actualizado: 2026-11-17.
 | 5. Piloto | ✅ 4 lotes de 40 líneas (menús, objetos, equipo, diálogos) |
 | 6. Traducción | ✅ 100 % (2217 líneas; dudas en PENDING.md) |
 | 7. Prueba en el juego | ⏳ imagen lista (`tools/st_build.py`), falta jugarla |
-| 8. Entrega (parche xdelta) | ⏳ |
+| 8. Entrega (parche xdelta) | ⏳ parche y paquete listos (`tools/st_patch.py`); se publica después de la fase 7 |
 
 ### Secciones
 
