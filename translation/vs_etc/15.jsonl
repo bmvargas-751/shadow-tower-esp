@@ -1,3 +1,80 @@
+{"key": "vs_etc/15#0000", "es": "INICIAR COMBATE"}
+{"key": "vs_etc/15#0001", "es": "J1 CARGAR/GUARDAR DATOS"}
+{"key": "vs_etc/15#0002", "es": "J2 CARGAR/GUARDAR DATOS"}
+{"key": "vs_etc/15#0003", "es": "J1 ELEGIR CRIATURA"}
+{"key": "vs_etc/15#0004", "es": "J2 ELEGIR CRIATURA"}
+{"key": "vs_etc/15#0005", "es": "J1 ELEGIR OBJETO"}
+{"key": "vs_etc/15#0006", "es": "J2 ELEGIR OBJETO"}
+{"key": "vs_etc/15#0007", "es": "FIN"}
+{"key": "vs_etc/15#0008", "es": "J1 PEDIR OBJETO"}
+{"key": "vs_etc/15#0009", "es": "J2 PEDIR OBJETO"}
+{"key": "vs_etc/15#0010", "es": "FIN DEL MODO VS{0032}"}
+{"key": "vs_etc/15#0011", "es": "  SÍ"}
+{"key": "vs_etc/15#0012", "es": "   NO"}
+{"key": "vs_etc/15#0020", "es": "ELEGIR NÚMERO DE RONDAS"}
+{"key": "vs_etc/15#0021", "es": "1 RONDA"}
+{"key": "vs_etc/15#0022", "es": "3 RONDAS"}
+{"key": "vs_etc/15#0023", "es": "ELEGIR CRIATURA PARA COMBATIR"}
+{"key": "vs_etc/15#0024", "es": "J1 NO ELIGIÓ OBJETO"}
+{"key": "vs_etc/15#0025", "es": "J2 NO ELIGIÓ OBJETO"}
+{"key": "vs_etc/15#0026", "es": "NO HAY OBJETO QUE PEDIR"}
+{"key": "vs_etc/15#0027", "es": "INSERTA UNA MEMORY CARD EN LA RANURA J1"}
+{"key": "vs_etc/15#0028", "es": "INSERTA UNA MEMORY CARD EN LA RANURA J2"}
+{"key": "vs_etc/15#0030", "es": "NO PUEDES ELEGIR UN OBJETO CON LOS MISMOS DATOS{0033}"}
+{"key": "vs_etc/15#0031", "es": "SE CAMBIÓ LA MEMORY CARD\n \nINSERTA LA MEMORY CARD CORRECTA"}
+{"key": "vs_etc/15#0032", "es": "REVISANDO MEMORY CARD...{0001}"}
+{"key": "vs_etc/15#0100", "es": "FUE"}
+{"key": "vs_etc/15#0101", "es": "VEL"}
+{"key": "vs_etc/15#0102", "es": "DEF"}
+{"key": "vs_etc/15#0103", "es": "EQU"}
+{"key": "vs_etc/15#0104", "es": "COR"}
+{"key": "vs_etc/15#0105", "es": "GOL"}
+{"key": "vs_etc/15#0106", "es": "EST"}
+{"key": "vs_etc/15#0107", "es": "ESP"}
+{"key": "vs_etc/15#0108", "es": "CON"}
+{"key": "vs_etc/15#0109", "es": "ARM"}
+{"key": "vs_etc/15#0110", "es": "PUR"}
+{"key": "vs_etc/15#0111", "es": "PAR"}
+{"key": "vs_etc/15#0112", "es": "DIS"}
+{"key": "vs_etc/15#0113", "es": "ALM"}
+{"key": "vs_etc/15#0117", "es": "TIPO"}
 {"key": "vs_etc/15#0118", "es": "PV"}
+{"key": "vs_etc/15#0119", "es": "PA OBTENIDOS"}
+{"key": "vs_etc/15#0120", "es": "ALTURA"}
+{"key": "vs_etc/15#0121", "es": "PESO"}
+{"key": "vs_etc/15#0122", "es": "ATAQUE FÍSICO"}
+{"key": "vs_etc/15#0123", "es": "ATAQUE MÁGICO"}
+{"key": "vs_etc/15#0124", "es": "DEFENSA FÍSICA"}
+{"key": "vs_etc/15#0125", "es": "DEFENSA MÁGICA"}
+{"key": "vs_etc/15#0126", "es": "HABILIDADES"}
+{"key": "vs_etc/15#0127", "es": "AUTOCURACIÓN"}
+{"key": "vs_etc/15#0128", "es": "DILUCIÓN"}
+{"key": "vs_etc/15#0129", "es": "OSCURIDAD"}
+{"key": "vs_etc/15#0130", "es": "{0032}{0032}{0032}{0032}"}
+{"key": "vs_etc/15#0131", "es": "INSECTO"}
+{"key": "vs_etc/15#0200", "es": "MANO"}
+{"key": "vs_etc/15#0201", "es": "BOLSA"}
+{"key": "vs_etc/15#0202", "es": "FUE"}
+{"key": "vs_etc/15#0203", "es": "VEL"}
+{"key": "vs_etc/15#0204", "es": "DEF"}
+{"key": "vs_etc/15#0205", "es": "EQU"}
+{"key": "vs_etc/15#0206", "es": "COR"}
+{"key": "vs_etc/15#0207", "es": "GOL"}
+{"key": "vs_etc/15#0208", "es": "EST"}
+{"key": "vs_etc/15#0209", "es": "ESP"}
+{"key": "vs_etc/15#0210", "es": "CON"}
+{"key": "vs_etc/15#0211", "es": "ARM"}
+{"key": "vs_etc/15#0212", "es": "PUR"}
+{"key": "vs_etc/15#0213", "es": "PAR"}
+{"key": "vs_etc/15#0214", "es": "DIS"}
+{"key": "vs_etc/15#0215", "es": "ALM"}
+{"key": "vs_etc/15#0216", "es": "HACER PEDIDO\n \n       {0034}OK        {0034}NO"}
+{"key": "vs_etc/15#0220", "es": "RIVAL"}
+{"key": "vs_etc/15#0500", "es": "SIN OBJETO PEDIDO"}
 {"key": "vs_etc/15#0501", "es": "DUR"}
+{"key": "vs_etc/15#0502", "es": "/"}
 {"key": "vs_etc/15#0503", "es": "PESO"}
+{"key": "vs_etc/15#0505", "es": "APARICIONES"}
+{"key": "vs_etc/15#0506", "es": "SIN APARICIONES"}
+{"key": "vs_etc/15#0507", "es": "CAPTURA"}
+{"key": "vs_etc/15#0999", "es": "ERRORERRORERROR"}

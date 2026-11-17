@@ -43,7 +43,19 @@
 {"key": "stat/00#0200", "es": "AJUSTAR MÚSICA"}
 {"key": "stat/00#0328", "es": "PA"}
 {"key": "stat/00#0500", "es": "USAR OBJETO"}
+{"key": "stat/00#0530", "es": "FUERZA"}
+{"key": "stat/00#0531", "es": "VELOCIDAD"}
+{"key": "stat/00#0532", "es": "DEFENSA"}
+{"key": "stat/00#0533", "es": "EQUILIBRIO"}
 {"key": "stat/00#0534", "es": "CORTE"}
 {"key": "stat/00#0535", "es": "GOLPE"}
 {"key": "stat/00#0536", "es": "ESTOCADA"}
+{"key": "stat/00#0537", "es": "ESPÍRITU"}
+{"key": "stat/00#0538", "es": "CONCENTRACIÓN"}
+{"key": "stat/00#0539", "es": "ARMONÍA"}
+{"key": "stat/00#0540", "es": "PUREZA"}
+{"key": "stat/00#0541", "es": "PARTÍCULA"}
+{"key": "stat/00#0542", "es": "DISOLUCIÓN"}
+{"key": "stat/00#0543", "es": "ALMA"}
 {"key": "stat/00#0601", "es": "CUNES"}
+{"key": "stat/00#0999", "es": "ERRORERRORERROR"}
