@@ -16,4 +16,8 @@ Se deciden al ver la pantalla.
 - [ ] `crt#0267`, `fdat/480#0613` (terminólogo, inconsistencia del original): WATER WORLD aparece también como «MAGIC WORLD» y «WATER SPRIT WORLD». Se señala, no se corrige (E-61): ¿es el mismo lugar?
 - [ ] `stat/00#0916`–`0933` y `stat/03#0512`–`0528` (terminólogo, duda): dos listas de magias que coinciden solo en parte. Se traducen igual las que coinciden; falta saber dónde se muestra la primera.
 
+## Términos sin regla (set de oro, 2026-11-17)
+
+- [ ] `equip#0003` (revisor, original): el original trae los signos de pie y pulgada invertidos (`2"11'`, visto en la imagen). Se lee como 2 pies 11 pulgadas → 89 CM.
+
 ## De los lotes
