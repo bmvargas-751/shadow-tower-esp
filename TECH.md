@@ -178,3 +178,15 @@ Prueba 5 (pendiente): Á (168) y É (169) en las láminas de las entradas 0 **y*
 - **Espacio sin mover la fuente:** deduplicar (las casillas con el mismo texto apuntan a una copia). En `stat/03` y `stat/04` deja ~2500 B libres (21–23 % del texto). `st_text.rebuild_entry` deduplica solo si un bloque no entra (la ida y vuelta sigue idéntica). Por probar en el juego.
 
 Prueba 6 (pendiente): Á en la celda 154 y É en la 25 (entradas 0 y 3), fuente sin mover, **deduplicación forzada en las entradas 3 y 4** (mismo texto visible) y el texto en imágenes redibujado.
+
+**Resultado de la prueba 6 (2026-11-16, estados 8, 9 y 10):**
+- «MAGIC LÉFT» con la É en la celda **25** (fila 0): **se ve**. «ST TUS» con la Á en la celda **154** (fila 3): hueco. El juego dibuja como letras normales solo los códigos de las filas 0–1 (2–83); las filas 2–3 son de la fuente ancha.
+- USE ITEM (Soul Pod incluido) y la pantalla de equipo, con las entradas 3 y 4 **deduplicadas**: correctos. **La deduplicación funciona.**
+- Libro de criaturas y descripción de equipo redibujados: se ven, con tildes en mayúsculas (chicas pero legibles).
+- Conversaciones: sin probar (no había un personaje cerca).
+
+**Letras españolas de la fuente A (definitivo, `st_text.SPANISH_A`):** É 25, Á 61 (celdas vacías) e Í 26 (`|`), Ó 28 (`;`), Ú 59 (`[`), Ñ 60 (`]`), Ü 62 (`=`), ¿ 20 (`#`), ¡ 14 (`*`): signos que ninguna cadena usa. No se usan `< > + %` ni los dígitos anchos, porque el juego podría dibujarlos por su cuenta. `st_text.import_` las dibuja (letra base + marca en la fila 0; ¿ y ¡ invirtiendo ? y !) en las láminas de las entradas 0 y 3 cuando alguna traducción de fuente A las usa.
+
+**Fuente B:** sus 3 filas (18 celdas de 12 px) no tienen celdas libres salvo la celda 0 (código 2). Prueba 7: Á en la fila 3 (código 56) y É en el código 2.
+
+Prueba 7 (pendiente): menú de pausa con «STÁTUS», «ÉÍÓÚ» (en lugar de SLASH), «ÑÜ¿¡» (SMASH) y «PIÉRCE»; panel derecho de la pantalla de equipo con «WEAPON ÁTTACK» y «MAGIC SPÉED» (fuente B); texto en imágenes redibujado (conversaciones).

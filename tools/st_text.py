@@ -14,6 +14,7 @@ Formato de un bloque de texto (ver TECH.md), relativo a su comienzo:
   ...     ceros hasta 0x4600
 En STAT.T, después del bloque viene la fuente de esa entrada (TIM 4 bpp 256×256).
 """
+import collections
 import json
 import os
 import struct
@@ -47,9 +48,16 @@ FONT_B = {0x03: '-', 0x0E: '/', 0x10: '+', 0x12: '.', 0x31: ' '}
 FONT_B.update({0x04 + i: c for i, c in enumerate('0123456789')})
 FONT_B.update({0x17 + i: c for i, c in enumerate('ABCDEFGHIJKLMNOPQRSTUVWXYZ')})
 
-# Letras nuevas para el español: se agregan cuando estén dibujadas en la lámina (TECH.md).
-EXTRA_A = {}
+# Letras españolas de la fuente A (TECH.md, prueba 6/7). El juego solo dibuja como letras normales los códigos
+# de las filas 0 y 1 de la lámina (2–83); ahí no hay lugar libre salvo las celdas 25 y 61, así que se reusan
+# celdas de signos que ninguna cadena usa ni el juego arma solo: * # | ; [ ] =
+SPANISH_A = {'É': 0x19, 'Á': 0x3D, 'Í': 0x1A, 'Ó': 0x1C, 'Ú': 0x3B, 'Ñ': 0x3C, 'Ü': 0x3E, '¿': 0x14, '¡': 0x0E}
+for _c in SPANISH_A.values():
+    FONT_A.pop(_c, None)
+EXTRA_A = dict(SPANISH_A)
 EXTRA_B = {}
+# Láminas de la fuente A donde se dibujan las letras nuevas (el menú usa una u otra según la pantalla)
+FONT_A_SHEETS = [0, 3]
 
 # Bloques de texto: (prefijo de clave, archivos donde se escribe, entrada .T, desplazamiento, fuente, copias)
 # Son todos los del juego (búsqueda del 2026-11-16 en todos los .T). VS/STAT.T es copia de COM/STAT.T;
@@ -250,6 +258,63 @@ def load_translation(use_en):
     return out
 
 
+def _cell_a(code):
+    return (code % 42) * 6, (code // 42) * 12
+
+
+def draw_spanish_a(entry):
+    """Dibuja las letras de SPANISH_A en la lámina de una entrada de fuente A (bytearray, se modifica)."""
+    import tim
+    ptr = struct.unpack_from('<I', entry, 0)[0]
+    t = tim.parse(bytes(entry), ptr + 8)
+    base, stride, bg = t['pix_off'], t['w'] // 2, 15
+
+    def get(x, y):
+        b = entry[base + y * stride + x // 2]
+        return (b >> 4) if x & 1 else (b & 15)
+
+    def put(x, y, v):
+        i = base + y * stride + x // 2
+        entry[i] = (entry[i] & 0x0F) | (v << 4) if x & 1 else (entry[i] & 0xF0) | v
+
+    def glyph(code):
+        x0, y0 = _cell_a(code)
+        return [[get(x0 + x, y0 + y) for x in range(6)] for y in range(12)]
+
+    def ink(g):
+        c = collections.Counter(v for r in g for v in r if v != bg)
+        return c.most_common(1)[0][0]
+
+    def store(code, g):
+        x0, y0 = _cell_a(code)
+        for y in range(12):
+            for x in range(6):
+                put(x0 + x, y0 + y, g[y][x])
+
+    marks = {'acute': [(3, 0), (4, 0)], 'tilde': [(1, 0), (2, 0), (3, 0), (4, 0)], 'diaer': [(1, 0), (4, 0)]}
+    for ch, (b, m) in {'Á': (0x21, 'acute'), 'É': (0x25, 'acute'), 'Í': (0x29, 'acute'), 'Ó': (0x2F, 'acute'),
+                       'Ú': (0x35, 'acute'), 'Ñ': (0x2E, 'tilde'), 'Ü': (0x35, 'diaer')}.items():
+        g = glyph(b)
+        v = ink(g)
+        for x, y in marks[m]:
+            g[y][x] = v
+        store(SPANISH_A[ch], g)
+    for ch, b, mirror in (('¿', 0x12, True), ('¡', 0x13, False)):
+        g = glyph(b)
+        rows = [y for y in range(12) if any(p != bg for p in g[y])]
+        y0, y1 = rows[0], rows[-1]
+        new = [list(r) for r in g]
+        for y in range(y0, y1 + 1):
+            src = g[y0 + y1 - y]
+            new[y] = src[::-1] if mirror else list(src)
+        store(SPANISH_A[ch], new)
+
+
+def uses_spanish_a(texts):
+    pre = {p for p, _f, _e, _b, font, _c in BLOCKS if font == 'A'}
+    return any(k.rsplit('#', 1)[0] in pre and any(c in SPANISH_A for c in v) for k, v in texts.items())
+
+
 def import_(use_en=False):
     texts = load_translation(use_en)
     data = {f: bytearray(open(os.path.join(ORIG, f), 'rb').read()) for f in FILES}
@@ -263,6 +328,13 @@ def import_(use_en=False):
                 _, a, n, blob = ents_f[target]
                 assert len(new) == len(blob)
                 data[f][a * 2048:(a + n) * 2048] = new
+    if uses_spanish_a(texts):
+        for f in STAT:
+            for i, a, n, _ in tfile.entries(bytes(data[f])):
+                if i in FONT_A_SHEETS:
+                    ent = bytearray(data[f][a * 2048:(a + n) * 2048])
+                    draw_spanish_a(ent)
+                    data[f][a * 2048:(a + n) * 2048] = ent
     for f in FILES:
         tfile.fix_checksums(data[f], open(os.path.join(ORIG, f), 'rb').read())
         p = os.path.join(OUT, f)
