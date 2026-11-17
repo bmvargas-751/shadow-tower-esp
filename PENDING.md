@@ -19,6 +19,10 @@ Se deciden al ver la pantalla.
 - [ ] `stat/00#0350`–`0371`, `fdat/480#0352` (orquestador, ancho): mensajes de la memory card bastante más largos que el original (`stat/00#0352`, 37 caracteres contra 24). Ver que entren en su cuadro.
 - [ ] `stat/08#0027`, `#0028`, `#0030` y `stat/01#0134` (revisor, ancho): mensajes del modo VS (de 43 a 52 caracteres) y «TELETRANSPORTE» con sangría (24 columnas). Ver en pantalla.
 
+## Alineación con el largo en inglés (prueba 0.9.1, 2026-11-17)
+
+- [ ] (orquestador, técnico): el tipo de criatura de la ficha (alineado a la derecha) y las opciones del menú principal y de OPTIONS (centradas) se ubican con el largo del texto en inglés (TECH.md, «Prueba 0.9.0 en el juego»). No se arregla desde el texto: hay que parchear el código. El usuario pidió las opciones alineadas a la izquierda.
+
 ## Formas cortas de la prueba 0.9.0 (2026-11-17)
 
 Soluciones provisionales, ya aplicadas, para lo que no entraba en pantalla (límites en TECH.md y en `tools/hooks.py`). Se apartan del glosario a propósito (avisos G-3). Falta tu «ok» o la alternativa.

@@ -170,7 +170,7 @@ Términos fijos de la traducción. La guía de estilo está en [STYLE.md](STYLE.
 | GAUNTLET | GUANTELETE | decidido 2026-11-16 | Guantes, botas o escudo. |
 | ARM GUARD | BRAZAL | decidido 2026-11-16 | Guantes, botas o escudo. |
 | BOOTS | BOTAS | decidido 2026-11-16 | Guantes, botas o escudo. |
-| LEG GUARD | GREBA | decidido 2026-11-16 | Guantes, botas o escudo. |
+| LEG GUARD | GREBAS | decidido 2026-11-17 | Guantes, botas o escudo. En plural, como BOTAS: van de a par (prueba 0.9.1). |
 | BUCKLER | RODELA | decidido 2026-11-16 | Guantes, botas o escudo. |
 | SMALL SHIELD | ESCUDO PEQUEÑO | decidido 2026-11-16 | Guantes, botas o escudo. |
 | LARGE SHIELD | ESCUDO GRANDE | decidido 2026-11-16 | Guantes, botas o escudo. |
