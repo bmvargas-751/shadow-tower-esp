@@ -1,11 +1,106 @@
 {"key": "stat/01#0000", "es": "PV"}
 {"key": "stat/01#0001", "es": "PM"}
+{"key": "stat/01#0002", "es": "ATAQUE FÍSICO"}
+{"key": "stat/01#0003", "es": "ATAQUE MÁGICO DER."}
+{"key": "stat/01#0004", "es": "ATAQUE MÁGICO IZQ."}
+{"key": "stat/01#0005", "es": "DEFENSA DE ARMADURA"}
+{"key": "stat/01#0006", "es": "DEFENSA MÁGICA"}
+{"key": "stat/01#0007", "es": "DEFENSA DE ESCUDO"}
+{"key": "stat/01#0008", "es": "DEF. MÁGICA ESCUDO"}
+{"key": "stat/01#0009", "es": "VELOCIDAD DE ATAQUE"}
+{"key": "stat/01#0010", "es": "VELOCIDAD MÁGICA"}
+{"key": "stat/01#0011", "es": "RESIST. AL IMPACTO"}
+{"key": "stat/01#0012", "es": "CURA DE ESTADOS"}
+{"key": "stat/01#0013", "es": "PESO DEL EQUIPO"}
+{"key": "stat/01#0014", "es": "FUERZA"}
+{"key": "stat/01#0015", "es": "VELOCIDAD"}
+{"key": "stat/01#0016", "es": "DEFENSA"}
+{"key": "stat/01#0017", "es": "EQUILIBRIO"}
 {"key": "stat/01#0018", "es": "CORTE"}
 {"key": "stat/01#0019", "es": "GOLPE"}
 {"key": "stat/01#0020", "es": "ESTOCADA"}
+{"key": "stat/01#0021", "es": "ESPÍRITU"}
+{"key": "stat/01#0022", "es": "CONCENTRACIÓN"}
+{"key": "stat/01#0023", "es": "ARMONÍA"}
+{"key": "stat/01#0024", "es": "PUREZA"}
+{"key": "stat/01#0025", "es": "PARTÍCULA"}
+{"key": "stat/01#0026", "es": "DISOLUCIÓN"}
+{"key": "stat/01#0027", "es": "ALMA"}
 {"key": "stat/01#0028", "es": "PESO"}
 {"key": "stat/01#0029", "es": "DUR"}
+{"key": "stat/01#0100", "es": "FUERZA"}
+{"key": "stat/01#0101", "es": "VELOCIDAD"}
+{"key": "stat/01#0102", "es": "DEFENSA"}
+{"key": "stat/01#0103", "es": "EQUILIBRIO"}
 {"key": "stat/01#0104", "es": "CORTE"}
 {"key": "stat/01#0105", "es": "GOLPE"}
 {"key": "stat/01#0106", "es": "ESTOCADA"}
+{"key": "stat/01#0107", "es": "ESPÍRITU"}
+{"key": "stat/01#0108", "es": "CONCENTRACIÓN"}
+{"key": "stat/01#0109", "es": "ARMONÍA"}
+{"key": "stat/01#0110", "es": "PUREZA"}
+{"key": "stat/01#0111", "es": "PARTÍCULA"}
+{"key": "stat/01#0112", "es": "DISOLUCIÓN"}
+{"key": "stat/01#0113", "es": "ALMA"}
+{"key": "stat/01#0117", "es": "TIPO"}
 {"key": "stat/01#0118", "es": "PV"}
+{"key": "stat/01#0119", "es": "PA OBTENIDOS"}
+{"key": "stat/01#0120", "es": "ALTURA"}
+{"key": "stat/01#0121", "es": "PESO"}
+{"key": "stat/01#0122", "es": "ATAQUE FÍSICO"}
+{"key": "stat/01#0123", "es": "ATAQUE MÁGICO"}
+{"key": "stat/01#0124", "es": "DEFENSA FÍSICA"}
+{"key": "stat/01#0125", "es": "DEFENSA MÁGICA"}
+{"key": "stat/01#0126", "es": "HABILIDADES{0032}"}
+{"key": "stat/01#0130", "es": "         RISA"}
+{"key": "stat/01#0131", "es": "         GRITO"}
+{"key": "stat/01#0132", "es": "        LANZA ROCAS"}
+{"key": "stat/01#0133", "es": "        ABSORCIÓN DE PM"}
+{"key": "stat/01#0134", "es": "          TELETRANSPORTE"}
+{"key": "stat/01#0135", "es": "         MALDICIÓN"}
+{"key": "stat/01#0136", "es": "         MALDICIÓN"}
+{"key": "stat/01#0137", "es": "         MALDICIÓN"}
+{"key": "stat/01#0138", "es": "        OSCURIDAD"}
+{"key": "stat/01#0139", "es": "        OSCURIDAD"}
+{"key": "stat/01#0140", "es": "        OSCURIDAD"}
+{"key": "stat/01#0141", "es": "         ABSORCIÓN"}
+{"key": "stat/01#0142", "es": "         ABSORCIÓN"}
+{"key": "stat/01#0143", "es": "         ABSORCIÓN"}
+{"key": "stat/01#0144", "es": "         ABSORCIÓN"}
+{"key": "stat/01#0150", "es": "REY DEMONIO"}
+{"key": "stat/01#0151", "es": "DEMONIO"}
+{"key": "stat/01#0152", "es": "INSECTO"}
+{"key": "stat/01#0153", "es": "LIMO"}
+{"key": "stat/01#0154", "es": "PLANTA"}
+{"key": "stat/01#0155", "es": "DEMONIO GUERRERO"}
+{"key": "stat/01#0156", "es": "ELEMENTAL DE TIERRA"}
+{"key": "stat/01#0157", "es": "ELEMENTAL DE FUEGO"}
+{"key": "stat/01#0158", "es": "NO MUERTO"}
+{"key": "stat/01#0159", "es": "ELEMENTAL DE AGUA"}
+{"key": "stat/01#0160", "es": "DESCONOCIDO"}
+{"key": "stat/01#0161", "es": "ES UN ERROR"}
+{"key": "stat/01#0162", "es": "BESTIA"}
+{"key": "stat/01#0163", "es": "ES UN ERROR"}
+{"key": "stat/01#0164", "es": "SOMBRA"}
+{"key": "stat/01#0165", "es": "ARCHIDEMONIO"}
+{"key": "stat/01#0166", "es": "ES UN ERROR"}
+{"key": "stat/01#0180", "es": "RIVAL"}
+{"key": "stat/01#0200", "es": "MANO"}
+{"key": "stat/01#0201", "es": "BOLSA"}
+{"key": "stat/01#0202", "es": "FUE"}
+{"key": "stat/01#0203", "es": "VEL"}
+{"key": "stat/01#0204", "es": "DEF"}
+{"key": "stat/01#0205", "es": "EQU"}
+{"key": "stat/01#0206", "es": "COR"}
+{"key": "stat/01#0207", "es": "GOL"}
+{"key": "stat/01#0208", "es": "EST"}
+{"key": "stat/01#0209", "es": "ESP"}
+{"key": "stat/01#0210", "es": "CON"}
+{"key": "stat/01#0211", "es": "ARM"}
+{"key": "stat/01#0212", "es": "PUR"}
+{"key": "stat/01#0213", "es": "PAR"}
+{"key": "stat/01#0214", "es": "DIS"}
+{"key": "stat/01#0215", "es": "ALM"}
+{"key": "stat/01#0216", "es": "MOVER\n \n       {0032}OK        {0032}CANCELAR"}
+{"key": "stat/01#0999", "es": "VOLVER AL MENÚ PRINCIPAL\n \n       {0032}OK        {0032}CANCELAR"}
+{"key": "stat/01#1000", "es": "ERRORERRORERROR"}

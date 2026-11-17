@@ -1,3 +1,80 @@
+{"key": "stat/08#0000", "es": "INICIAR COMBATE"}
+{"key": "stat/08#0001", "es": "J1 CARGAR/GUARDAR DATOS"}
+{"key": "stat/08#0002", "es": "J2 CARGAR/GUARDAR DATOS"}
+{"key": "stat/08#0003", "es": "J1 ELEGIR CRIATURA"}
+{"key": "stat/08#0004", "es": "J2 ELEGIR CRIATURA"}
+{"key": "stat/08#0005", "es": "J1 ELEGIR OBJETO"}
+{"key": "stat/08#0006", "es": "J2 ELEGIR OBJETO"}
+{"key": "stat/08#0007", "es": "FIN"}
+{"key": "stat/08#0008", "es": "J1 PEDIR OBJETO"}
+{"key": "stat/08#0009", "es": "J2 PEDIR OBJETO"}
+{"key": "stat/08#0010", "es": "FIN DEL MODO VS{0032}"}
+{"key": "stat/08#0011", "es": "  SÍ"}
+{"key": "stat/08#0012", "es": "   NO"}
+{"key": "stat/08#0020", "es": "ELEGIR NÚMERO DE RONDAS"}
+{"key": "stat/08#0021", "es": "1 RONDA"}
+{"key": "stat/08#0022", "es": "3 RONDAS"}
+{"key": "stat/08#0023", "es": "ELEGIR CRIATURA PARA COMBATIR"}
+{"key": "stat/08#0024", "es": "J1 NO ELIGIÓ OBJETO"}
+{"key": "stat/08#0025", "es": "J2 NO ELIGIÓ OBJETO"}
+{"key": "stat/08#0026", "es": "NO HAY OBJETO QUE PEDIR"}
+{"key": "stat/08#0027", "es": "INSERTA UNA MEMORY CARD EN LA RANURA DE MEMORY CARD 1"}
+{"key": "stat/08#0028", "es": "INSERTA UNA MEMORY CARD EN LA RANURA DE MEMORY CARD 2"}
+{"key": "stat/08#0030", "es": "NO PUEDES ELEGIR UN OBJETO CON LOS MISMOS DATOS"}
+{"key": "stat/08#0031", "es": "SE CAMBIÓ LA MEMORY CARD\n \nINSERTA LA MEMORY CARD CORRECTA"}
+{"key": "stat/08#0032", "es": "REVISANDO MEMORY CARD...{0001}"}
+{"key": "stat/08#0100", "es": "FUE"}
+{"key": "stat/08#0101", "es": "VEL"}
+{"key": "stat/08#0102", "es": "DEF"}
+{"key": "stat/08#0103", "es": "EQU"}
+{"key": "stat/08#0104", "es": "COR"}
+{"key": "stat/08#0105", "es": "GOL"}
+{"key": "stat/08#0106", "es": "EST"}
+{"key": "stat/08#0107", "es": "ESP"}
+{"key": "stat/08#0108", "es": "CON"}
+{"key": "stat/08#0109", "es": "ARM"}
+{"key": "stat/08#0110", "es": "PUR"}
+{"key": "stat/08#0111", "es": "PAR"}
+{"key": "stat/08#0112", "es": "DIS"}
+{"key": "stat/08#0113", "es": "ALM"}
+{"key": "stat/08#0117", "es": "TIPO"}
 {"key": "stat/08#0118", "es": "PV"}
+{"key": "stat/08#0119", "es": "PA OBTENIDOS"}
+{"key": "stat/08#0120", "es": "ALTURA"}
+{"key": "stat/08#0121", "es": "PESO"}
+{"key": "stat/08#0122", "es": "ATAQUE FÍSICO"}
+{"key": "stat/08#0123", "es": "ATAQUE MÁGICO"}
+{"key": "stat/08#0124", "es": "DEFENSA FÍSICA"}
+{"key": "stat/08#0125", "es": "DEFENSA MÁGICA"}
+{"key": "stat/08#0126", "es": "HABILIDADES"}
+{"key": "stat/08#0127", "es": "AUTOCURACIÓN"}
+{"key": "stat/08#0128", "es": "DILUCIÓN"}
+{"key": "stat/08#0129", "es": "OSCURIDAD"}
+{"key": "stat/08#0130", "es": "{0032}{0032}{0032}{0032}"}
+{"key": "stat/08#0131", "es": "INSECTO"}
+{"key": "stat/08#0200", "es": "MANO"}
+{"key": "stat/08#0201", "es": "BOLSA"}
+{"key": "stat/08#0202", "es": "FUE"}
+{"key": "stat/08#0203", "es": "VEL"}
+{"key": "stat/08#0204", "es": "DEF"}
+{"key": "stat/08#0205", "es": "EQU"}
+{"key": "stat/08#0206", "es": "COR"}
+{"key": "stat/08#0207", "es": "GOL"}
+{"key": "stat/08#0208", "es": "EST"}
+{"key": "stat/08#0209", "es": "ESP"}
+{"key": "stat/08#0210", "es": "CON"}
+{"key": "stat/08#0211", "es": "ARM"}
+{"key": "stat/08#0212", "es": "PUR"}
+{"key": "stat/08#0213", "es": "PAR"}
+{"key": "stat/08#0214", "es": "DIS"}
+{"key": "stat/08#0215", "es": "ALM"}
+{"key": "stat/08#0216", "es": "HACER PEDIDO\n \n       {0034}OK        {0034}NO"}
+{"key": "stat/08#0220", "es": "RIVAL"}
+{"key": "stat/08#0500", "es": "SIN OBJETO PEDIDO"}
 {"key": "stat/08#0501", "es": "DUR"}
+{"key": "stat/08#0502", "es": "/"}
 {"key": "stat/08#0503", "es": "PESO"}
+{"key": "stat/08#0505", "es": "APARICIONES"}
+{"key": "stat/08#0506", "es": "SIN APARICIONES"}
+{"key": "stat/08#0507", "es": "CAPTURA"}
+{"key": "stat/08#0999", "es": "ERRORERRORERROR"}

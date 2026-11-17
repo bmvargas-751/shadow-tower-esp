@@ -21,25 +21,25 @@ Actualizado: 2026-11-17.
 | 3. Glosario y fichas | ✅ 287 términos, 7 personajes y 3 voces |
 | 4. Set de oro | ✅ 14 de 14 (oro-001) |
 | 5. Piloto | ✅ 4 lotes de 40 líneas (menús, objetos, equipo, diálogos) |
-| 6. Traducción | 🔄 12,5 % (281 de 2244 líneas) |
+| 6. Traducción | ✅ 100 % (2217 líneas; dudas en PENDING.md) |
 | 7. Prueba en el juego | ⏳ |
 | 8. Entrega (parche xdelta) | ⏳ |
 
 ### Secciones
 
 <!-- loc:progress -->
-**Etapa actual:** Fase 6. Traducción: (una casilla por sección de `loc.json`)
+**Etapa actual:** Fase 7. Prueba en el juego
 
 | Sección | Líneas | Traducidas | Avance |
 |---|---:|---:|---:|
-| Introducción | 6 | 0 | 0,0 % |
-| Interfaz y menús | 472 | 71 | 15,0 % |
-| Estadísticas | 107 | 11 | 10,3 % |
-| Nombres de criaturas | 153 | 0 | 0,0 % |
-| Objetos y equipo | 760 | 102 | 13,4 % |
-| Modo VS | 162 | 6 | 3,7 % |
-| Diálogos | 112 | 40 | 35,7 % |
-| Descripciones de equipo | 321 | 51 | 15,9 % |
-| Descripciones de criaturas | 151 | 0 | 0,0 % |
-| **Total** | **2.244** | **281** | **12,5 %** |
+| Introducción | 6 | 6 | 100,0 % |
+| Interfaz y menús | 448 | 448 | 100,0 % |
+| Estadísticas | 106 | 106 | 100,0 % |
+| Nombres de criaturas | 153 | 153 | 100,0 % |
+| Objetos y equipo | 760 | 760 | 100,0 % |
+| Modo VS | 160 | 160 | 100,0 % |
+| Diálogos | 112 | 112 | 100,0 % |
+| Descripciones de equipo | 321 | 321 | 100,0 % |
+| Descripciones de criaturas | 151 | 151 | 100,0 % |
+| **Total** | **2.217** | **2.217** | **100,0 %** |
 <!-- /loc:progress -->

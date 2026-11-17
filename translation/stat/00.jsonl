@@ -41,9 +41,172 @@
 {"key": "stat/00#0108", "es": "CANCELAR"}
 {"key": "stat/00#0109", "es": "DUR"}
 {"key": "stat/00#0200", "es": "AJUSTAR MÚSICA"}
+{"key": "stat/00#0201", "es": "AJUSTAR EFECTOS"}
+{"key": "stat/00#0202", "es": "AJUSTAR VAIVÉN"}
+{"key": "stat/00#0203", "es": "MOSTRAR ESTADO"}
+{"key": "stat/00#0204", "es": "SUBTÍTULOS"}
+{"key": "stat/00#0205", "es": "VIBRACIÓN"}
+{"key": "stat/00#0206", "es": "CONFIG. BOTONES"}
+{"key": "stat/00#0207", "es": "SÍ"}
+{"key": "stat/00#0208", "es": "NO"}
+{"key": "stat/00#0209", "es": "ADELANTE"}
+{"key": "stat/00#0210", "es": "ATRÁS"}
+{"key": "stat/00#0211", "es": "GIRAR IZQUIERDA"}
+{"key": "stat/00#0212", "es": "GIRAR DERECHA"}
+{"key": "stat/00#0213", "es": "MOVER IZQUIERDA"}
+{"key": "stat/00#0214", "es": "MOVER DERECHA"}
+{"key": "stat/00#0215", "es": "MIRAR ARRIBA"}
+{"key": "stat/00#0216", "es": "MIRAR ABAJO"}
+{"key": "stat/00#0217", "es": "MANO DER."}
+{"key": "stat/00#0218", "es": "MANO IZQ."}
+{"key": "stat/00#0219", "es": "EVENTO"}
+{"key": "stat/00#0220", "es": "MAGIA/MENÚ"}
+{"key": "stat/00#0221", "es": "AJUSTE ESTÁNDAR"}
+{"key": "stat/00#0222", "es": "LISTO"}
+{"key": "stat/00#0223", "es": "AJUSTA EL VOLUMEN DE LA MÚSICA"}
+{"key": "stat/00#0224", "es": "AJUSTA EL VOLUMEN DE LOS EFECTOS"}
+{"key": "stat/00#0225", "es": "AJUSTA EL VAIVÉN AL CAMINAR"}
+{"key": "stat/00#0226", "es": "MUESTRA U OCULTA PV/PM"}
+{"key": "stat/00#0227", "es": "MUESTRA U OCULTA LOS SUBTÍTULOS"}
+{"key": "stat/00#0228", "es": "ACTIVA O DESACTIVA LA VIBRACIÓN"}
+{"key": "stat/00#0229", "es": "CAMBIA LA CONFIGURACIÓN DE BOTONES"}
+{"key": "stat/00#0300", "es": "     CARGAR DATOS"}
+{"key": "stat/00#0301", "es": "     GUARDAR DATOS"}
+{"key": "stat/00#0310", "es": "     REVISANDO MEMORY CARD..."}
+{"key": "stat/00#0311", "es": "     MEMORY CARD SIN FORMATO\n     ¿DESEAS FORMATEARLA?"}
+{"key": "stat/00#0312", "es": "     FORMATEANDO..."}
+{"key": "stat/00#0320", "es": "RANURA DE MEMORY CARD 1"}
+{"key": "stat/00#0321", "es": "RANURA DE MEMORY CARD 2"}
+{"key": "stat/00#0322", "es": "NUEVO ARCHIVO"}
+{"key": "stat/00#0323", "es": "    ¿CARGAR DATOS?"}
+{"key": "stat/00#0324", "es": "    ¿GUARDAR DATOS?"}
+{"key": "stat/00#0325", "es": "SÍ"}
+{"key": "stat/00#0326", "es": "NO"}
+{"key": "stat/00#0327", "es": "ZONA"}
 {"key": "stat/00#0328", "es": "PA"}
+{"key": "stat/00#0329", "es": "OBJETOS"}
+{"key": "stat/00#0330", "es": "     CARGANDO..."}
+{"key": "stat/00#0331", "es": "     GUARDANDO..."}
+{"key": "stat/00#0332", "es": "     NO RETIRES LA MEMORY CARD"}
+{"key": "stat/00#0340", "es": "     FINALIZADO"}
+{"key": "stat/00#0349", "es": "     LOS DATOS ESTÁN DAÑADOS"}
+{"key": "stat/00#0350", "es": "  LA MEMORY CARD NO ESTÁ INSERTADA\n  EN LA RANURA DE MEMORY CARD"}
+{"key": "stat/00#0351", "es": "     LA MEMORY CARD\n     FUE CAMBIADA"}
+{"key": "stat/00#0352", "es": "    SIN DATOS DE LA TORRE DE LAS SOMBRAS"}
+{"key": "stat/00#0353", "es": "   BLOQUES VACÍOS INSUFICIENTES"}
+{"key": "stat/00#0354", "es": "     ERROR AL CARGAR DATOS"}
+{"key": "stat/00#0355", "es": "     ERROR AL GUARDAR DATOS"}
+{"key": "stat/00#0356", "es": "     ERROR AL FORMATEAR"}
+{"key": "stat/00#0357", "es": "  SE CAMBIÓ LA MEMORY CARD\n  INSERTA LA MEMORY CARD CORRECTA"}
+{"key": "stat/00#0358", "es": "       DATOS NO CARGADOS"}
+{"key": "stat/00#0370", "es": "     INSERTA LA MEMORY CARD DE J1\n     EN LA RANURA DE MEMORY CARD 1"}
+{"key": "stat/00#0371", "es": "     INSERTA LA MEMORY CARD DE J2\n     EN LA RANURA DE MEMORY CARD 2"}
+{"key": "stat/00#0400", "es": "¿SALIR DEL JUEGO?"}
+{"key": "stat/00#0401", "es": "SÍ"}
+{"key": "stat/00#0402", "es": "NO"}
 {"key": "stat/00#0500", "es": "USAR OBJETO"}
+{"key": "stat/00#0521", "es": "MUESTRA EL EFECTO DEL OBJETO."}
+{"key": "stat/00#0530", "es": "FUERZA"}
+{"key": "stat/00#0531", "es": "VELOCIDAD"}
+{"key": "stat/00#0532", "es": "DEFENSA"}
+{"key": "stat/00#0533", "es": "EQUILIBRIO"}
 {"key": "stat/00#0534", "es": "CORTE"}
 {"key": "stat/00#0535", "es": "GOLPE"}
 {"key": "stat/00#0536", "es": "ESTOCADA"}
+{"key": "stat/00#0537", "es": "ESPÍRITU"}
+{"key": "stat/00#0538", "es": "CONCENTRACIÓN"}
+{"key": "stat/00#0539", "es": "ARMONÍA"}
+{"key": "stat/00#0540", "es": "PUREZA"}
+{"key": "stat/00#0541", "es": "PARTÍCULA"}
+{"key": "stat/00#0542", "es": "DISOLUCIÓN"}
+{"key": "stat/00#0543", "es": "ALMA"}
+{"key": "stat/00#0544", "es": "PA RESTANTES:"}
+{"key": "stat/00#0600", "es": "UBICACIÓN"}
 {"key": "stat/00#0601", "es": "CUNES"}
+{"key": "stat/00#0602", "es": "OBJETOS"}
+{"key": "stat/00#0603", "es": "CRIATURAS"}
+{"key": "stat/00#0604", "es": "TIEMPO"}
+{"key": "stat/00#0610", "es": "MUNDO HUMANO"}
+{"key": "stat/00#0611", "es": "MUNDO DE TIERRA"}
+{"key": "stat/00#0612", "es": "MUNDO DE FUEGO"}
+{"key": "stat/00#0613", "es": "MUNDO DE AGUA"}
+{"key": "stat/00#0614", "es": "MUNDO DE ILUSIÓN"}
+{"key": "stat/00#0615", "es": "MUNDO DE MONSTRUOS"}
+{"key": "stat/00#0616", "es": "MUNDO DE LA MUERTE"}
+{"key": "stat/00#0617", "es": "MUNDO DESCONOCIDO"}
+{"key": "stat/00#0618", "es": "      ???"}
+{"key": "stat/00#0700", "es": "TORRE DE LAS SOMBRAS"}
+{"key": "stat/00#0701", "es": "REGIÓN MALDITA"}
+{"key": "stat/00#0702", "es": "ZONA DEL OJO FALSO"}
+{"key": "stat/00#0703", "es": "CUEVA DEL FÉNIX"}
+{"key": "stat/00#0704", "es": "REGIÓN SOLITARIA"}
+{"key": "stat/00#0705", "es": "REGIÓN OCULTA"}
+{"key": "stat/00#0706", "es": "REGIÓN OLVIDADA"}
+{"key": "stat/00#0708", "es": "DOMINIO CONFUSO"}
+{"key": "stat/00#0709", "es": "DOMINIO LÚGUBRE"}
+{"key": "stat/00#0710", "es": "ESTANQUE IMPURO"}
+{"key": "stat/00#0711", "es": "CAVERNA PUTREFACTA"}
+{"key": "stat/00#0712", "es": "CAVERNA TEMBLOROSA"}
+{"key": "stat/00#0713", "es": "DOMINIO DEL CULTO"}
+{"key": "stat/00#0714", "es": "ESTRATO MALDITO"}
+{"key": "stat/00#0715", "es": "CAVERNA FOSO FALSO"}
+{"key": "stat/00#0717", "es": "ZONA DE LOS CHILLIDOS"}
+{"key": "stat/00#0718", "es": "CAVERNA CENICIENTA"}
+{"key": "stat/00#0720", "es": "CAVERNA ARDIENTE"}
+{"key": "stat/00#0721", "es": "ZONA DEL RÍO HUNDIDO"}
+{"key": "stat/00#0723", "es": "PUERTA DE LOS MUERTOS"}
+{"key": "stat/00#0724", "es": "CAVERNA DE MAGMA"}
+{"key": "stat/00#0725", "es": "CASTILLO OSCURO"}
+{"key": "stat/00#0726", "es": "ESTRATO NO MUERTO"}
+{"key": "stat/00#0727", "es": "CAVERNA VENENOSA"}
+{"key": "stat/00#0728", "es": "CAVERNA DE PIEDRA"}
+{"key": "stat/00#0730", "es": "VACÍO"}
+{"key": "stat/00#0732", "es": "LABERINTO ACUÁTICO"}
+{"key": "stat/00#0733", "es": "CAVERNA ROCA HOSTIL"}
+{"key": "stat/00#0737", "es": "LLUVIA BLANCA"}
+{"key": "stat/00#0738", "es": "DOMINIO DE LOS SUEÑOS"}
+{"key": "stat/00#0740", "es": "TORRE DE LAS SOMBRAS"}
+{"key": "stat/00#0741", "es": "TORRE DE LAS SOMBRAS"}
+{"key": "stat/00#0800", "es": "{005E}{0055}{0067}{004F}{0057}{0051}{005D}{0055}"}
+{"key": "stat/00#0801", "es": "{005C}{005F}{0051}{0054}{004F}{0057}{0051}{005D}{0055}"}
+{"key": "stat/00#0850", "es": "     ¿GUARDAR DATOS?"}
+{"key": "stat/00#0851", "es": "SÍ"}
+{"key": "stat/00#0852", "es": "NO"}
+{"key": "stat/00#0900", "es": "CASCO"}
+{"key": "stat/00#0901", "es": "ARMADURA"}
+{"key": "stat/00#0902", "es": "GUANTES"}
+{"key": "stat/00#0903", "es": "BOTAS"}
+{"key": "stat/00#0904", "es": "MANO DER."}
+{"key": "stat/00#0905", "es": "RESERVA DER."}
+{"key": "stat/00#0906", "es": "MANO IZQ."}
+{"key": "stat/00#0907", "es": "RESERVA IZQ."}
+{"key": "stat/00#0908", "es": "BRAZALETE DER."}
+{"key": "stat/00#0909", "es": "BRAZALETE IZQ."}
+{"key": "stat/00#0910", "es": "AMULETO"}
+{"key": "stat/00#0911", "es": "ANILLO DER."}
+{"key": "stat/00#0912", "es": "MAGIA DER."}
+{"key": "stat/00#0913", "es": "ANILLO IZQ."}
+{"key": "stat/00#0914", "es": "MAGIA IZQ."}
+{"key": "stat/00#0915", "es": "PESO DEL EQUIPO"}
+{"key": "stat/00#0916", "es": "EXPLOSIÓN"}
+{"key": "stat/00#0917", "es": "LLAMARADA"}
+{"key": "stat/00#0918", "es": "AVISPÓN HELADO"}
+{"key": "stat/00#0919", "es": "SABLE DE HIELO"}
+{"key": "stat/00#0920", "es": "OJOS DE REINA"}
+{"key": "stat/00#0921", "es": "VENENO DOBLE"}
+{"key": "stat/00#0922", "es": "LLUVIA DE BURBUJAS"}
+{"key": "stat/00#0923", "es": "ELEMENTOS CORROSIVOS"}
+{"key": "stat/00#0924", "es": "JUICIO"}
+{"key": "stat/00#0925", "es": "RAYO PURIFICADOR"}
+{"key": "stat/00#0926", "es": "EXTERMINIO"}
+{"key": "stat/00#0927", "es": "ESPÍRITUS IMPÍOS"}
+{"key": "stat/00#0928", "es": "JUICIO"}
+{"key": "stat/00#0929", "es": "NIÑOS DEL CORO"}
+{"key": "stat/00#0930", "es": "SARIBAN"}
+{"key": "stat/00#0931", "es": "JUSTICIA"}
+{"key": "stat/00#0932", "es": "AGACCIO"}
+{"key": "stat/00#0933", "es": "MULTIPOLAR"}
+{"key": "stat/00#0934", "es": "SIN EQUIPO"}
+{"key": "stat/00#0935", "es": "SIN SELECCIÓN"}
+{"key": "stat/00#0936", "es": "COSTO DE PM"}
+{"key": "stat/00#0999", "es": "ERRORERRORERROR"}
