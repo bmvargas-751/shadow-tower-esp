@@ -1,5 +1,16 @@
 # Cambios
 
+## 0.9.1 — 2026-11-17
+
+Versión de prueba: correcciones de la primera ronda en el juego.
+
+- Nombres de objetos acortados para que entren en la lista y en el panel del objeto.
+- Pantalla EQUIP: etiquetas y peso sin pisar el nombre del objeto ni los números.
+- Configuración de botones: los nombres ya no tapan los íconos.
+- Ficha de criatura: el tipo queda dentro del recuadro.
+- Descripciones de USE ITEM más cortas donde se salían.
+- «MEMORY CARD 1/2» en lugar de «RANURA DE MEMORY CARD».
+
 ## 0.9.0 — 2026-11-17
 
 Versión de prueba: el juego completo en español neutro, todavía sin revisar entero en el juego. Puede haber textos cortados o que no entren en su cuadro; avísanos en los *issues* del repositorio.
