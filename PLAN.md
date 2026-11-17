@@ -91,4 +91,7 @@ Obligatorio: sin él, `loc.py prepare` no arma lotes.
 
 ### Fase 8. Entrega
 
-- [ ] Instalador, registro de cambios y publicación.
+- [x] Parche y paquete: `tools/st_patch.py` arma la imagen, crea el `.xdelta` (sin compresión secundaria, para que sirva en cualquier parcheador), lo comprueba aplicándolo sobre el original y deja `../shadow-tower-esp-local/dist/shadow-tower-esp-VERSIÓN.zip` con el parche, el `.cue`, `LEEME.txt` (de `tools/release/`) y CHANGELOG.md. (2026-11-17: 1.0, parche de ~1 MB; la imagen sale idéntica en cada armado.)
+- [x] Registro de cambios: CHANGELOG.md.
+- [ ] Confirmar en la prueba del juego lo que afirma LEEME.txt: que las partidas de la versión en inglés sirven, y que el título, los créditos y los logos quedan en inglés.
+- [ ] Publicación: cuando cierre la fase 7, CHANGELOG.md con la fecha y un *release* de GitHub con el `.zip` (lo confirma el usuario antes).

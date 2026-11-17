@@ -38,7 +38,11 @@ def rebuild():
 
 
 def main():
-    name = sys.argv[1] if len(sys.argv) > 1 else 'shadow-tower-esp'
+    build(sys.argv[1] if len(sys.argv) > 1 else 'shadow-tower-esp')
+
+
+def build(name):
+    """Arma TEST/NAME.{bin,cue} con la traducción y devuelve la ruta del .bin."""
     files = rebuild()
     os.makedirs(TEST, exist_ok=True)
     img = os.path.join(TEST, name + '.bin')
@@ -55,6 +59,7 @@ def main():
                 seen.add(p)
     assert seen == set(files), sorted(set(files) - seen)
     print(f'{len(files)} archivos en la imagen: {img}')
+    return img
 
 
 if __name__ == '__main__':

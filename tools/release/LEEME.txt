@@ -1,0 +1,72 @@
+SHADOW TOWER EN ESPAÑOL — versión {VERSION}
+Traducción al español neutro de Shadow Tower (PlayStation, versión USA, SLUS-00863).
+https://github.com/bmvargas-751/shadow-tower-esp
+
+
+QUÉ ESTÁ TRADUCIDO
+------------------
+- Menús, interfaz y mensajes del sistema (memory card incluida).
+- Nombres de objetos, equipo, magias, estadísticas, criaturas y lugares.
+- Todos los diálogos.
+- Descripciones de equipo y del libro de criaturas.
+- Modo VS.
+- Las pantallas de texto de la introducción.
+
+Quedan en inglés: los créditos, los logos y la pantalla de título.
+
+
+QUÉ NECESITAS
+-------------
+Tu propia copia de Shadow Tower para PlayStation, versión USA (SLUS-00863), en
+una imagen .bin de una sola pista (MODE2/2352). Este paquete NO trae el juego:
+solo el parche.
+
+La imagen tiene que ser exactamente esta (compruébalo antes de parchear):
+
+  CRC32  {ORIG_CRC32}
+  MD5    {ORIG_MD5}
+  SHA-1  {ORIG_SHA1}
+
+Si tu copia está en otro formato (.chd, .iso, .ecm, .pbp), conviértela primero a
+.bin/.cue. Si los valores no coinciden, el parche no se aplica.
+
+
+CÓMO SE APLICA
+--------------
+Windows: con Delta Patcher o xdelta UI.
+  1. Original/Source file: tu Shadow Tower .bin.
+  2. Patch file: {NAME}.xdelta
+  3. Guarda el resultado como {NAME}.bin, en la misma carpeta que el
+     {NAME}.cue de este paquete.
+
+En el navegador: Rom Patcher JS (www.marcrobledo.com/RomPatcher.js), con los
+mismos dos archivos. Guarda el resultado como {NAME}.bin.
+
+Linux o macOS:
+  xdelta3 -d -s "Shadow Tower (USA).bin" {NAME}.xdelta {NAME}.bin
+
+Para jugar, abre {NAME}.cue en el emulador (probado en DuckStation) o
+graba la imagen en un CD-R.
+
+La imagen traducida tiene que dar:
+
+  CRC32  {NEW_CRC32}
+  MD5    {NEW_MD5}
+  SHA-1  {NEW_SHA1}
+
+
+PARTIDAS GUARDADAS
+------------------
+Las partidas de la versión USA en inglés sirven en la traducción, y al revés: el
+parche cambia solo el texto. En los emuladores, los save states no se pasan de
+una imagen a otra; usa la memory card.
+
+
+CRÉDITOS
+--------
+Traducción y herramientas: bmvargas-751.
+Letra de la introducción: Special Elite, de Astigmatic (licencia Apache 2.0).
+Shadow Tower es una obra de FromSoftware. Esta traducción no es oficial y no
+tiene relación con FromSoftware ni con sus distribuidores.
+
+Los cambios de cada versión están en CHANGELOG.md.
