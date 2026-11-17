@@ -236,6 +236,7 @@ def import_(use_en=False):
                 assert len(new) == len(blob)
                 data[f][a * 2048:(a + n) * 2048] = new
     for f in FILES:
+        tfile.fix_checksums(data[f], open(os.path.join(ORIG, f), 'rb').read())
         p = os.path.join(OUT, f)
         os.makedirs(os.path.dirname(p), exist_ok=True)
         open(p, 'wb').write(data[f])

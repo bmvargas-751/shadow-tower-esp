@@ -2,10 +2,11 @@
 """Imagen de prueba combinada para DuckStation (no toca translation/).
 
 Uso (desde la raíz del proyecto):
-  st_testbuild.py          → ../shadow-tower-esp-local/test/shadow-tower-prueba-2.{bin,cue} (todo junto)
-  st_testbuild.py glyphs   → prueba-3a: solo Á/É en la entrada 0 de STAT.T
-  st_testbuild.py move     → prueba-3b: solo la fuente de la entrada 3 movida a 0x4780 (256 filas)
-  st_testbuild.py shrink   → prueba-3c: solo la fuente de la entrada 3 recortada a 64 filas (en 0x4600)
+  st_testbuild.py          → ../shadow-tower-esp-local/test/shadow-tower-prueba-4.{bin,cue} (todo junto)
+  st_testbuild.py glyphs   → prueba-4a: solo Á/É en la entrada 0 de STAT.T
+  st_testbuild.py move     → prueba-4b: solo la fuente de la entrada 3 movida a 0x4780 (256 filas)
+  st_testbuild.py shrink   → prueba-4c: solo la fuente de la entrada 3 recortada a 64 filas (en 0x4600)
+Todas las entradas modificadas llevan su suma de verificación recalculada (tfile.fix_checksums).
 
 Qué prueba:
   1. Letras nuevas en la fuente del texto codificado (STAT.T entrada 0): Á en el código 168 y É en el 300;
@@ -163,6 +164,7 @@ def _stat_entry3(d, ents, variant):
 
 
 def _write_stat(d):
+    tfile.fix_checksums(d, open(os.path.join(st_text.ORIG, 'ST/COM/STAT.T'), 'rb').read())
     out = {}
     for f in ('ST/COM/STAT.T', 'ST/VS/STAT.T'):
         p = os.path.join(BUILD, f)
@@ -202,8 +204,8 @@ def build_images():
 def main():
     global BUILD
     variant = sys.argv[1] if len(sys.argv) > 1 else 'all'
-    name = NAME if variant == 'all' else {'glyphs': 'shadow-tower-prueba-3a', 'move': 'shadow-tower-prueba-3b',
-                                          'shrink': 'shadow-tower-prueba-3c'}[variant]
+    name = {'all': 'shadow-tower-prueba-4', 'glyphs': 'shadow-tower-prueba-4a', 'move': 'shadow-tower-prueba-4b',
+            'shrink': 'shadow-tower-prueba-4c'}[variant]
     BUILD = os.path.join(TEST, 'build-' + name)
     os.makedirs(TEST, exist_ok=True)
     files = build_stat(variant)

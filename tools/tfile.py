@@ -17,3 +17,21 @@ if __name__ == '__main__':
     for i, a, n, blob in entries(d):
         if n:
             print(f'{i:4d} sec={a:5d} n={n:3d} {blob[:24].hex(" ")}')
+
+
+# Suma de verificación de cada entrada (ST.EXE, rutina en 0x80015B80): 0x12345678 más la suma de todas las
+# palabras de 32 bits de la entrada salvo la última, que guarda el resultado. Si no coincide, el juego se cae.
+def checksum(blob):
+    w = struct.unpack_from(f'<{len(blob) // 4}I', blob)
+    return (0x12345678 + sum(w[:-1])) & 0xFFFFFFFF
+
+
+def fix_checksums(data, orig):
+    """Recalcula la suma de las entradas de `data` (bytearray de un .T) que difieren de `orig`. Devuelve cuántas."""
+    n = 0
+    for (i, a, cnt, blob), (_, _, _, old) in zip(entries(bytes(data)), entries(orig)):
+        if cnt <= 0 or blob == old:
+            continue
+        struct.pack_into('<I', data, (a + cnt) * 2048 - 4, checksum(blob))
+        n += 1
+    return n

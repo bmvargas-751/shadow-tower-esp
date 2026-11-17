@@ -160,3 +160,9 @@ Palabras dibujadas con letras decorativas; no pasan por el reconocedor. Cada pal
 | Logo SHADOW TOWER, FROM SOFTWARE, avisos de copyright | `TITLE.MIC`, `FLOGO320.TIM`, `COPYRIGT.TIM`, `STR/*.STR` | 16 bpp / video | no (marcas y avisos legales) |
 
 Plan: medir el rectángulo de cada palabra (componentes conexas de la lámina), elegir con el usuario la traducción corta de cada una (con el glosario) y dibujarla con una letra parecida, en la misma paleta y sin pasarse del rectángulo.
+
+**Resultado de la prueba 3 (2026-11-16):** 3a (Á/É) y la prueba de la fuente: el menú se cae. 3b (fuente movida) y 3c (fuente achicada): el menú abre, pero se cae la pantalla de equipo (que usa la entrada 3).
+
+**Causa: suma de verificación por entrada.** Cada entrada de todos los `.T` termina en una palabra de 32 bits = `0x12345678` + suma de todas las palabras de la entrada salvo la última (rutina en `ST.EXE` `0x80015B80`; compara con `xor` y devuelve error). Se cumple en 4909 de 4961 entradas, y en el 100 % de las que tocamos (`STAT.T`, `TALKMSG.T`, `EQUIP.T`, `CRT.T`, `VS_ETC.T`, `FDAT.T` 480). Las tres pruebas cambiaban entradas sin recalcularla. `tfile.fix_checksums` la recalcula; `st_text`, `st_render` y `st_testbuild` la usan. `OPTXT.MIC` no es un `.T` y no la tiene (la introducción funcionó).
+
+Prueba 4 (pendiente): `prueba-4` (todo junto, con sumas corregidas) y `4a/4b/4c` (los mismos cambios que 3a/3b/3c), por si hay que aislar de nuevo.

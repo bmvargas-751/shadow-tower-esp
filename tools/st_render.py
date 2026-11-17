@@ -316,6 +316,7 @@ def import_(use_en=False):
         files[fn][off:off + len(pix)] = pix
         changed += 1
     for fn, data in files.items():
+        tfile.fix_checksums(data, open(os.path.join(SI.ORIG, fn), 'rb').read())
         p = os.path.join(OUT, fn)
         os.makedirs(os.path.dirname(p), exist_ok=True)
         open(p, 'wb').write(data)
