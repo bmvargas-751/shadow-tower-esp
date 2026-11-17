@@ -37,3 +37,8 @@ Lo que el usuario decidió, con fecha, para no volver a discutirlo. Una regla de
   - `talk#0192` «Death and wisdom» y `talk#0186` «Death and Knowledge» son pares distintos: sabiduría y Conocimiento, sin unificar.
   - `equip#0564`: la errata «ACID PROPERTIES 211» se corrige a «DEFENSA DE ÁCIDO 211», como los demás pavés.
   - Nombres inventados que quedan en inglés: FESTER, DEMENTOR, MAGI MAGUS, AGUTION, APOCRYPHA, DESCRYPHA, WIZCRYPHA.
+- **2026-11-17** PENDING.md, segunda ronda (usuario): se aprueban las soluciones provisionales de los lotes, salvo cinco que pasan a la alternativa:
+  - DRAGON SWORD → ESPADA DE DRAGÓN; GOD PLATE → ARMADURA DIVINA; KEY OF DELUSION → LLAVE DEL ENGAÑO (`stat/03` y `stat/04`).
+  - `talk#0144`: «Aunque, en realidad, no es agua: es ácido.»
+  - `intro#3`: «¿Qué significan estas palabras...?» (presente, como el original).
+  - Quedan como estaban, entre otras: ESPADA SANGRIENTA, PAR/DIS en el modo VS, ¿SALIR DEL JUEGO? / ¿SEGURO?, AJUSTAR VAIVÉN, RESERVA DER./IZQ., INSECTO ALADO, DESTELLO AZUL, CORNETISTA, OJO SALTÓN, SABLE DE TRUENO, CRUZ HÍBRIDA, DEMONIO MALDITO, ANILLO DEL ESPÍRITU MUERTO, VACÍO, ANILLO DE ALMAS OSCURAS; y en los diálogos `talk#0304` y `talk#0307`.
