@@ -27,4 +27,4 @@ Lo que el usuario decidió, con fecha, para no volver a discutirlo. Una regla de
 - **2026-11-17** Piloto: END GAME → SALIR; TRADE → INTERCAMBIAR; DARK como elemento → OSCURIDAD (como estado sigue CEGUERA); `equip#0117` sin punto final para que entre en 5 renglones.
 - **2026-11-17** Glosario: los afijos que concuerdan van en minúscula (el control del kit solo reconoce género y número en minúscula); las filas con paréntesis en «Inglés» (DARK (estado), R (ranura), ON (opción)…) quedan fuera del control automático; los nombres sin artículo (rey Edward, Caos…).
 - **2026-11-17** Medidas en pies y pulgadas: la exportación las da con ′ y ″ (no comillas).
-- **2026-11-17** Las casillas vacías del original (`stat/01#0116`, `stat/08#0504`, `vs_etc/15#0504`) van en `excluded` de `loc.json`: no hay texto que traducir.
+- **2026-11-17** Las casillas vacías del original (27, todas en `stat/00`, `stat/01`, `stat/08` y `vs_etc/15`) van en `excluded` de `loc.json`: no hay texto que traducir.

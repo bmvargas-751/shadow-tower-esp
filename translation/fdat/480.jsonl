@@ -1,26 +1,203 @@
 {"key": "fdat/480#0000", "es": "PV"}
 {"key": "fdat/480#0001", "es": "PM"}
 {"key": "fdat/480#0002", "es": "PA"}
+{"key": "fdat/480#0003", "es": "CUNES"}
 {"key": "fdat/480#0004", "es": "ESTADO"}
 {"key": "fdat/480#0005", "es": "ATAQUE MÁGICO IZQ."}
 {"key": "fdat/480#0006", "es": "ATAQUE MÁGICO DER."}
+{"key": "fdat/480#0007", "es": "???"}
+{"key": "fdat/480#0008", "es": "???"}
+{"key": "fdat/480#0009", "es": "???"}
+{"key": "fdat/480#0010", "es": "MAG ESCUDO"}
 {"key": "fdat/480#0011", "es": "USAR OBJETO"}
+{"key": "fdat/480#0012", "es": "???"}
+{"key": "fdat/480#0013", "es": "???"}
 {"key": "fdat/480#0014", "es": "BESTIARIO"}
+{"key": "fdat/480#0015", "es": "???"}
+{"key": "fdat/480#0016", "es": "OPCIONES"}
+{"key": "fdat/480#0017", "es": "CARGAR DATOS"}
+{"key": "fdat/480#0018", "es": "SALIR"}
 {"key": "fdat/480#0019", "es": "NORMAL"}
 {"key": "fdat/480#0020", "es": "VENENO"}
 {"key": "fdat/480#0021", "es": "PARÁLISIS"}
 {"key": "fdat/480#0022", "es": "CEGUERA"}
+{"key": "fdat/480#0023", "es": "LENTO"}
 {"key": "fdat/480#0024", "es": "MALDICIÓN"}
+{"key": "fdat/480#0025", "es": "NINGUNO"}
+{"key": "fdat/480#0026", "es": "FUEGO"}
+{"key": "fdat/480#0027", "es": "HIELO"}
 {"key": "fdat/480#0028", "es": "VENENO"}
 {"key": "fdat/480#0029", "es": "ÁCIDO"}
 {"key": "fdat/480#0030", "es": "SAGRADO"}
 {"key": "fdat/480#0031", "es": "OSCURIDAD"}
+{"key": "fdat/480#0100", "es": "CUNES"}
 {"key": "fdat/480#0101", "es": "PV RESTANTES"}
+{"key": "fdat/480#0102", "es": "C"}
+{"key": "fdat/480#0103", "es": "???        ???\n???        ???\n???        ???\n???        ???\n???        ???\n???        ???\n???        ???"}
 {"key": "fdat/480#0104", "es": "PESO"}
 {"key": "fdat/480#0105", "es": "COMPRAR"}
 {"key": "fdat/480#0106", "es": "REPARAR"}
+{"key": "fdat/480#0107", "es": "CAMBIAR"}
 {"key": "fdat/480#0108", "es": "CANCELAR"}
+{"key": "fdat/480#0109", "es": "DURABILIDAD"}
+{"key": "fdat/480#0200", "es": "VOLUMEN DE MÚSICA"}
+{"key": "fdat/480#0201", "es": "??? VOLUMEN"}
+{"key": "fdat/480#0202", "es": "EFECTO AL CAMINAR"}
+{"key": "fdat/480#0203", "es": "TODOS LOS ESTADOS"}
+{"key": "fdat/480#0204", "es": "???SUBTÍTULOS"}
+{"key": "fdat/480#0205", "es": "VIBRACIÓN"}
+{"key": "fdat/480#0206", "es": "CONFIG. BOTONES"}
+{"key": "fdat/480#0207", "es": "SÍ"}
+{"key": "fdat/480#0208", "es": "NO"}
+{"key": "fdat/480#0209", "es": "ADELANTE"}
+{"key": "fdat/480#0210", "es": "HACIA ATRÁS"}
+{"key": "fdat/480#0211", "es": "GIRAR IZQUIERDA"}
+{"key": "fdat/480#0212", "es": "GIRAR DERECHA"}
+{"key": "fdat/480#0213", "es": "MOVER IZQUIERDA"}
+{"key": "fdat/480#0214", "es": "MOVER DERECHA"}
+{"key": "fdat/480#0215", "es": "MIRAR ARRIBA"}
+{"key": "fdat/480#0216", "es": "MIRAR ABAJO"}
+{"key": "fdat/480#0217", "es": "???DERECHA"}
+{"key": "fdat/480#0218", "es": "???IZQUIERDA"}
+{"key": "fdat/480#0219", "es": "EVENTO"}
+{"key": "fdat/480#0220", "es": "MAGIA/MENÚ"}
+{"key": "fdat/480#0221", "es": "AJUSTE ESTÁNDAR"}
+{"key": "fdat/480#0222", "es": "SALIR"}
+{"key": "fdat/480#0223", "es": "AJUSTAR VOLUMEN DE MÚSICA"}
+{"key": "fdat/480#0224", "es": "AJUSTAR VOLUMEN DE ???"}
+{"key": "fdat/480#0225", "es": "???"}
+{"key": "fdat/480#0226", "es": "???"}
+{"key": "fdat/480#0227", "es": "??? SUBTÍTULOS"}
+{"key": "fdat/480#0228", "es": "??? VIBRACIÓN"}
+{"key": "fdat/480#0229", "es": "CONFIG. BOTONES"}
 {"key": "fdat/480#0300", "es": "CARGAR DATOS"}
+{"key": "fdat/480#0301", "es": "GUARDAR DATOS"}
+{"key": "fdat/480#0310", "es": "REVISANDO MEMORY CARD..."}
+{"key": "fdat/480#0311", "es": "LA MEMORY CARD NO ESTÁ\n              FORMATEADA\n\n  ¿FORMATEAR MEMORY CARD?"}
+{"key": "fdat/480#0312", "es": "FORMATEANDO MEMORY CARD..."}
+{"key": "fdat/480#0320", "es": "RANURA 1"}
+{"key": "fdat/480#0321", "es": "RANURA 2"}
+{"key": "fdat/480#0322", "es": "NUEVO ARCHIVO"}
+{"key": "fdat/480#0323", "es": "¿CARGAR?"}
+{"key": "fdat/480#0324", "es": "¿GUARDAR DATOS?"}
+{"key": "fdat/480#0325", "es": "SÍ"}
+{"key": "fdat/480#0326", "es": "NO"}
+{"key": "fdat/480#0327", "es": "???:"}
 {"key": "fdat/480#0328", "es": "PA"}
+{"key": "fdat/480#0329", "es": "??? EQUIPO"}
+{"key": "fdat/480#0330", "es": "CARGANDO..."}
+{"key": "fdat/480#0331", "es": "GUARDANDO..."}
+{"key": "fdat/480#0332", "es": "     NO ??? LA MEMORY CARD"}
+{"key": "fdat/480#0340", "es": "FINALIZADO SIN PROBLEMAS"}
+{"key": "fdat/480#0349", "es": "LOS DATOS ESTÁN DAÑADOS"}
+{"key": "fdat/480#0350", "es": "LA MEMORY CARD NO ESTÁ\n\n           EN LA RANURA"}
+{"key": "fdat/480#0351", "es": "LA MEMORY CARD FUE\n\n           CAMBIADA"}
+{"key": "fdat/480#0352", "es": "LOS DATOS DE LA TORRE DE LAS SOMBRAS\n\n           NO ESTÁN AQUÍ"}
+{"key": "fdat/480#0353", "es": "BLOQUES LLENOS"}
+{"key": "fdat/480#0354", "es": "ERROR AL CARGAR"}
+{"key": "fdat/480#0355", "es": "ERROR AL GUARDAR DATOS"}
+{"key": "fdat/480#0356", "es": "ERROR AL FORMATEAR"}
+{"key": "fdat/480#0357", "es": "LA MEMORY CARD FUE CAMBIADA\n\nINSERTA LA CORRECTA"}
+{"key": "fdat/480#0358", "es": "LOS DATOS NO SE CARGARON"}
+{"key": "fdat/480#0360", "es": "MUNDO HUMANO REGIÓN SOLITARIA"}
+{"key": "fdat/480#0361", "es": "???1"}
+{"key": "fdat/480#0362", "es": "???2"}
+{"key": "fdat/480#0363", "es": "???3"}
+{"key": "fdat/480#0370", "es": "COLOCA LA MEMORY CARD DE J1\n\nEN LA RANURA 1"}
+{"key": "fdat/480#0371", "es": "COLOCA LA MEMORY CARD DE J2\n\nEN LA RANURA 2"}
+{"key": "fdat/480#0400", "es": "¿SALIR DEL JUEGO?\n     ¿SEGURO?"}
+{"key": "fdat/480#0401", "es": "SÍ"}
+{"key": "fdat/480#0402", "es": "NO"}
 {"key": "fdat/480#0500", "es": "USAR OBJETO"}
+{"key": "fdat/480#0501", "es": "OBJETO1"}
+{"key": "fdat/480#0502", "es": "OBJETO2"}
+{"key": "fdat/480#0503", "es": "OBJETO3"}
+{"key": "fdat/480#0504", "es": "OBJETO4"}
+{"key": "fdat/480#0505", "es": "OBJETO5"}
+{"key": "fdat/480#0506", "es": "OBJETO6"}
+{"key": "fdat/480#0507", "es": "OBJETO7"}
+{"key": "fdat/480#0508", "es": "OBJETO8"}
+{"key": "fdat/480#0509", "es": "OBJETO9"}
+{"key": "fdat/480#0510", "es": "OBJETO10"}
+{"key": "fdat/480#0511", "es": "OBJETO11"}
+{"key": "fdat/480#0512", "es": "OBJETO12"}
+{"key": "fdat/480#0513", "es": "OBJETO13"}
+{"key": "fdat/480#0514", "es": "OBJETO14"}
+{"key": "fdat/480#0515", "es": "OBJETO15"}
+{"key": "fdat/480#0516", "es": "OBJETO16"}
+{"key": "fdat/480#0517", "es": "OBJETO17"}
+{"key": "fdat/480#0518", "es": "OBJETO18"}
+{"key": "fdat/480#0519", "es": "OBJETO19"}
+{"key": "fdat/480#0520", "es": "OBJETO20"}
+{"key": "fdat/480#0521", "es": "??? EFECTO DE OBJETO"}
+{"key": "fdat/480#0530", "es": "???"}
+{"key": "fdat/480#0531", "es": "???"}
+{"key": "fdat/480#0532", "es": "???"}
+{"key": "fdat/480#0533", "es": "???"}
+{"key": "fdat/480#0534", "es": "???"}
+{"key": "fdat/480#0535", "es": "???"}
+{"key": "fdat/480#0536", "es": "???"}
+{"key": "fdat/480#0537", "es": "???"}
+{"key": "fdat/480#0538", "es": "???"}
+{"key": "fdat/480#0539", "es": "???"}
+{"key": "fdat/480#0540", "es": "???"}
+{"key": "fdat/480#0541", "es": "???"}
+{"key": "fdat/480#0542", "es": "???"}
+{"key": "fdat/480#0543", "es": "???"}
+{"key": "fdat/480#0544", "es": "???  RESTANTES:"}
+{"key": "fdat/480#0600", "es": "POSICIÓN ACTUAL"}
+{"key": "fdat/480#0601", "es": "CUNES"}
+{"key": "fdat/480#0602", "es": "???EQUIPO"}
+{"key": "fdat/480#0603", "es": "???MONSTRUOS"}
+{"key": "fdat/480#0604", "es": "TIEMPO TRANSCURRIDO"}
+{"key": "fdat/480#0610", "es": "MUNDO HUMANO"}
+{"key": "fdat/480#0611", "es": "MUNDO DE TIERRA"}
+{"key": "fdat/480#0612", "es": "MUNDO DE FUEGO"}
+{"key": "fdat/480#0613", "es": "MUNDO DEL ESPÍRITU DE AGUA"}
+{"key": "fdat/480#0614", "es": "MUNDO DE ILUSIÓN"}
+{"key": "fdat/480#0615", "es": "MUNDO DE MONSTRUOS"}
+{"key": "fdat/480#0616", "es": "MUNDO DE LA MUERTE"}
+{"key": "fdat/480#0617", "es": "MUNDO DESCONOCIDO"}
+{"key": "fdat/480#0618", "es": "???"}
+{"key": "fdat/480#0700", "es": "TORRE OSCURA"}
+{"key": "fdat/480#0701", "es": "REGIÓN MALDITA"}
+{"key": "fdat/480#0702", "es": "ZONA DEL OJO FALSO"}
+{"key": "fdat/480#0703", "es": "CUEVA DEL FÉNIX"}
+{"key": "fdat/480#0704", "es": "REGIÓN SOLITARIA"}
+{"key": "fdat/480#0705", "es": "ZONA DE LA PLEGARIA FINAL"}
+{"key": "fdat/480#0706", "es": "ZONA DEL OLVIDO"}
+{"key": "fdat/480#0708", "es": "ESTATUA CONFUSA"}
+{"key": "fdat/480#0709", "es": "ESTATUA LÚGUBRE"}
+{"key": "fdat/480#0710", "es": "ANILLO DEL MANANTIAL IMPURO"}
+{"key": "fdat/480#0711", "es": "CAVERNA PUTREFACTA"}
+{"key": "fdat/480#0712", "es": "CAVERNA TEMBLOROSA"}
+{"key": "fdat/480#0713", "es": "ESTATUA DEL FANTASMA ORANTE"}
+{"key": "fdat/480#0714", "es": "ESTRATO MALDITO"}
+{"key": "fdat/480#0715", "es": "CAVERNA FOSO FALSO"}
+{"key": "fdat/480#0717", "es": "ZONA DE LOS CHILLIDOS"}
+{"key": "fdat/480#0718", "es": "CAVERNA CENICIENTA"}
+{"key": "fdat/480#0720", "es": "CAVERNA ARDIENTE"}
+{"key": "fdat/480#0721", "es": "ANILLO DEL RÍO HUNDIDO"}
+{"key": "fdat/480#0723", "es": "PUERTA DE LOS MUERTOS"}
+{"key": "fdat/480#0724", "es": "CAVERNA DE MAGMA"}
+{"key": "fdat/480#0725", "es": "ESTRATO DEL CASTILLO NOCTURNO"}
+{"key": "fdat/480#0726", "es": "ESTRATO DEL HAMBRE"}
+{"key": "fdat/480#0727", "es": "CAVERNA DE SUELO VENENOSO"}
+{"key": "fdat/480#0728", "es": "CAVERNA DE PIEDRA"}
+{"key": "fdat/480#0730", "es": "VACÍO"}
+{"key": "fdat/480#0732", "es": "ANILLO DE LA CUENCA"}
+{"key": "fdat/480#0733", "es": "CAVERNA ROCA HOSTIL"}
+{"key": "fdat/480#0737", "es": "ANILLO DE LA LLUVIA BLANCA"}
+{"key": "fdat/480#0738", "es": "ESTATUA DEL SUEÑO"}
+{"key": "fdat/480#0740", "es": "TORRE OSCURA"}
+{"key": "fdat/480#0741", "es": "TORRE OSCURA"}
+{"key": "fdat/480#0850", "es": "¿GUARDAR DATOS?"}
+{"key": "fdat/480#0851", "es": "SÍ"}
+{"key": "fdat/480#0852", "es": "NO"}
+{"key": "fdat/480#0916", "es": "EXPLOSIÓN"}
+{"key": "fdat/480#0918", "es": "LLAMARADA"}
+{"key": "fdat/480#0922", "es": "LLUVIA DE BURBUJAS"}
+{"key": "fdat/480#0928", "es": "JUICIO"}
+{"key": "fdat/480#0933", "es": "MULTIPOLAR"}
+{"key": "fdat/480#0934", "es": "SIN EQUIPO"}
 {"key": "fdat/480#0999", "es": "ERRORERRORERROR"}
