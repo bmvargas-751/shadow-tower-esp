@@ -18,8 +18,6 @@ Se deciden al ver la pantalla.
 
 ## Términos sin regla (set de oro, 2026-11-17)
 
-- [ ] `talk#0030` (traductor, sin regla): «demoness» → «demonia» (Auriel). Alternativa: «diablesa». No está en el glosario.
-- [ ] `stat/00#0311` (revisor, sin regla): «MEMORY CARD» queda en inglés («MEMORY CARD SIN FORMATO»). Alternativa: «TARJETA DE MEMORIA» (más larga). Es el nombre del accesorio de la consola; aparece en toda la pantalla de guardado.
 - [ ] `equip#0003` (revisor, original): el original trae los signos de pie y pulgada invertidos (`2"11'`, visto en la imagen). Se lee como 2 pies 11 pulgadas → 89 CM.
 
 ## De los lotes

@@ -303,3 +303,5 @@ Términos fijos de la traducción. La guía de estilo está en [STYLE.md](STYLE.
 | SLAYER | EXTERMINIO | decidido 2026-11-16 | Magia. |
 | UNHOLY SPRIT | ESPÍRITU IMPÍO | decidido 2026-11-16 | Magia (sprit: errata de spirit). |
 | MULTIPOLAR | MULTIPOLAR | decidido 2026-11-16 | Magia (igual al inglés). |
+| demoness | diablesa | decidido 2026-11-17 | Cómo se presenta Auriel («la diablesa Auriel»). |
+| MEMORY CARD | MEMORY CARD | decidido 2026-11-17 | Nombre del accesorio de la consola: queda en inglés. |
