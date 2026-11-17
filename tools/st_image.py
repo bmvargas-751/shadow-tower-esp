@@ -117,11 +117,14 @@ def lines(t, font, thr=THRESHOLDS[0]):
         if not any(col):
             continue
         best = max(range(pw), key=lambda o: (sum(1 for x in range(o, W, pw) if not col[x]), -o))
+        # las celdas arrancan antes del origen si hace falta (con origen 9, la primera celda empieza en x = −1:
+        # ahí está la primera letra de los renglones de equipo y criaturas); lo que cae fuera es vacío
+        start = best - pw * ((best + pw - 1) // pw)
         cs = []
-        for x0 in range(best, W - pw + 1, pw):
-            cs.append(tuple(0 if (x == 0 or y >= len(rows)) else px[rows[y] * W + x0 + x]
+        for x0 in range(start, W - pw + 1, pw):
+            cs.append(tuple(0 if (x == 0 or y >= len(rows) or not 0 <= x0 + x < W) else px[rows[y] * W + x0 + x]
                             for y in range(ch) for x in range(pw)))
-        out.append((r, best, cs))
+        out.append((r, start, cs))
     return out
 
 

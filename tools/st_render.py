@@ -28,7 +28,7 @@ OUT = os.path.join(LOCAL, 'build', 'files')
 
 # Caja de texto por fuente (TECH.md): x inicial, máximo de caracteres por renglón y de renglones.
 LIMITS = {'talk': {'cols': 33, 'rows': 5}, 'equip': {'rows': 5}, 'crt': {'rows': 5}}
-EQUIP_X = 9  # equip/crt: las celdas empiezan en x = 9
+EQUIP_X = -1  # equip/crt: las celdas empiezan en x = −1 (la letra, desde x = 0), como el original
 BASELINE = {'talk': 10, 'equip': 9}  # fila de la línea de base dentro de la celda
 
 
