@@ -36,8 +36,7 @@ CÓMO SE APLICA
 Windows: con Delta Patcher o xdelta UI.
   1. Original/Source file: tu Shadow Tower .bin.
   2. Patch file: {NAME}.xdelta
-  3. Guarda el resultado como {NAME}.bin, en la misma carpeta que el
-     {NAME}.cue de este paquete.
+  3. Guarda el resultado como {NAME}.bin.
 
 En el navegador: Rom Patcher JS (www.marcrobledo.com/RomPatcher.js), con los
 mismos dos archivos. Guarda el resultado como {NAME}.bin.
@@ -45,8 +44,9 @@ mismos dos archivos. Guarda el resultado como {NAME}.bin.
 Linux o macOS:
   xdelta3 -d -s "Shadow Tower (USA).bin" {NAME}.xdelta {NAME}.bin
 
-Para jugar, abre {NAME}.cue en el emulador (probado en DuckStation) o
-graba la imagen en un CD-R.
+Para jugar, abre {NAME}.bin en el emulador (probado en DuckStation).
+Si tu emulador o tu programa para grabar CD pide un .cue, copia el de tu juego
+y cambia adentro el nombre del .bin por {NAME}.bin.
 
 La imagen traducida tiene que dar:
 

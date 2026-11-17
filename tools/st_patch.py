@@ -9,7 +9,7 @@ Pasos:
   1. Comprueba que original.bin es la imagen USA esperada (SHA-1).
   2. Arma la imagen traducida con st_build.
   3. Crea el parche con xdelta3 y lo aplica de vuelta sobre original.bin para comprobar que da la misma imagen.
-  4. Arma la carpeta y el .zip: parche, .cue, LEEME.txt (de tools/release/) y CHANGELOG.md.
+  4. Arma la carpeta y el .zip: parche, LEEME.txt (de tools/release/) y CHANGELOG.md.
 
 xdelta3 se busca en $XDELTA3 o en el PATH. El paquete no lleva nada del juego: solo el parche.
 """
@@ -83,8 +83,6 @@ def main():
     os.remove(check)
     assert got == new, 'el parche aplicado no da la imagen armada'
 
-    with open(os.path.join(out, name + '.cue'), 'w', newline='\r\n') as w:
-        w.write(f'FILE "{name}.bin" BINARY\n  TRACK 01 MODE2/2352\n    INDEX 01 00:00:00\n')
     leeme = open(TEMPLATE, encoding='utf-8').read()
     for k, v in {'VERSION': version, 'NAME': name,
                  'ORIG_SHA1': orig['sha1'], 'ORIG_MD5': orig['md5'], 'ORIG_CRC32': orig['crc32'],
