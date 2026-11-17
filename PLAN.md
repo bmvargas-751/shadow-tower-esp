@@ -65,7 +65,7 @@ Obligatorio: sin él, `loc.py prepare` no arma lotes.
 
 - [x] Elegir con el usuario los casos reales (al menos uno de cada tipo; mejor dos o tres). (2026-11-17: 14 casos, dos por tipo.)
 - [x] Aprobarlo (`loc.py golden approve`).
-- [ ] Probar a los agentes (`loc.py golden prepare`, traductor, revisor y corrector, `loc.py golden score`) hasta que pase.
+- [x] Probar a los agentes (`loc.py golden prepare`, traductor, revisor y corrector, `loc.py golden score`) hasta que pase. (2026-11-17: oro-001, 14 de 14.)
 
 ### Fase 5. Piloto
 
