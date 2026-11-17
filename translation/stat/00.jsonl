@@ -51,12 +51,12 @@
 {"key": "stat/00#0208", "es": "NO"}
 {"key": "stat/00#0209", "es": "ADELANTE"}
 {"key": "stat/00#0210", "es": "ATRÁS"}
-{"key": "stat/00#0211", "es": "GIRAR IZQUIERDA"}
-{"key": "stat/00#0212", "es": "GIRAR DERECHA"}
-{"key": "stat/00#0213", "es": "MOVER IZQUIERDA"}
-{"key": "stat/00#0214", "es": "MOVER DERECHA"}
-{"key": "stat/00#0215", "es": "MIRAR ARRIBA"}
-{"key": "stat/00#0216", "es": "MIRAR ABAJO"}
+{"key": "stat/00#0211", "es": "GIRAR IZQ."}
+{"key": "stat/00#0212", "es": "GIRAR DER."}
+{"key": "stat/00#0213", "es": "MOVER IZQ."}
+{"key": "stat/00#0214", "es": "MOVER DER."}
+{"key": "stat/00#0215", "es": "SUBIR VISTA"}
+{"key": "stat/00#0216", "es": "BAJAR VISTA"}
 {"key": "stat/00#0217", "es": "MANO DER."}
 {"key": "stat/00#0218", "es": "MANO IZQ."}
 {"key": "stat/00#0219", "es": "EVENTO"}
@@ -75,8 +75,8 @@
 {"key": "stat/00#0310", "es": "     REVISANDO MEMORY CARD..."}
 {"key": "stat/00#0311", "es": "     MEMORY CARD SIN FORMATO\n     ¿DESEAS FORMATEARLA?"}
 {"key": "stat/00#0312", "es": "     FORMATEANDO..."}
-{"key": "stat/00#0320", "es": "RANURA DE MEMORY CARD 1"}
-{"key": "stat/00#0321", "es": "RANURA DE MEMORY CARD 2"}
+{"key": "stat/00#0320", "es": "MEMORY CARD 1"}
+{"key": "stat/00#0321", "es": "MEMORY CARD 2"}
 {"key": "stat/00#0322", "es": "NUEVO ARCHIVO"}
 {"key": "stat/00#0323", "es": "    ¿CARGAR DATOS?"}
 {"key": "stat/00#0324", "es": "    ¿GUARDAR DATOS?"}
@@ -176,18 +176,18 @@
 {"key": "stat/00#0901", "es": "ARMADURA"}
 {"key": "stat/00#0902", "es": "GUANTES"}
 {"key": "stat/00#0903", "es": "BOTAS"}
-{"key": "stat/00#0904", "es": "MANO DER."}
-{"key": "stat/00#0905", "es": "RESERVA DER."}
-{"key": "stat/00#0906", "es": "MANO IZQ."}
-{"key": "stat/00#0907", "es": "RESERVA IZQ."}
-{"key": "stat/00#0908", "es": "BRAZALETE DER."}
-{"key": "stat/00#0909", "es": "BRAZALETE IZQ."}
+{"key": "stat/00#0904", "es": "MANO D."}
+{"key": "stat/00#0905", "es": "RES. D."}
+{"key": "stat/00#0906", "es": "MANO I."}
+{"key": "stat/00#0907", "es": "RES. I."}
+{"key": "stat/00#0908", "es": "BRAZ. D."}
+{"key": "stat/00#0909", "es": "BRAZ. I."}
 {"key": "stat/00#0910", "es": "AMULETO"}
-{"key": "stat/00#0911", "es": "ANILLO DER."}
-{"key": "stat/00#0912", "es": "MAGIA DER."}
-{"key": "stat/00#0913", "es": "ANILLO IZQ."}
-{"key": "stat/00#0914", "es": "MAGIA IZQ."}
-{"key": "stat/00#0915", "es": "PESO DEL EQUIPO"}
+{"key": "stat/00#0911", "es": "ANIL. D."}
+{"key": "stat/00#0912", "es": "MAG. D."}
+{"key": "stat/00#0913", "es": "ANIL. I."}
+{"key": "stat/00#0914", "es": "MAG. I."}
+{"key": "stat/00#0915", "es": "PESO"}
 {"key": "stat/00#0916", "es": "EXPLOSIÓN"}
 {"key": "stat/00#0917", "es": "LLAMARADA"}
 {"key": "stat/00#0918", "es": "AVISPÓN HELADO"}

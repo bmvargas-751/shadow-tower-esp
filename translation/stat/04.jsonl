@@ -27,7 +27,7 @@
 {"key": "stat/04#0026", "es": "ESPADA BASTARDA LETAL"}
 {"key": "stat/04#0027", "es": "ESPADA BASTARDA VELOZ"}
 {"key": "stat/04#0028", "es": "ESPADA BASTARDA AFILADA"}
-{"key": "stat/04#0029", "es": "ESPADA BASTARDA APLASTANTE"}
+{"key": "stat/04#0029", "es": "BASTARDA APLASTANTE"}
 {"key": "stat/04#0030", "es": "ESPADA BASTARDA ÍGNEA"}
 {"key": "stat/04#0031", "es": "ESPADA BASTARDA GÉLIDA"}
 {"key": "stat/04#0032", "es": "ESPADA BASTARDA RADIANTE"}
@@ -96,12 +96,12 @@
 {"key": "stat/04#0095", "es": "ARMADURA DE CUERO MÁGICA"}
 {"key": "stat/04#0096", "es": "COTA DE ESCAMAS"}
 {"key": "stat/04#0097", "es": "COTA DE ESCAMAS"}
-{"key": "stat/04#0098", "es": "COTA DE ESCAMAS DE CURACIÓN"}
+{"key": "stat/04#0098", "es": "COTA DE ESCAMAS CURATIVA"}
 {"key": "stat/04#0099", "es": "COTA DE PLACAS"}
 {"key": "stat/04#0100", "es": "COTA DE PLACAS"}
 {"key": "stat/04#0101", "es": "COTA DE PLACAS REFORZADA"}
-{"key": "stat/04#0102", "es": "COTA DE PLACAS DE RESISTENCIA"}
-{"key": "stat/04#0103", "es": "COTA DE PLACAS DE CURACIÓN"}
+{"key": "stat/04#0102", "es": "COTA DE PLACAS DE RESIST."}
+{"key": "stat/04#0103", "es": "COTA DE PLACAS CURATIVA"}
 {"key": "stat/04#0104", "es": "COTA DE PLACAS"}
 {"key": "stat/04#0105", "es": "COTA DE PLACAS MÁGICA"}
 {"key": "stat/04#0106", "es": "COTA DE PLACAS ÍGNEA"}
@@ -109,16 +109,16 @@
 {"key": "stat/04#0108", "es": "COTA DE PLACAS CÁUSTICA"}
 {"key": "stat/04#0109", "es": "COTA DE PLACAS RADIANTE"}
 {"key": "stat/04#0110", "es": "COTA DE PLACAS OSCURA"}
-{"key": "stat/04#0111", "es": "COTA DE PLACAS DE PROTECCIÓN"}
+{"key": "stat/04#0111", "es": "COTA DE PLACAS PROTECTORA"}
 {"key": "stat/04#0112", "es": "COTA DE PLACAS ETERNA"}
 {"key": "stat/04#0113", "es": "COTA DE PLACAS DIABÓLICA"}
 {"key": "stat/04#0114", "es": "COTA DE PLACAS SAGRADA"}
 {"key": "stat/04#0115", "es": "ARMADURA COMPLETA"}
 {"key": "stat/04#0116", "es": "COTA DE PLACAS DE HONOR"}
-{"key": "stat/04#0117", "es": "ARMADURA COMPLETA REFORZADA"}
+{"key": "stat/04#0117", "es": "ARMADURA COMPL. REFORZADA"}
 {"key": "stat/04#0118", "es": "ARMADURA DIVINA"}
 {"key": "stat/04#0119", "es": "COTA DE PLACAS DE FURIA"}
-{"key": "stat/04#0120", "es": "COTA DE PLACAS DE CABALLERO"}
+{"key": "stat/04#0120", "es": "COTA DE CABALLERO"}
 {"key": "stat/04#0121", "es": "GUANTE DE CUERO"}
 {"key": "stat/04#0122", "es": "GUANTE DE CUERO"}
 {"key": "stat/04#0123", "es": "GUANTE DE CUERO"}
@@ -128,7 +128,7 @@
 {"key": "stat/04#0127", "es": "GUANTE DE METAL"}
 {"key": "stat/04#0128", "es": "GUANTE DE METAL"}
 {"key": "stat/04#0129", "es": "GUANTELETE ÍGNEO"}
-{"key": "stat/04#0130", "es": "PROTECTOR DE MANO CÁUSTICO"}
+{"key": "stat/04#0130", "es": "PROT. DE MANO CÁUSTICO"}
 {"key": "stat/04#0131", "es": "GUANTELETE"}
 {"key": "stat/04#0132", "es": "GUANTELETE"}
 {"key": "stat/04#0133", "es": "GUANTELETE REFORZADO"}
@@ -144,13 +144,13 @@
 {"key": "stat/04#0143", "es": "BOTAS DURAS"}
 {"key": "stat/04#0144", "es": "BOTAS DE ACERO"}
 {"key": "stat/04#0145", "es": "BOTAS DE ACERO"}
-{"key": "stat/04#0146", "es": "BOTAS DE ACERO DE RESISTENCIA"}
-{"key": "stat/04#0147", "es": "BOTAS DE ACERO DE CURACIÓN"}
-{"key": "stat/04#0148", "es": "BOTAS DE ACERO DE RESISTENCIA"}
+{"key": "stat/04#0146", "es": "BOTAS DE ACERO DE RESIST."}
+{"key": "stat/04#0147", "es": "BOTAS DE ACERO CURATIVAS"}
+{"key": "stat/04#0148", "es": "BOTAS DE ACERO DE RESIST."}
 {"key": "stat/04#0149", "es": "BOTAS DE ACERO CÁUSTICAS"}
 {"key": "stat/04#0150", "es": "BOTAS DE ACERO VELOCES"}
-{"key": "stat/04#0151", "es": "BOTAS DE ACERO DE EQUILIBRIO"}
-{"key": "stat/04#0152", "es": "BOTAS DE ACERO DE RESISTENCIA"}
+{"key": "stat/04#0151", "es": "BOTAS DE ACERO DE EQUIL."}
+{"key": "stat/04#0152", "es": "BOTAS DE ACERO DE RESIST."}
 {"key": "stat/04#0153", "es": "GREBA"}
 {"key": "stat/04#0154", "es": "GREBA"}
 {"key": "stat/04#0155", "es": "GREBA REFORZADA"}
@@ -167,7 +167,7 @@
 {"key": "stat/04#0166", "es": "ESCUDO GRANDE"}
 {"key": "stat/04#0167", "es": "ESCUDO GRANDE"}
 {"key": "stat/04#0168", "es": "ESCUDO GRANDE REFORZADO"}
-{"key": "stat/04#0169", "es": "ESCUDO GRANDE DE EQUILIBRIO"}
+{"key": "stat/04#0169", "es": "ESCUDO GRANDE DE EQUIL."}
 {"key": "stat/04#0170", "es": "ESCUDO GRANDE ÍGNEO"}
 {"key": "stat/04#0172", "es": "GRAN ESCUDO"}
 {"key": "stat/04#0173", "es": "GRAN ESCUDO DE EQUILIBRIO"}
@@ -185,46 +185,46 @@
 {"key": "stat/04#0185", "es": "ESCUDO GÓTICO"}
 {"key": "stat/04#0186", "es": "ESCUDO GÓTICO REFORZADO"}
 {"key": "stat/04#0187", "es": "ESCUDO GÓTICO"}
-{"key": "stat/04#0188", "es": "ESCUDO GÓTICO DE RESISTENCIA"}
+{"key": "stat/04#0188", "es": "ESCUDO GÓTICO DE RESIST."}
 {"key": "stat/04#0189", "es": "ESCUDO GÓTICO DE HONOR"}
-{"key": "stat/04#0190", "es": "ESCUDO GÓTICO DE EQUILIBRIO"}
+{"key": "stat/04#0190", "es": "ESCUDO GÓTICO DE EQUIL."}
 {"key": "stat/04#0191", "es": "ESCUDO GÓTICO MAESTRO"}
 {"key": "stat/04#0192", "es": "ESCUDO GÓTICO DE PODER"}
 {"key": "stat/04#0193", "es": "ESCUDO GÓTICO DE FURIA"}
 {"key": "stat/04#0194", "es": "ESCUDO GÓTICO RADIANTE"}
 {"key": "stat/04#0195", "es": "ESCUDO GÓTICO SAGRADO"}
-{"key": "stat/04#0196", "es": "ANILLO DE FUEGO DE INVOCADOR"}
-{"key": "stat/04#0197", "es": "ANILLO DE FUEGO DE INVOCADOR"}
-{"key": "stat/04#0198", "es": "ANILLO DE RESISTENCIA AL FUEGO"}
-{"key": "stat/04#0199", "es": "ANILLO DE FUEGO DE SACERDOTE"}
-{"key": "stat/04#0200", "es": "ANILLO DE FUEGO DE HECHICERO"}
-{"key": "stat/04#0201", "es": "ANILLO DE HIELO DE INVOCADOR"}
-{"key": "stat/04#0202", "es": "ANILLO DE HIELO DE INVOCADOR"}
-{"key": "stat/04#0203", "es": "ANILLO DE HIELO DE EQUILIBRIO"}
-{"key": "stat/04#0204", "es": "ANILLO DE HIELO DE SACERDOTE"}
-{"key": "stat/04#0205", "es": "ANILLO DE HIELO DE HECHICERO"}
+{"key": "stat/04#0196", "es": "ANILLO INVOCADOR ÍGNEO"}
+{"key": "stat/04#0197", "es": "ANILLO INVOCADOR ÍGNEO"}
+{"key": "stat/04#0198", "es": "ANILLO IGNÍFUGO"}
+{"key": "stat/04#0199", "es": "ANILLO CLERICAL ÍGNEO"}
+{"key": "stat/04#0200", "es": "ANILLO HECHICERO ÍGNEO"}
+{"key": "stat/04#0201", "es": "ANILLO INVOCADOR GÉLIDO"}
+{"key": "stat/04#0202", "es": "ANILLO INVOCADOR GÉLIDO"}
+{"key": "stat/04#0203", "es": "ANILLO GÉLIDO EQUILIBRADO"}
+{"key": "stat/04#0204", "es": "ANILLO CLERICAL GÉLIDO"}
+{"key": "stat/04#0205", "es": "ANILLO HECHICERO GÉLIDO"}
 {"key": "stat/04#0206", "es": "ANILLO DE ALMA"}
 {"key": "stat/04#0207", "es": "ANILLO DE ALMA"}
-{"key": "stat/04#0208", "es": "ANILLO SAGRADO DE RESISTENCIA"}
-{"key": "stat/04#0209", "es": "ANILLO SAGRADO DE SACERDOTE"}
+{"key": "stat/04#0208", "es": "ANILLO SAGRADO DE RESIST."}
+{"key": "stat/04#0209", "es": "ANILLO SAGRADO CLERICAL"}
 {"key": "stat/04#0210", "es": "ANILLO SAGRADO\n\n{0032}{0033}{0034}{0034}\nANILLO OSCURO"}
 {"key": "stat/04#0212", "es": "ANILLO OSCURO"}
-{"key": "stat/04#0213", "es": "ANILLO OSCURO DE SACERDOTE"}
-{"key": "stat/04#0214", "es": "ANILLO OSCURO DE HECHICERO"}
+{"key": "stat/04#0213", "es": "ANILLO OSCURO CLERICAL"}
+{"key": "stat/04#0214", "es": "ANILLO OSCURO HECHICERO"}
 {"key": "stat/04#0215", "es": "ANILLO DE VENENO"}
 {"key": "stat/04#0216", "es": "ANILLO DE VENENO"}
 {"key": "stat/04#0217", "es": "ANILLO DE PROTECCIÓN"}
-{"key": "stat/04#0218", "es": "ANILLO DE VENENO DE HECHICERO"}
+{"key": "stat/04#0218", "es": "ANILLO HECHICERO VENENOSO"}
 {"key": "stat/04#0219", "es": "ANILLO CÁUSTICO"}
 {"key": "stat/04#0220", "es": "ANILLO CÁUSTICO"}
-{"key": "stat/04#0221", "es": "ANILLO CÁUSTICO DE SACERDOTE"}
-{"key": "stat/04#0222", "es": "ANILLO CÁUSTICO DE HECHICERO"}
+{"key": "stat/04#0221", "es": "ANILLO CÁUSTICO CLERICAL"}
+{"key": "stat/04#0222", "es": "ANILLO CÁUSTICO HECHICERO"}
 {"key": "stat/04#0223", "es": "ANILLO DE DESEO"}
 {"key": "stat/04#0224", "es": "ANILLO DE HIELO"}
 {"key": "stat/04#0225", "es": "ANILLO DE ALMAS OSCURAS"}
 {"key": "stat/04#0226", "es": "ANILLO NEGRO"}
 {"key": "stat/04#0227", "es": "ANILLO DE SELLO"}
-{"key": "stat/04#0228", "es": "ANILLO DEL ESPÍRITU MUERTO"}
+{"key": "stat/04#0228", "es": "ANILLO DE ESPÍRITU MUERTO"}
 {"key": "stat/04#0229", "es": "ANILLO DE FURIA"}
 {"key": "stat/04#0230", "es": "ANILLO DE ABSORCIÓN"}
 {"key": "stat/04#0231", "es": "BRAZALETE DE RESISTENCIA"}
@@ -332,7 +332,7 @@
 {"key": "stat/04#0641", "es": "VACÍO"}
 {"key": "stat/04#0642", "es": "ILUMINA PARCIALMENTE LA ZONA"}
 {"key": "stat/04#0643", "es": "ANTORCHA DURADERA"}
-{"key": "stat/04#0644", "es": "TELETRANSPORTA AL ÚLTIMO PUNTO DE GUARDADO"}
+{"key": "stat/04#0644", "es": "TE LLEVA AL ÚLTIMO PUNTO DE GUARDADO"}
 {"key": "stat/04#0645", "es": "VACÍO"}
 {"key": "stat/04#0646", "es": "LLAVE DE COFRE"}
 {"key": "stat/04#0647", "es": "LLAVE DE PUERTA"}
@@ -366,7 +366,7 @@
 {"key": "stat/04#0675", "es": "AÚN SIN USAR"}
 {"key": "stat/04#0676", "es": "REPARA OBJETOS Y ARMAS"}
 {"key": "stat/04#0677", "es": "DESBLOQUEA EL SELLO DEL ESPÍRITU"}
-{"key": "stat/04#0678", "es": "COMBUSTIBLE DE VELA DEL MUNDO DE TIERRA"}
+{"key": "stat/04#0678", "es": "ALIMENTA LA VELA DEL MUNDO DE TIERRA"}
 {"key": "stat/04#0679", "es": "CONDUCE AL SEÑOR DEL FUEGO"}
 {"key": "stat/04#0680", "es": "VACÍO"}
 {"key": "stat/04#0681", "es": "VACÍO"}

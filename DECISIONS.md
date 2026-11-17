@@ -42,3 +42,4 @@ Lo que el usuario decidió, con fecha, para no volver a discutirlo. Una regla de
   - `talk#0144`: «Aunque, en realidad, no es agua: es ácido.»
   - `intro#3`: «¿Qué significan estas palabras...?» (presente, como el original).
   - Quedan como estaban, entre otras: ESPADA SANGRIENTA, PAR/DIS en el modo VS, ¿SALIR DEL JUEGO? / ¿SEGURO?, AJUSTAR VAIVÉN, RESERVA DER./IZQ., INSECTO ALADO, DESTELLO AZUL, CORNETISTA, OJO SALTÓN, SABLE DE TRUENO, CRUZ HÍBRIDA, DEMONIO MALDITO, ANILLO DEL ESPÍRITU MUERTO, VACÍO, ANILLO DE ALMAS OSCURAS; y en los diálogos `talk#0304` y `talk#0307`.
+- **2026-11-17** Prueba 0.9.0: «MEMORY CARD SLOT N» queda «MEMORY CARD N», sin «RANURA DE» (`stat/00#0320`, `0321`).
