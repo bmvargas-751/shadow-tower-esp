@@ -51,12 +51,12 @@
 {"key": "fdat/480#0208", "es": "NO"}
 {"key": "fdat/480#0209", "es": "ADELANTE"}
 {"key": "fdat/480#0210", "es": "HACIA ATRÁS"}
-{"key": "fdat/480#0211", "es": "GIRAR IZQUIERDA"}
-{"key": "fdat/480#0212", "es": "GIRAR DERECHA"}
-{"key": "fdat/480#0213", "es": "MOVER IZQUIERDA"}
-{"key": "fdat/480#0214", "es": "MOVER DERECHA"}
-{"key": "fdat/480#0215", "es": "MIRAR ARRIBA"}
-{"key": "fdat/480#0216", "es": "MIRAR ABAJO"}
+{"key": "fdat/480#0211", "es": "GIRAR IZQ."}
+{"key": "fdat/480#0212", "es": "GIRAR DER."}
+{"key": "fdat/480#0213", "es": "MOVER IZQ."}
+{"key": "fdat/480#0214", "es": "MOVER DER."}
+{"key": "fdat/480#0215", "es": "SUBIR VISTA"}
+{"key": "fdat/480#0216", "es": "BAJAR VISTA"}
 {"key": "fdat/480#0217", "es": "???DERECHA"}
 {"key": "fdat/480#0218", "es": "???IZQUIERDA"}
 {"key": "fdat/480#0219", "es": "EVENTO"}
