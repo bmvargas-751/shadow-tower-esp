@@ -86,7 +86,8 @@ Obligatorio: sin él, `loc.py prepare` no arma lotes.
 
 ### Fase 7. Prueba en el juego
 
-- [ ] Jugar con la traducción completa y anotar cortes, cajas que se pasan, glifos que faltan y texto que quedó sin traducir.
+- [x] Imagen completa con la traducción: `tools/st_build.py` → `../shadow-tower-esp-local/test/shadow-tower-esp.{bin,cue}` (2026-11-17).
+- [ ] Jugar con la traducción completa y anotar cortes, cajas que se pasan, glifos que faltan y texto que quedó sin traducir. Mirar también los puntos de «Para la prueba en el juego» de PENDING.md y una conversación redibujada (fase 1).
 
 ### Fase 8. Entrega
 

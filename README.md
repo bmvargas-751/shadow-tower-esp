@@ -22,7 +22,7 @@ Actualizado: 2026-11-17.
 | 4. Set de oro | ✅ 14 de 14 (oro-001) |
 | 5. Piloto | ✅ 4 lotes de 40 líneas (menús, objetos, equipo, diálogos) |
 | 6. Traducción | ✅ 100 % (2217 líneas; dudas en PENDING.md) |
-| 7. Prueba en el juego | ⏳ |
+| 7. Prueba en el juego | ⏳ imagen lista (`tools/st_build.py`), falta jugarla |
 | 8. Entrega (parche xdelta) | ⏳ |
 
 ### Secciones

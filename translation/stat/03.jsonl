@@ -21,7 +21,7 @@
 {"key": "stat/03#0020", "es": "ESPADA ANCHA APLASTANTE"}
 {"key": "stat/03#0021", "es": "ESPADA ANCHA AFILADA"}
 {"key": "stat/03#0022", "es": "ESPADA ANCHA GUARDIANA"}
-{"key": "stat/03#0023", "es": "ESPADA DRAGÓN"}
+{"key": "stat/03#0023", "es": "ESPADA DE DRAGÓN"}
 {"key": "stat/03#0024", "es": "ESPADA BASTARDA"}
 {"key": "stat/03#0025", "es": "ESPADA BASTARDA"}
 {"key": "stat/03#0026", "es": "ESPADA BASTARDA LETAL"}
@@ -116,7 +116,7 @@
 {"key": "stat/03#0115", "es": "ARMADURA COMPLETA"}
 {"key": "stat/03#0116", "es": "COTA DE PLACAS DE HONOR"}
 {"key": "stat/03#0117", "es": "ARMADURA COMPLETA REFORZADA"}
-{"key": "stat/03#0118", "es": "COTA DIVINA"}
+{"key": "stat/03#0118", "es": "ARMADURA DIVINA"}
 {"key": "stat/03#0119", "es": "COTA DE PLACAS DE FURIA"}
 {"key": "stat/03#0120", "es": "COTA DE PLACAS DE CABALLERO"}
 {"key": "stat/03#0121", "es": "GUANTE DE CUERO"}
@@ -274,7 +274,7 @@
 {"key": "stat/03#0275", "es": "LLAVE DE LA BESTIA"}
 {"key": "stat/03#0276", "es": "LLAVE DE COMPUERTA"}
 {"key": "stat/03#0277", "es": "LLAVE DE SIRENA"}
-{"key": "stat/03#0278", "es": "LLAVE DEL DELIRIO"}
+{"key": "stat/03#0278", "es": "LLAVE DEL ENGAÑO"}
 {"key": "stat/03#0279", "es": "LLAVE DE LATÓN"}
 {"key": "stat/03#0280", "es": "LLAVE DE HIERRO"}
 {"key": "stat/03#0281", "es": "VACÍO"}
@@ -376,5 +376,4 @@
 {"key": "stat/03#0685", "es": "EL ESPÍRITU AUMENTA LAS HABILIDADES"}
 {"key": "stat/03#0686", "es": "EL ESPÍRITU AUMENTA LAS HABILIDADES"}
 {"key": "stat/03#0687", "es": "EL ESPÍRITU AUMENTA LAS HABILIDADES"}
-{"key": "stat/03#0999", "es": "ERRORERRORERROR"}
 {"key": "stat/03#1071", "es": "ESCUDO GRANDE GÉLIDO"}

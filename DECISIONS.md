@@ -29,3 +29,16 @@ Lo que el usuario decidió, con fecha, para no volver a discutirlo. Una regla de
 - **2026-11-17** Medidas en pies y pulgadas: la exportación las da con ′ y ″ (no comillas).
 - **2026-11-17** Las casillas vacías del original (27, todas en `stat/00`, `stat/01`, `stat/08` y `vs_etc/15`) van en `excluded` de `loc.json`: no hay texto que traducir.
 - **2026-11-17** El apóstrofo y el guion de la fuente B se exportan como `'` y `-` (por lámina), así que el español puede omitirlos sin romper T-1 (`stat/02#0131`, `stat/08#0030`, `vs_etc/15#0030`).
+- **2026-11-17** PENDING.md, primera ronda (usuario):
+  - Abreviaturas de estadísticas: las tres primeras letras (FUE VEL DEF EQU COR GOL EST / ESP CON ARM PUR PAR DIS ALM), también en los sueltos y en el modo VS.
+  - SHADOW en armas → «X DE SOMBRA» (HOJA, LOBO y TIGRE DE SOMBRA); en lugares, «DE LAS SOMBRAS» (TORRE DE LAS SOMBRAS). Depende de lo que evoque cada nombre.
+  - «BUG DESU» y «BUGBUGBUG» (restos de depuración) quedan en inglés, en `excluded`.
+  - Trato al rey: *usted* (`talk#0313`).
+  - `talk#0192` «Death and wisdom» y `talk#0186` «Death and Knowledge» son pares distintos: sabiduría y Conocimiento, sin unificar.
+  - `equip#0564`: la errata «ACID PROPERTIES 211» se corrige a «DEFENSA DE ÁCIDO 211», como los demás pavés.
+  - Nombres inventados que quedan en inglés: FESTER, DEMENTOR, MAGI MAGUS, AGUTION, APOCRYPHA, DESCRYPHA, WIZCRYPHA.
+- **2026-11-17** PENDING.md, segunda ronda (usuario): se aprueban las soluciones provisionales de los lotes, salvo cinco que pasan a la alternativa:
+  - DRAGON SWORD → ESPADA DE DRAGÓN; GOD PLATE → ARMADURA DIVINA; KEY OF DELUSION → LLAVE DEL ENGAÑO (`stat/03` y `stat/04`).
+  - `talk#0144`: «Aunque, en realidad, no es agua: es ácido.»
+  - `intro#3`: «¿Qué significan estas palabras...?» (presente, como el original).
+  - Quedan como estaban, entre otras: ESPADA SANGRIENTA, PAR/DIS en el modo VS, ¿SALIR DEL JUEGO? / ¿SEGURO?, AJUSTAR VAIVÉN, RESERVA DER./IZQ., INSECTO ALADO, DESTELLO AZUL, CORNETISTA, OJO SALTÓN, SABLE DE TRUENO, CRUZ HÍBRIDA, DEMONIO MALDITO, ANILLO DEL ESPÍRITU MUERTO, VACÍO, ANILLO DE ALMAS OSCURAS; y en los diálogos `talk#0304` y `talk#0307`.
