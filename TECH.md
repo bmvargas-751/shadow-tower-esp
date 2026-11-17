@@ -203,7 +203,7 @@ Prueba 8 (pendiente): las 9 letras de A en el menú y las 7 de B en el panel de 
 
 **Imagen completa (fase 7, `tools/st_build.py`, 2026-11-17):** reconstruye los 8 archivos con `translation/` (4 de texto codificado con `st_text`, 3 de imágenes con `st_render` y `OPTXT.MIC` con `st_intro`), los escribe en una copia de `original.bin` y comprueba lo escrito. Resultado: `../shadow-tower-esp-local/test/shadow-tower-esp.{bin,cue}`, 584 imágenes y 6 pantallas redibujadas, sin errores. Pendiente de probar en DuckStation.
 
-**Parche (fase 8, `tools/st_patch.py`, 2026-11-17):** comprueba el SHA-1 del original, arma la imagen con `st_build.build`, crea el parche con `xdelta3 -e -9 -S none` (sin compresión secundaria: Rom Patcher JS y otros parcheadores no la soportan) y lo aplica de vuelta para comparar. El armado es determinista: dos corridas dan la misma imagen (SHA-1 `6fe34831…` con la traducción del 2026-11-17). El `.cue` del paquete va con fin de línea CRLF. `LEEME.txt` sale de `tools/release/LEEME.txt` con los hashes de las dos imágenes.
+**Parche (fase 8, `tools/st_patch.py`, 2026-11-17):** comprueba el SHA-1 del original, arma la imagen con `st_build.build`, crea el parche con `xdelta3 -e -9 -S none` (sin compresión secundaria: Rom Patcher JS y otros parcheadores no la soportan) y lo aplica de vuelta para comparar. El armado es determinista: dos corridas dan la misma imagen (SHA-1 `6fe34831…` con la traducción del 2026-11-17). El paquete no lleva `.cue` (decidido por el usuario, 2026-11-17): DuckStation abre el `.bin` directo, y quien necesite uno usa el de su juego. `LEEME.txt` sale de `tools/release/LEEME.txt` con los hashes de las dos imágenes.
 
 ### Prueba 0.9.0 en el juego (2026-11-17, usuario, estados 7 a 10)
 
