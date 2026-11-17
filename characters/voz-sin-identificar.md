@@ -7,7 +7,7 @@ Los grupos siguen la hipótesis de bloques de seis entradas de `TALKMSG.T` (ver 
 ## Rasgos comunes
 
 - **Género:** pendiente en todos. No se marca en ninguna línea.
-- **Trato:** *tú* al jugador en todos los grupos, salvo **G7** («I beg of you», súplica cortés) y **G27** (guardia de un castillo real), que tratan de *usted* (decidido por el usuario, 2026-11-17).
+- **Trato:** *tú* al jugador en todos los grupos, salvo **G7** («I beg of you», súplica cortés) y **G27** (guardia de un castillo real), que tratan de *usted* (decidido por el usuario, 2026-11-17). Al rey se le habla de *usted* (`talk#0313`, «¡Mi rey! Tenga cuidado...»; decidido por el usuario, 2026-11-17).
 - **«human» para nombrar al jugador:** muchas voces lo usan (`talk#0006`, `talk#0012`, `talk#0018`, `talk#0024`, `talk#0169`); es un rasgo de cómo ven al jugador y se mantiene.
 
 ## Líneas que en español marcarían el género de quien habla (E-41)

@@ -78,12 +78,9 @@
 {"key": "stat/01#0158", "es": "NO MUERTO"}
 {"key": "stat/01#0159", "es": "ELEMENTAL DE AGUA"}
 {"key": "stat/01#0160", "es": "DESCONOCIDO"}
-{"key": "stat/01#0161", "es": "ES UN ERROR"}
 {"key": "stat/01#0162", "es": "BESTIA"}
-{"key": "stat/01#0163", "es": "ES UN ERROR"}
 {"key": "stat/01#0164", "es": "SOMBRA"}
 {"key": "stat/01#0165", "es": "ARCHIDEMONIO"}
-{"key": "stat/01#0166", "es": "ES UN ERROR"}
 {"key": "stat/01#0180", "es": "RIVAL"}
 {"key": "stat/01#0200", "es": "MANO"}
 {"key": "stat/01#0201", "es": "BOLSA"}
@@ -103,4 +100,3 @@
 {"key": "stat/01#0215", "es": "ALM"}
 {"key": "stat/01#0216", "es": "MOVER\n \n       {0032}OK        {0032}CANCELAR"}
 {"key": "stat/01#0999", "es": "VOLVER AL MENÚ PRINCIPAL\n \n       {0032}OK        {0032}CANCELAR"}
-{"key": "stat/01#1000", "es": "ERRORERRORERROR"}
