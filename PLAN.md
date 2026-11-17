@@ -82,7 +82,7 @@ Obligatorio: sin él, `loc.py prepare` no arma lotes.
 - [x] Modo VS (2026-11-17: chicas-001).
 - [x] Diálogos (2026-11-17: piloto-dialogos y diálogos-001).
 - [x] Descripciones de equipo (2026-11-17: piloto-equipo, equipo-001 y equipo-002).
-- [ ] Descripciones de criaturas
+- [x] Descripciones de criaturas (2026-11-17: criaturas-desc-001).
 
 ### Fase 7. Prueba en el juego
 
