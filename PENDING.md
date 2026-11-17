@@ -45,8 +45,6 @@ Se deciden al ver la pantalla.
 
 ### Lote chicas-001 (2026-11-17)
 
-- [ ] `stat/08#0030` (reviewer, sin regla): «DATOS{0033}» → «NO PUEDES ELEGIR UN OBJETO CON LOS MISMOS DATOS (sin {0033}; exige que el adaptador exporte el 0x33 de la lámina 8 como apóstrofo)». En la lámina de stat/08 el código 0x33 es un apóstrofo dibujado (celda 49, arriba a la izquierda): en «CAN{0033}T» es el de CAN'T. Al final de la frase imprime «DATOS'», un signo que el español no tiene (E-3, E-50), pero quitarlo rompe T-1 (`codigos` exige los mismos códigos) y TECH.md no declara que un signo de lámina pueda quitarse o moverse: lo decide el usuario.
-- [ ] `stat/02#0131` (delicadas, lote criaturas-001, apóstrofo de la lámina): «DEMON{0032}S EYE» → «OJO DE DEMONIO» (sin {0032}; ya está en `translation/`). Comprobado en la lámina: en la entrada 2 de `STAT.T` (y en su copia, la 10), el código 0x32 (celda 48: fila 2, columna 12) es un apóstrofo, el mismo dibujo que el 0x33 de la lámina 8; aquí es el de DEMON'S. Cada lámina B pone sus signos extra en celdas distintas: en la lámina 8, el 0x32 es un «?» («END VS.MODE?», `stat/08#0010`), así que el mapa tendría que ser por lámina. El español no lleva ese apóstrofo, y quitarlo deja el aviso T-1 (`codigos`), como en `stat/08#0030`: lo decide el usuario (aceptar el aviso, o que el adaptador exporte el 0x32 de la lámina 2 como «'»). En `stat/02` es el único uso del código. Alternativa: «OJO DEL DEMONIO» (más cerca del posesivo, pero apunta a un demonio concreto; la descripción, `crt#0331`, presenta a la criatura como un demonio con forma de ojo).
 
 ### Lote menus-001 (2026-11-17)
 

@@ -57,6 +57,12 @@ for _c in SPANISH_A.values():
 EXTRA_A = dict(SPANISH_A)
 # Fuente B (con serifas): sus 3 filas están llenas, pero el juego dibuja también la fila 3 (prueba 7: la Á en el
 # código 56 se vio; la celda 0, código 2, no sirve). Sin ¿ ni ¡: la fuente B no trae ? ni ! de base.
+# Signos de la fuente B que cambian de una lámina a otra (dibujados el 2026-11-17): solo los que se leen en la
+# lámina de la propia entrada y su uso en el original lo confirma. El guion 0x11 es igual en todas las láminas.
+# stat/04 queda fuera: sus códigos ({0035} en KING'S, {0036}/{0037} en SOUL POD) no coinciden con su lámina,
+# así que el juego la dibuja con otra; se decide al verla en pantalla.
+FONT_B.update({0x11: '-'})
+FONT_B_ENTRY = {'stat/02': {0x32: "'"}, 'stat/08': {0x33: "'"}, 'vs_etc/15': {0x33: "'"}}
 SPANISH_B = {'Á': 56, 'É': 57, 'Í': 58, 'Ó': 59, 'Ú': 60, 'Ñ': 61, 'Ü': 62}
 EXTRA_B = dict(SPANISH_B)
 # Láminas donde se dibujan las letras nuevas (cada pantalla usa la de alguna entrada)
@@ -83,12 +89,17 @@ LINE_END = (0x0000, 0x0001)
 STR_END = 0xFFFF
 
 
-def charmap(font):
-    return FONT_A if font == 'A' else FONT_B
+def charmap(font, prefix=None):
+    if font == 'A':
+        return FONT_A
+    return {**FONT_B, **FONT_B_ENTRY.get(prefix, {})}
 
 
-def encmap(font):
-    m = {c: k for k, c in charmap(font).items()}
+def encmap(font, prefix=None):
+    # el primer código de cada signo manda (el guion sigue siendo 0x03, como antes)
+    m = {}
+    for k, c in charmap(font, prefix).items():
+        m.setdefault(c, k)
     m.update(EXTRA_A if font == 'A' else EXTRA_B)
     return m
 
@@ -120,13 +131,13 @@ def split_lines(units):
     return lines, cur  # cur: resto sin terminador (normalmente vacío)
 
 
-def decode_line(units, font):
-    m = charmap(font)
+def decode_line(units, font, prefix=None):
+    m = charmap(font, prefix)
     return ''.join(m.get(u, f'{{{u:04X}}}') for u in units)
 
 
-def to_text(lines, rest, font):
-    text = [decode_line(l, font) for l in lines]
+def to_text(lines, rest, font, prefix=None):
+    text = [decode_line(l, font, prefix) for l in lines]
     while text and text[-1] == '':
         text.pop()
     # rest (códigos de control después del último renglón) no se muestra: el import lo conserva
@@ -135,7 +146,7 @@ def to_text(lines, rest, font):
 
 # --- Escritura -----------------------------------------------------------------
 def encode_line(s, font, key):
-    m = encmap(font)
+    m = encmap(font, key.split('#')[0])
     out, i = [], 0
     while i < len(s):
         if s[i] == '{':
@@ -159,7 +170,7 @@ def build_string(text, orig_units, font, key):
     units = []
     for k, line in enumerate(new):
         # un renglón que en el original no cambia se copia tal cual (conserva códigos raros)
-        if decode_line(lines[k], font) == line:
+        if decode_line(lines[k], font, key.split('#')[0]) == line:
             units += lines[k]
         else:
             units += encode_line(line, font, key)
@@ -237,7 +248,7 @@ def export():
             if units is None:
                 continue
             lines, rest = split_lines(units)
-            rows.append({'key': f'{prefix}#{i:04d}', 'en': to_text(lines, rest, font),
+            rows.append({'key': f'{prefix}#{i:04d}', 'en': to_text(lines, rest, font, prefix),
                          'note': f'{name} entrada {e}, casilla {i}, fuente {font}, {len(lines)} renglones'})
     os.makedirs(os.path.dirname(src), exist_ok=True)
     with open(src, 'w', encoding='utf-8') as w:
