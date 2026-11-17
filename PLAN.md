@@ -78,7 +78,7 @@ Obligatorio: sin él, `loc.py prepare` no arma lotes.
 - [x] Interfaz y menús (2026-11-17: piloto-menus, menus-001 y criaturas-001).
 - [x] Estadísticas (2026-11-17: chicas-001).
 - [x] Nombres de criaturas (2026-11-17: criaturas-001).
-- [ ] Objetos y equipo
+- [x] Objetos y equipo (2026-11-17: piloto-objetos, objetos-001 y equipo-001).
 - [x] Modo VS (2026-11-17: chicas-001).
 - [x] Diálogos (2026-11-17: piloto-dialogos y diálogos-001).
 - [ ] Descripciones de equipo

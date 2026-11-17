@@ -163,6 +163,7 @@
 {"key": "stat/04#0162", "es": "RODELA"}
 {"key": "stat/04#0163", "es": "ESCUDO PEQUEÑO"}
 {"key": "stat/04#0164", "es": "ESCUDO PEQUEÑO"}
+{"key": "stat/04#0165", "es": "ESCUDO DE RESISTENCIA"}
 {"key": "stat/04#0166", "es": "ESCUDO GRANDE"}
 {"key": "stat/04#0167", "es": "ESCUDO GRANDE"}
 {"key": "stat/04#0168", "es": "ESCUDO GRANDE REFORZADO"}
@@ -175,7 +176,10 @@
 {"key": "stat/04#0176", "es": "GRAN ESCUDO MORTAL"}
 {"key": "stat/04#0177", "es": "PAVÉS"}
 {"key": "stat/04#0178", "es": "PAVÉS"}
+{"key": "stat/04#0179", "es": "PAVÉS DE HONOR"}
 {"key": "stat/04#0180", "es": "PAVÉS REFORZADO"}
+{"key": "stat/04#0181", "es": "PAVÉS DE PROTECCIÓN"}
+{"key": "stat/04#0182", "es": "PAVÉS CÁUSTICO"}
 {"key": "stat/04#0183", "es": "PAVÉS DE EQUILIBRIO"}
 {"key": "stat/04#0184", "es": "PAVÉS DE RESISTENCIA"}
 {"key": "stat/04#0185", "es": "ESCUDO GÓTICO"}
@@ -191,13 +195,19 @@
 {"key": "stat/04#0195", "es": "ESCUDO GÓTICO SAGRADO"}
 {"key": "stat/04#0196", "es": "ANILLO DE FUEGO DE INVOCADOR"}
 {"key": "stat/04#0197", "es": "ANILLO DE FUEGO DE INVOCADOR"}
+{"key": "stat/04#0198", "es": "ANILLO DE RESISTENCIA AL FUEGO"}
+{"key": "stat/04#0199", "es": "ANILLO DE FUEGO DE SACERDOTE"}
 {"key": "stat/04#0200", "es": "ANILLO DE FUEGO DE HECHICERO"}
 {"key": "stat/04#0201", "es": "ANILLO DE HIELO DE INVOCADOR"}
 {"key": "stat/04#0202", "es": "ANILLO DE HIELO DE INVOCADOR"}
 {"key": "stat/04#0203", "es": "ANILLO DE HIELO DE EQUILIBRIO"}
 {"key": "stat/04#0204", "es": "ANILLO DE HIELO DE SACERDOTE"}
 {"key": "stat/04#0205", "es": "ANILLO DE HIELO DE HECHICERO"}
+{"key": "stat/04#0206", "es": "ANILLO DE ALMA"}
+{"key": "stat/04#0207", "es": "ANILLO DE ALMA"}
 {"key": "stat/04#0208", "es": "ANILLO SAGRADO DE RESISTENCIA"}
+{"key": "stat/04#0209", "es": "ANILLO SAGRADO DE SACERDOTE"}
+{"key": "stat/04#0210", "es": "ANILLO SAGRADO\n\n{0032}{0033}{0034}{0034}\nANILLO OSCURO"}
 {"key": "stat/04#0212", "es": "ANILLO OSCURO"}
 {"key": "stat/04#0213", "es": "ANILLO OSCURO DE SACERDOTE"}
 {"key": "stat/04#0214", "es": "ANILLO OSCURO DE HECHICERO"}
@@ -210,6 +220,7 @@
 {"key": "stat/04#0221", "es": "ANILLO CÁUSTICO DE SACERDOTE"}
 {"key": "stat/04#0222", "es": "ANILLO CÁUSTICO DE HECHICERO"}
 {"key": "stat/04#0223", "es": "ANILLO DE DESEO"}
+{"key": "stat/04#0224", "es": "ANILLO DE HIELO"}
 {"key": "stat/04#0225", "es": "ANILLO DE ALMAS OSCURAS"}
 {"key": "stat/04#0226", "es": "ANILLO NEGRO"}
 {"key": "stat/04#0227", "es": "ANILLO DE SELLO"}
@@ -237,6 +248,7 @@
 {"key": "stat/04#0249", "es": "BRAZALETE DE REY"}
 {"key": "stat/04#0250", "es": "BRAZALETE DE LUNA"}
 {"key": "stat/04#0251", "es": "AMULETO MÁGICO"}
+{"key": "stat/04#0252", "es": "AMULETO DE MOVIMIENTO"}
 {"key": "stat/04#0253", "es": "AMULETO DE GUARDIÁN"}
 {"key": "stat/04#0254", "es": "AMULETO MORTAL"}
 {"key": "stat/04#0255", "es": "AMULETO DE SERENIDAD"}
@@ -257,6 +269,7 @@
 {"key": "stat/04#0270", "es": "PLUMA SAGRADA"}
 {"key": "stat/04#0271", "es": "VACÍO"}
 {"key": "stat/04#0272", "es": "LLAVE ÍGNEA"}
+{"key": "stat/04#0273", "es": "LLAVE DEL REY{0035}"}
 {"key": "stat/04#0274", "es": "LLAVE DEL SABER"}
 {"key": "stat/04#0275", "es": "LLAVE DE LA BESTIA"}
 {"key": "stat/04#0276", "es": "LLAVE DE COMPUERTA"}
@@ -285,6 +298,7 @@
 {"key": "stat/04#0299", "es": "JARRA DE NADYA"}
 {"key": "stat/04#0300", "es": "JARRA DE NADYA"}
 {"key": "stat/04#0301", "es": "JARRA DE NADYA"}
+{"key": "stat/04#0302", "es": "CENIZAS DE DORADO{0035}"}
 {"key": "stat/04#0303", "es": "LLAVE DEL ESPÍRITU"}
 {"key": "stat/04#0304", "es": "CRISTAL AZUL"}
 {"key": "stat/04#0305", "es": "LLAVE FLAMEANTE"}
@@ -292,6 +306,11 @@
 {"key": "stat/04#0307", "es": "VACÍO"}
 {"key": "stat/04#0308", "es": "VACÍO"}
 {"key": "stat/04#0309", "es": "VACÍO"}
+{"key": "stat/04#0310", "es": "FRASCO DE ALMA {0036}5 PA{0037}"}
+{"key": "stat/04#0311", "es": "FRASCO DE ALMA {0036}53 PA{0037}"}
+{"key": "stat/04#0312", "es": "FRASCO DE ALMA {0036}29 PA{0037}"}
+{"key": "stat/04#0313", "es": "FRASCO DE ALMA {0036}14 PA{0037}"}
+{"key": "stat/04#0512", "es": "BOLA DE FUEGO"}
 {"key": "stat/04#0513", "es": "QUEMADURA"}
 {"key": "stat/04#0514", "es": "VACÍO"}
 {"key": "stat/04#0515", "es": "BOLAS HELADAS"}
@@ -342,12 +361,20 @@
 {"key": "stat/04#0670", "es": "LIBERA LA MAGIA TEMPORALMENTE"}
 {"key": "stat/04#0671", "es": "DESBLOQUEA EL SELLO DEL RELIEVE"}
 {"key": "stat/04#0672", "es": "CURA LA CEGUERA"}
+{"key": "stat/04#0673", "es": "JARRA DEL GUARDIÁN{0035}"}
 {"key": "stat/04#0674", "es": "AÚN SIN USAR"}
 {"key": "stat/04#0675", "es": "AÚN SIN USAR"}
 {"key": "stat/04#0676", "es": "REPARA OBJETOS Y ARMAS"}
 {"key": "stat/04#0677", "es": "DESBLOQUEA EL SELLO DEL ESPÍRITU"}
+{"key": "stat/04#0678", "es": "COMBUSTIBLE DE VELA DEL MUNDO DE TIERRA"}
+{"key": "stat/04#0679", "es": "CONDUCE AL SEÑOR DEL FUEGO"}
 {"key": "stat/04#0680", "es": "VACÍO"}
 {"key": "stat/04#0681", "es": "VACÍO"}
 {"key": "stat/04#0682", "es": "VACÍO"}
 {"key": "stat/04#0683", "es": "VACÍO"}
+{"key": "stat/04#0684", "es": "EL ESPÍRITU AUMENTA LAS HABILIDADES"}
+{"key": "stat/04#0685", "es": "EL ESPÍRITU AUMENTA LAS HABILIDADES"}
+{"key": "stat/04#0686", "es": "EL ESPÍRITU AUMENTA LAS HABILIDADES"}
+{"key": "stat/04#0687", "es": "EL ESPÍRITU AUMENTA LAS HABILIDADES"}
 {"key": "stat/04#0999", "es": "ERRORERRORERROR"}
+{"key": "stat/04#1071", "es": "ESCUDO GRANDE GÉLIDO"}
