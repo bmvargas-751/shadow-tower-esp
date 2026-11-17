@@ -21,7 +21,7 @@ Actualizado: 2026-11-17.
 | 3. Glosario y fichas | ✅ 287 términos, 7 personajes y 3 voces |
 | 4. Set de oro | ✅ 14 de 14 (oro-001) |
 | 5. Piloto | ✅ 4 lotes de 40 líneas (menús, objetos, equipo, diálogos) |
-| 6. Traducción | 🔄 52,0 % (1152 de 2217 líneas; completas: introducción, interfaz, estadísticas, criaturas, modo VS y diálogos) |
+| 6. Traducción | 🔄 79,9 % (1771 de 2217 líneas; completas: introducción, interfaz, estadísticas, criaturas, modo VS y diálogos; objetos al 95,5 %) |
 | 7. Prueba en el juego | ⏳ |
 | 8. Entrega (parche xdelta) | ⏳ |
 
@@ -36,10 +36,10 @@ Actualizado: 2026-11-17.
 | Interfaz y menús | 448 | 448 | 100,0 % |
 | Estadísticas | 106 | 106 | 100,0 % |
 | Nombres de criaturas | 153 | 153 | 100,0 % |
-| Objetos y equipo | 760 | 116 | 15,3 % |
+| Objetos y equipo | 760 | 726 | 95,5 % |
 | Modo VS | 160 | 160 | 100,0 % |
 | Diálogos | 112 | 112 | 100,0 % |
-| Descripciones de equipo | 321 | 51 | 15,9 % |
+| Descripciones de equipo | 321 | 60 | 18,7 % |
 | Descripciones de criaturas | 151 | 0 | 0,0 % |
-| **Total** | **2.217** | **1.152** | **52,0 %** |
+| **Total** | **2.217** | **1.771** | **79,9 %** |
 <!-- /loc:progress -->

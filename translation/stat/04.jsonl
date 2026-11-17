@@ -48,11 +48,306 @@
 {"key": "stat/04#0047", "es": "MANDOBLE PODEROSO"}
 {"key": "stat/04#0048", "es": "MANDOBLE GUARDIÁN"}
 {"key": "stat/04#0049", "es": "ESPADA SANGRIENTA"}
+{"key": "stat/04#0050", "es": "MAZA"}
+{"key": "stat/04#0051", "es": "MAZA APLASTANTE"}
+{"key": "stat/04#0052", "es": "MAZA RADIANTE"}
+{"key": "stat/04#0053", "es": "LUCERO DEL ALBA"}
+{"key": "stat/04#0054", "es": "LUCERO DEL ALBA VELOZ"}
+{"key": "stat/04#0055", "es": "LUCERO DEL ALBA GÉLIDO"}
+{"key": "stat/04#0056", "es": "HACHA"}
+{"key": "stat/04#0057", "es": "HACHA"}
+{"key": "stat/04#0058", "es": "HACHA GIGANTE"}
+{"key": "stat/04#0059", "es": "HACHA GIGANTE"}
+{"key": "stat/04#0060", "es": "HACHA APLASTANTE"}
+{"key": "stat/04#0061", "es": "HACHA MORTAL"}
+{"key": "stat/04#0062", "es": "HACHA VIVIENTE"}
+{"key": "stat/04#0063", "es": "HACHA DE GUERRA"}
+{"key": "stat/04#0064", "es": "HACHA DE GUERRA MORTAL"}
+{"key": "stat/04#0065", "es": "HACHA DE GUERRA AFILADA"}
+{"key": "stat/04#0066", "es": "ARCO"}
+{"key": "stat/04#0067", "es": "ARCO GUERRERO"}
+{"key": "stat/04#0068", "es": "BALLESTA"}
+{"key": "stat/04#0069", "es": "BALLESTA ÍGNEA"}
+{"key": "stat/04#0070", "es": "VACÍO"}
+{"key": "stat/04#0071", "es": "GORRO"}
+{"key": "stat/04#0072", "es": "CORONA"}
+{"key": "stat/04#0073", "es": "CORONA DE RESISTENCIA"}
+{"key": "stat/04#0074", "es": "CORONA DE SERENIDAD"}
+{"key": "stat/04#0075", "es": "CORONA DE MAGO"}
+{"key": "stat/04#0076", "es": "CORONA DIABÓLICA"}
+{"key": "stat/04#0077", "es": "YELMO"}
+{"key": "stat/04#0078", "es": "YELMO"}
+{"key": "stat/04#0079", "es": "YELMO MÁGICO"}
+{"key": "stat/04#0080", "es": "YELMO CERRADO"}
+{"key": "stat/04#0081", "es": "YELMO CERRADO"}
+{"key": "stat/04#0082", "es": "YELMO CERRADO DE CURACIÓN"}
+{"key": "stat/04#0083", "es": "YELMO CERRADO REFORZADO"}
+{"key": "stat/04#0084", "es": "YELMO CERRADO ÍGNEO"}
+{"key": "stat/04#0085", "es": "GRAN YELMO"}
+{"key": "stat/04#0086", "es": "GRAN YELMO"}
+{"key": "stat/04#0087", "es": "GRAN YELMO REFORZADO"}
+{"key": "stat/04#0088", "es": "GRAN YELMO DE FORTUNA"}
+{"key": "stat/04#0089", "es": "GRAN YELMO MÍSTICO"}
+{"key": "stat/04#0090", "es": "GRAN YELMO SAGRADO"}
+{"key": "stat/04#0091", "es": "ARMADURA ACOLCHADA"}
+{"key": "stat/04#0092", "es": "ARMADURA ACOLCHADA"}
+{"key": "stat/04#0093", "es": "ARMADURA DE CUERO"}
+{"key": "stat/04#0094", "es": "ARMADURA DE CUERO"}
+{"key": "stat/04#0095", "es": "ARMADURA DE CUERO MÁGICA"}
+{"key": "stat/04#0096", "es": "COTA DE ESCAMAS"}
+{"key": "stat/04#0097", "es": "COTA DE ESCAMAS"}
+{"key": "stat/04#0098", "es": "COTA DE ESCAMAS DE CURACIÓN"}
+{"key": "stat/04#0099", "es": "COTA DE PLACAS"}
+{"key": "stat/04#0100", "es": "COTA DE PLACAS"}
+{"key": "stat/04#0101", "es": "COTA DE PLACAS REFORZADA"}
+{"key": "stat/04#0102", "es": "COTA DE PLACAS DE RESISTENCIA"}
+{"key": "stat/04#0103", "es": "COTA DE PLACAS DE CURACIÓN"}
+{"key": "stat/04#0104", "es": "COTA DE PLACAS"}
+{"key": "stat/04#0105", "es": "COTA DE PLACAS MÁGICA"}
+{"key": "stat/04#0106", "es": "COTA DE PLACAS ÍGNEA"}
+{"key": "stat/04#0107", "es": "COTA DE PLACAS GÉLIDA"}
+{"key": "stat/04#0108", "es": "COTA DE PLACAS CÁUSTICA"}
+{"key": "stat/04#0109", "es": "COTA DE PLACAS RADIANTE"}
+{"key": "stat/04#0110", "es": "COTA DE PLACAS OSCURA"}
+{"key": "stat/04#0111", "es": "COTA DE PLACAS DE PROTECCIÓN"}
+{"key": "stat/04#0112", "es": "COTA DE PLACAS ETERNA"}
+{"key": "stat/04#0113", "es": "COTA DE PLACAS DIABÓLICA"}
+{"key": "stat/04#0114", "es": "COTA DE PLACAS SAGRADA"}
+{"key": "stat/04#0115", "es": "ARMADURA COMPLETA"}
+{"key": "stat/04#0116", "es": "COTA DE PLACAS DE HONOR"}
+{"key": "stat/04#0117", "es": "ARMADURA COMPLETA REFORZADA"}
+{"key": "stat/04#0118", "es": "COTA DIVINA"}
+{"key": "stat/04#0119", "es": "COTA DE PLACAS DE FURIA"}
+{"key": "stat/04#0120", "es": "COTA DE PLACAS DE CABALLERO"}
+{"key": "stat/04#0121", "es": "GUANTE DE CUERO"}
+{"key": "stat/04#0122", "es": "GUANTE DE CUERO"}
+{"key": "stat/04#0123", "es": "GUANTE DE CUERO"}
+{"key": "stat/04#0124", "es": "GUANTE DE MADERA"}
+{"key": "stat/04#0125", "es": "GUANTE DE MADERA"}
+{"key": "stat/04#0126", "es": "GUANTE DE METAL"}
+{"key": "stat/04#0127", "es": "GUANTE DE METAL"}
+{"key": "stat/04#0128", "es": "GUANTE DE METAL"}
+{"key": "stat/04#0129", "es": "GUANTELETE ÍGNEO"}
+{"key": "stat/04#0130", "es": "PROTECTOR DE MANO CÁUSTICO"}
+{"key": "stat/04#0131", "es": "GUANTELETE"}
+{"key": "stat/04#0132", "es": "GUANTELETE"}
+{"key": "stat/04#0133", "es": "GUANTELETE REFORZADO"}
+{"key": "stat/04#0134", "es": "GUANTELETE DE RESISTENCIA"}
+{"key": "stat/04#0135", "es": "GUANTELETE VELOZ"}
+{"key": "stat/04#0136", "es": "GUANTELETE MORTAL"}
+{"key": "stat/04#0137", "es": "BRAZAL"}
+{"key": "stat/04#0138", "es": "BRAZAL DE SERENIDAD"}
+{"key": "stat/04#0139", "es": "BRAZAL MORTAL"}
+{"key": "stat/04#0140", "es": "BRAZAL MAESTRO"}
+{"key": "stat/04#0141", "es": "BOTAS DE CUERO"}
+{"key": "stat/04#0142", "es": "BOTAS DE CUERO"}
+{"key": "stat/04#0143", "es": "BOTAS DURAS"}
+{"key": "stat/04#0144", "es": "BOTAS DE ACERO"}
+{"key": "stat/04#0145", "es": "BOTAS DE ACERO"}
+{"key": "stat/04#0146", "es": "BOTAS DE ACERO DE RESISTENCIA"}
+{"key": "stat/04#0147", "es": "BOTAS DE ACERO DE CURACIÓN"}
+{"key": "stat/04#0148", "es": "BOTAS DE ACERO DE RESISTENCIA"}
+{"key": "stat/04#0149", "es": "BOTAS DE ACERO CÁUSTICAS"}
+{"key": "stat/04#0150", "es": "BOTAS DE ACERO VELOCES"}
+{"key": "stat/04#0151", "es": "BOTAS DE ACERO DE EQUILIBRIO"}
+{"key": "stat/04#0152", "es": "BOTAS DE ACERO DE RESISTENCIA"}
+{"key": "stat/04#0153", "es": "GREBA"}
+{"key": "stat/04#0154", "es": "GREBA"}
+{"key": "stat/04#0155", "es": "GREBA REFORZADA"}
+{"key": "stat/04#0156", "es": "GREBA ÍGNEA"}
+{"key": "stat/04#0157", "es": "GREBA GÉLIDA"}
+{"key": "stat/04#0158", "es": "GREBA DE PROTECCIÓN"}
+{"key": "stat/04#0159", "es": "GREBA CÁUSTICA"}
+{"key": "stat/04#0160", "es": "GREBA SAGRADA"}
+{"key": "stat/04#0161", "es": "RODELA"}
+{"key": "stat/04#0162", "es": "RODELA"}
+{"key": "stat/04#0163", "es": "ESCUDO PEQUEÑO"}
+{"key": "stat/04#0164", "es": "ESCUDO PEQUEÑO"}
+{"key": "stat/04#0166", "es": "ESCUDO GRANDE"}
+{"key": "stat/04#0167", "es": "ESCUDO GRANDE"}
+{"key": "stat/04#0168", "es": "ESCUDO GRANDE REFORZADO"}
+{"key": "stat/04#0169", "es": "ESCUDO GRANDE DE EQUILIBRIO"}
+{"key": "stat/04#0170", "es": "ESCUDO GRANDE ÍGNEO"}
+{"key": "stat/04#0172", "es": "GRAN ESCUDO"}
+{"key": "stat/04#0173", "es": "GRAN ESCUDO DE EQUILIBRIO"}
+{"key": "stat/04#0174", "es": "GRAN ESCUDO RADIANTE"}
+{"key": "stat/04#0175", "es": "GRAN ESCUDO OSCURO"}
+{"key": "stat/04#0176", "es": "GRAN ESCUDO MORTAL"}
+{"key": "stat/04#0177", "es": "PAVÉS"}
+{"key": "stat/04#0178", "es": "PAVÉS"}
+{"key": "stat/04#0180", "es": "PAVÉS REFORZADO"}
+{"key": "stat/04#0183", "es": "PAVÉS DE EQUILIBRIO"}
+{"key": "stat/04#0184", "es": "PAVÉS DE RESISTENCIA"}
+{"key": "stat/04#0185", "es": "ESCUDO GÓTICO"}
+{"key": "stat/04#0186", "es": "ESCUDO GÓTICO REFORZADO"}
+{"key": "stat/04#0187", "es": "ESCUDO GÓTICO"}
+{"key": "stat/04#0188", "es": "ESCUDO GÓTICO DE RESISTENCIA"}
+{"key": "stat/04#0189", "es": "ESCUDO GÓTICO DE HONOR"}
+{"key": "stat/04#0190", "es": "ESCUDO GÓTICO DE EQUILIBRIO"}
+{"key": "stat/04#0191", "es": "ESCUDO GÓTICO MAESTRO"}
+{"key": "stat/04#0192", "es": "ESCUDO GÓTICO DE PODER"}
+{"key": "stat/04#0193", "es": "ESCUDO GÓTICO DE FURIA"}
+{"key": "stat/04#0194", "es": "ESCUDO GÓTICO RADIANTE"}
+{"key": "stat/04#0195", "es": "ESCUDO GÓTICO SAGRADO"}
+{"key": "stat/04#0196", "es": "ANILLO DE FUEGO DE INVOCADOR"}
+{"key": "stat/04#0197", "es": "ANILLO DE FUEGO DE INVOCADOR"}
+{"key": "stat/04#0200", "es": "ANILLO DE FUEGO DE HECHICERO"}
+{"key": "stat/04#0201", "es": "ANILLO DE HIELO DE INVOCADOR"}
+{"key": "stat/04#0202", "es": "ANILLO DE HIELO DE INVOCADOR"}
+{"key": "stat/04#0203", "es": "ANILLO DE HIELO DE EQUILIBRIO"}
+{"key": "stat/04#0204", "es": "ANILLO DE HIELO DE SACERDOTE"}
+{"key": "stat/04#0205", "es": "ANILLO DE HIELO DE HECHICERO"}
+{"key": "stat/04#0208", "es": "ANILLO SAGRADO DE RESISTENCIA"}
+{"key": "stat/04#0212", "es": "ANILLO OSCURO"}
+{"key": "stat/04#0213", "es": "ANILLO OSCURO DE SACERDOTE"}
+{"key": "stat/04#0214", "es": "ANILLO OSCURO DE HECHICERO"}
+{"key": "stat/04#0215", "es": "ANILLO DE VENENO"}
+{"key": "stat/04#0216", "es": "ANILLO DE VENENO"}
+{"key": "stat/04#0217", "es": "ANILLO DE PROTECCIÓN"}
+{"key": "stat/04#0218", "es": "ANILLO DE VENENO DE HECHICERO"}
+{"key": "stat/04#0219", "es": "ANILLO CÁUSTICO"}
+{"key": "stat/04#0220", "es": "ANILLO CÁUSTICO"}
+{"key": "stat/04#0221", "es": "ANILLO CÁUSTICO DE SACERDOTE"}
+{"key": "stat/04#0222", "es": "ANILLO CÁUSTICO DE HECHICERO"}
+{"key": "stat/04#0223", "es": "ANILLO DE DESEO"}
+{"key": "stat/04#0225", "es": "ANILLO DE ALMAS OSCURAS"}
+{"key": "stat/04#0226", "es": "ANILLO NEGRO"}
+{"key": "stat/04#0227", "es": "ANILLO DE SELLO"}
+{"key": "stat/04#0228", "es": "ANILLO DEL ESPÍRITU MUERTO"}
+{"key": "stat/04#0229", "es": "ANILLO DE FURIA"}
+{"key": "stat/04#0230", "es": "ANILLO DE ABSORCIÓN"}
+{"key": "stat/04#0231", "es": "BRAZALETE DE RESISTENCIA"}
+{"key": "stat/04#0232", "es": "BRAZALETE DE EQUILIBRIO"}
+{"key": "stat/04#0233", "es": "BRAZALETE DE MOVIMIENTO"}
+{"key": "stat/04#0234", "es": "BRAZALETE DE SERENIDAD"}
+{"key": "stat/04#0235", "es": "BRAZALETE DE CURACIÓN"}
+{"key": "stat/04#0236", "es": "BRAZALETE DE RECUPERACIÓN"}
+{"key": "stat/04#0237", "es": "BRAZALETE MENTAL"}
+{"key": "stat/04#0238", "es": "ANILLO PODEROSO"}
+{"key": "stat/04#0239", "es": "BRAZALETE MORTAL"}
+{"key": "stat/04#0240", "es": "BRAZALETE GUARDIÁN"}
+{"key": "stat/04#0241", "es": "BRAZALETE DE HECHICERO"}
+{"key": "stat/04#0242", "es": "BRAZALETE DE SACERDOTE"}
+{"key": "stat/04#0243", "es": "BRAZALETE DE MOVIMIENTO"}
+{"key": "stat/04#0244", "es": "BRAZALETE DE SERENIDAD"}
+{"key": "stat/04#0245", "es": "BRAZALETE MORTAL"}
+{"key": "stat/04#0246", "es": "BRAZALETE REFORZADO"}
+{"key": "stat/04#0247", "es": "BRAZALETE DE SACERDOTE"}
+{"key": "stat/04#0248", "es": "BRAZALETE SAGRADO"}
+{"key": "stat/04#0249", "es": "BRAZALETE DE REY"}
+{"key": "stat/04#0250", "es": "BRAZALETE DE LUNA"}
+{"key": "stat/04#0251", "es": "AMULETO MÁGICO"}
+{"key": "stat/04#0253", "es": "AMULETO DE GUARDIÁN"}
+{"key": "stat/04#0254", "es": "AMULETO MORTAL"}
+{"key": "stat/04#0255", "es": "AMULETO DE SERENIDAD"}
+{"key": "stat/04#0256", "es": "AMULETO DE CURACIÓN"}
+{"key": "stat/04#0257", "es": "AMULETO DE RESISTENCIA"}
+{"key": "stat/04#0258", "es": "AMULETO MENTAL"}
+{"key": "stat/04#0259", "es": "AMULETO DE HECHICERO"}
+{"key": "stat/04#0260", "es": "AMULETO DE SACERDOTE"}
+{"key": "stat/04#0261", "es": "AMULETO DE EQUILIBRIO"}
+{"key": "stat/04#0262", "es": "AMULETO DE RECUPERACIÓN"}
+{"key": "stat/04#0263", "es": "AMULETO DE ESTRELLA"}
+{"key": "stat/04#0264", "es": "AMULETO DE INVIERNO"}
+{"key": "stat/04#0265", "es": "AMULETO INFINITO"}
 {"key": "stat/04#0266", "es": "CUNES"}
+{"key": "stat/04#0267", "es": "VACÍO"}
+{"key": "stat/04#0268", "es": "ANTORCHA"}
+{"key": "stat/04#0269", "es": "LÁMPARA"}
+{"key": "stat/04#0270", "es": "PLUMA SAGRADA"}
+{"key": "stat/04#0271", "es": "VACÍO"}
+{"key": "stat/04#0272", "es": "LLAVE ÍGNEA"}
+{"key": "stat/04#0274", "es": "LLAVE DEL SABER"}
+{"key": "stat/04#0275", "es": "LLAVE DE LA BESTIA"}
+{"key": "stat/04#0276", "es": "LLAVE DE COMPUERTA"}
+{"key": "stat/04#0277", "es": "LLAVE DE SIRENA"}
+{"key": "stat/04#0278", "es": "LLAVE DEL DELIRIO"}
+{"key": "stat/04#0279", "es": "LLAVE DE LATÓN"}
+{"key": "stat/04#0280", "es": "LLAVE DE HIERRO"}
+{"key": "stat/04#0281", "es": "VACÍO"}
+{"key": "stat/04#0282", "es": "VACÍO"}
+{"key": "stat/04#0283", "es": "VACÍO"}
+{"key": "stat/04#0284", "es": "POCIÓN CURATIVA"}
+{"key": "stat/04#0285", "es": "POCIÓN MÁGICA"}
+{"key": "stat/04#0286", "es": "ANTÍDOTO"}
+{"key": "stat/04#0287", "es": "ANTIPARALÍTICO"}
+{"key": "stat/04#0288", "es": "SÍMBOLO DIVINO"}
+{"key": "stat/04#0289", "es": "VACÍO"}
+{"key": "stat/04#0290", "es": "OJO MALIGNO"}
+{"key": "stat/04#0291", "es": "PIEDRA DEL MUNDO DE FUEGO"}
+{"key": "stat/04#0292", "es": "VACUNA CONTRA VENENO"}
+{"key": "stat/04#0293", "es": "POLVO DE FURIA"}
+{"key": "stat/04#0294", "es": "BOTELLA DE LUZ"}
+{"key": "stat/04#0295", "es": "VACUNA CONTRA ÁCIDO"}
+{"key": "stat/04#0296", "es": "LIBRO DEL ESPÍRITU"}
+{"key": "stat/04#0297", "es": "PIEDRA DE ESPADA SELLADA"}
+{"key": "stat/04#0298", "es": "GEMA DE DRAGÓN JOVEN"}
+{"key": "stat/04#0299", "es": "JARRA DE NADYA"}
+{"key": "stat/04#0300", "es": "JARRA DE NADYA"}
+{"key": "stat/04#0301", "es": "JARRA DE NADYA"}
+{"key": "stat/04#0303", "es": "LLAVE DEL ESPÍRITU"}
+{"key": "stat/04#0304", "es": "CRISTAL AZUL"}
+{"key": "stat/04#0305", "es": "LLAVE FLAMEANTE"}
+{"key": "stat/04#0306", "es": "VACÍO"}
+{"key": "stat/04#0307", "es": "VACÍO"}
+{"key": "stat/04#0308", "es": "VACÍO"}
+{"key": "stat/04#0309", "es": "VACÍO"}
+{"key": "stat/04#0513", "es": "QUEMADURA"}
+{"key": "stat/04#0514", "es": "VACÍO"}
+{"key": "stat/04#0515", "es": "BOLAS HELADAS"}
+{"key": "stat/04#0516", "es": "SABLE DE HIELO"}
+{"key": "stat/04#0517", "es": "VACÍO"}
 {"key": "stat/04#0518", "es": "OJOS DE REINA"}
 {"key": "stat/04#0519", "es": "VENENO DOBLE"}
+{"key": "stat/04#0520", "es": "VACÍO"}
+{"key": "stat/04#0521", "es": "LLUVIA DE ÁCIDO"}
 {"key": "stat/04#0522", "es": "ELEMENTOS CORROSIVOS"}
+{"key": "stat/04#0523", "es": "VACÍO"}
 {"key": "stat/04#0524", "es": "JUICIO"}
 {"key": "stat/04#0525", "es": "RAYO PURIFICADOR"}
+{"key": "stat/04#0526", "es": "VACÍO"}
 {"key": "stat/04#0527", "es": "EXTERMINIO"}
+{"key": "stat/04#0528", "es": "ESPÍRITU IMPÍO"}
+{"key": "stat/04#0529", "es": "VACÍO"}
+{"key": "stat/04#0640", "es": "INTERCAMBIAR POR OBJETO EN TIENDA"}
+{"key": "stat/04#0641", "es": "VACÍO"}
+{"key": "stat/04#0642", "es": "ILUMINA PARCIALMENTE LA ZONA"}
+{"key": "stat/04#0643", "es": "ANTORCHA DURADERA"}
+{"key": "stat/04#0644", "es": "TELETRANSPORTA AL ÚLTIMO PUNTO DE GUARDADO"}
+{"key": "stat/04#0645", "es": "VACÍO"}
+{"key": "stat/04#0646", "es": "LLAVE DE COFRE"}
+{"key": "stat/04#0647", "es": "LLAVE DE PUERTA"}
+{"key": "stat/04#0648", "es": "LLAVE DE PUERTA"}
+{"key": "stat/04#0649", "es": "LLAVE DE PUERTA"}
+{"key": "stat/04#0650", "es": "LLAVE DE PORTÓN"}
+{"key": "stat/04#0651", "es": "LLAVE DE COFRE"}
+{"key": "stat/04#0652", "es": "LLAVE DE COFRE"}
+{"key": "stat/04#0653", "es": "LLAVE DE CÁRCEL"}
+{"key": "stat/04#0654", "es": "LLAVE DE PUERTA"}
+{"key": "stat/04#0655", "es": "VACÍO"}
+{"key": "stat/04#0656", "es": "VACÍO"}
+{"key": "stat/04#0657", "es": "VACÍO"}
+{"key": "stat/04#0658", "es": "RECUPERA TODOS LOS PV"}
+{"key": "stat/04#0659", "es": "RECUPERA TODOS LOS PM"}
+{"key": "stat/04#0660", "es": "CURA EL VENENO"}
+{"key": "stat/04#0661", "es": "CURA LA PARÁLISIS"}
+{"key": "stat/04#0662", "es": "CURA LA MALDICIÓN"}
+{"key": "stat/04#0663", "es": "VACÍO"}
+{"key": "stat/04#0664", "es": "DETIENE EL MOVIMIENTO ENEMIGO"}
+{"key": "stat/04#0665", "es": "REDUCE EL DAÑO DE FUEGO"}
+{"key": "stat/04#0666", "es": "PROTEGE DEL VENENO"}
+{"key": "stat/04#0667", "es": "AUMENTA EL PODER DE ATAQUE"}
+{"key": "stat/04#0668", "es": "ILUMINA TODA LA ZONA"}
+{"key": "stat/04#0669", "es": "REDUCE EL DAÑO DE ÁCIDO"}
+{"key": "stat/04#0670", "es": "LIBERA LA MAGIA TEMPORALMENTE"}
+{"key": "stat/04#0671", "es": "DESBLOQUEA EL SELLO DEL RELIEVE"}
+{"key": "stat/04#0672", "es": "CURA LA CEGUERA"}
+{"key": "stat/04#0674", "es": "AÚN SIN USAR"}
+{"key": "stat/04#0675", "es": "AÚN SIN USAR"}
+{"key": "stat/04#0676", "es": "REPARA OBJETOS Y ARMAS"}
+{"key": "stat/04#0677", "es": "DESBLOQUEA EL SELLO DEL ESPÍRITU"}
+{"key": "stat/04#0680", "es": "VACÍO"}
+{"key": "stat/04#0681", "es": "VACÍO"}
+{"key": "stat/04#0682", "es": "VACÍO"}
+{"key": "stat/04#0683", "es": "VACÍO"}
 {"key": "stat/04#0999", "es": "ERRORERRORERROR"}
