@@ -74,7 +74,15 @@ Obligatorio: sin él, `loc.py prepare` no arma lotes.
 
 ### Fase 6. Traducción
 
-- [ ] (una casilla por sección de `loc.json`)
+- [ ] Introducción
+- [ ] Interfaz y menús
+- [ ] Estadísticas
+- [ ] Nombres de criaturas
+- [ ] Objetos y equipo
+- [ ] Modo VS
+- [x] Diálogos (2026-11-17: piloto-dialogos y diálogos-001).
+- [ ] Descripciones de equipo
+- [ ] Descripciones de criaturas
 
 ### Fase 7. Prueba en el juego
 
