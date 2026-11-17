@@ -196,3 +196,5 @@ Prueba 7 (pendiente): menú de pausa con «STÁTUS», «ÉÍÓÚ» (en lugar de 
 **Letras españolas de la fuente B (`st_text.SPANISH_B`):** Á 56, É 57, Í 58, Ó 59, Ú 60, Ñ 61, Ü 62 (fila 3, libre en todas las láminas B). Se dibujan en las entradas 1, 2, 4, 8 y 10 de `STAT.T` (las dos copias) y en la 15 de `VS_ETC.T`, cuando alguna traducción de fuente B las usa. La letra se baja un píxel (se quita su fila más redundante) y la marca va en la fila 0, con la fila 1 vacía. Sin ¿ ni ¡ (la fuente B no trae ? ni !; `hooks.py` avisa si se usan).
 
 Prueba 8 (pendiente): las 9 letras de A en el menú y las 7 de B en el panel de equipo («WEAPON ÁTTACK», «MAGIC SPÉED», «ÍÓÚ DEFENSE», «MAGIC DEFÑÜ»), con el adaptador real; y el texto en imágenes (conversaciones sin probar todavía).
+
+**Resultado de la prueba 8 (2026-11-16):** con el adaptador real, la fuente A muestra Á É Í Ó Ú Ñ Ü ¿ ¡ en el menú y la fuente B muestra Á É Í Ó Ú Ñ Ü en el panel de equipo, con la marca separada de la letra. **Letras españolas del texto codificado: resuelto.** Falta ver en el juego una conversación redibujada (`TALKMSG.T`).
