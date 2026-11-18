@@ -302,6 +302,7 @@ Términos fijos de la traducción. La guía de estilo está en [STYLE.md](STYLE.
 | FIREBALL | BOLA DE FUEGO | decidido 2026-11-16 | Magia; SHOOTS FIREBALLS en la prosa. |
 | EXPLOSIVE | EXPLOSIÓN | decidido 2026-11-16 | Magia. |
 | BLAZE | LLAMARADA | decidido 2026-11-16 | Magia. |
+| FROZEN BALLS | BOLAS DE HIELO | decidido 2026-11-17 | Magia; no «bolas heladas» (pedido del usuario en la prueba 0.9.2). |
 | ICE SABER | SABLE DE HIELO | decidido 2026-11-16 | Magia (las dos grafías del original). |
 | ICE SABRE | SABLE DE HIELO | decidido 2026-11-16 | Magia (las dos grafías del original). |
 | QUEEN EYES | OJOS DE REINA | decidido 2026-11-16 | Magia. |
