@@ -1,5 +1,11 @@
 # Cambios
 
+## 0.9.3 — 2026-11-17
+
+Versión de prueba: tercera ronda en el juego.
+
+- BOLAS DE HIELO en vez de BOLAS HELADAS.
+
 ## 0.9.2 — 2026-11-17
 
 Versión de prueba: segunda ronda en el juego.
