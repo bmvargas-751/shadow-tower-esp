@@ -9,7 +9,7 @@ Pasos:
   1. Comprueba que original.bin es la imagen USA esperada (SHA-1).
   2. Arma la imagen traducida con st_build.
   3. Crea el parche con xdelta3 y lo aplica de vuelta sobre original.bin para comprobar que da la misma imagen.
-  4. Arma la carpeta y el .zip: parche, LEEME.txt (de tools/release/) y CHANGELOG.md.
+  4. Arma el .zip: parche, LEEME.txt (de tools/release/) y CHANGELOG.md. No deja la imagen ni la carpeta.
 
 xdelta3 se busca en $XDELTA3 o en el PATH. El paquete no lleva nada del juego: solo el parche.
 """
@@ -97,9 +97,11 @@ def main():
     with zipfile.ZipFile(zpath, 'w', zipfile.ZIP_DEFLATED) as z:
         for fn in sorted(os.listdir(out)):
             z.write(os.path.join(out, fn), f'{name}/{fn}')
+    size = os.path.getsize(patch)
+    shutil.rmtree(out)  # solo queda el .zip
     os.remove(img)
     os.remove(os.path.splitext(img)[0] + '.cue')
-    print(f'parche: {os.path.getsize(patch):,} bytes; imagen traducida SHA-1 {new["sha1"]}')
+    print(f'parche: {size:,} bytes; imagen traducida SHA-1 {new["sha1"]}')
     print(f'paquete: {zpath}')
 
 

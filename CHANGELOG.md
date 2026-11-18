@@ -1,5 +1,14 @@
 # Cambios
 
+## 0.9.2 — 2026-11-17
+
+Versión de prueba: segunda ronda en el juego.
+
+- Menú principal y OPTIONS alineados a la izquierda.
+- Configuración de botones centrada con el texto en español.
+- Bestiario: el tipo de criatura queda dentro del recuadro.
+- GREBAS en plural, como BOTAS.
+
 ## 0.9.1 — 2026-11-17
 
 Versión de prueba: correcciones de la primera ronda en el juego.
