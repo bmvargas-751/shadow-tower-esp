@@ -97,4 +97,5 @@ Obligatorio: sin él, `loc.py prepare` no arma lotes.
 - [x] Versión de prueba 0.9.0: release de GitHub `v0.9.0` (marcado como *Latest*, con «versión de prueba» en el título y las notas) con el `.zip` (2026-11-17), para probar la descarga y el parcheo como cualquier jugador.
 - [x] Versión de prueba 0.9.1: correcciones de la primera ronda en el juego (2026-11-17).
 - [x] Versión de prueba 0.9.2: alineación de menús (`ST.EXE`) y grebas en plural (2026-11-17).
+- [x] Versión de prueba 0.9.3: bolas de hielo (2026-11-17).
 - [ ] Publicación de la 1.0: cuando cierre la fase 7, CHANGELOG.md con la fecha y un *release* de GitHub con el `.zip` (lo confirma el usuario antes).
