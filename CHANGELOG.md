@@ -1,5 +1,12 @@
 # Cambios
 
+## 0.9.4 — 2026-11-20
+
+Versión de prueba: cuarta ronda en el juego.
+
+- Nueve diálogos que habían quedado en inglés, ahora en español (entre ellos, los del siervo de Necron, Auriel y Akryal).
+- Tienda: el recuadro de COMPRAR, REPARAR o CAMBIAR y CANCELAR queda alineado con el texto.
+
 ## 0.9.3 — 2026-11-17
 
 Versión de prueba: tercera ronda en el juego.

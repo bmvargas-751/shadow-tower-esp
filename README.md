@@ -32,7 +32,7 @@ Actualizado: 2026-11-20.
 | 5. Piloto | ✅ 4 lotes de 40 líneas (menús, objetos, equipo, diálogos) |
 | 6. Traducción | ✅ 100 % (2216 líneas; dudas en PENDING.md) |
 | 7. Prueba en el juego | ⏳ segunda ronda: 9 diálogos que habían quedado en inglés y recuadro de la tienda (PENDING.md) |
-| 8. Entrega (parche xdelta) | ⏳ 0.9.3 publicada como versión de prueba ([releases](https://github.com/bmvargas-751/shadow-tower-esp/releases)); la 1.0, después de la fase 7 |
+| 8. Entrega (parche xdelta) | ⏳ 0.9.4 publicada como versión de prueba ([releases](https://github.com/bmvargas-751/shadow-tower-esp/releases)); la 1.0, después de la fase 7 |
 
 ### Secciones
 
