@@ -318,5 +318,5 @@ Términos fijos de la traducción. La guía de estilo está en [STYLE.md](STYLE.
 | demoness | diablesa | decidido 2026-11-17 | Cómo se presenta Auriel («la diablesa Auriel»). |
 | MEMORY CARD | MEMORY CARD | decidido 2026-11-17 | Nombre del accesorio de la consola: queda en inglés. |
 | END GAME | SALIR | decidido 2026-11-17 | Comando del menú de pausa. |
-| TRADE | INTERCAMBIAR | decidido 2026-11-17 | Comando de la tienda. |
+| TRADE | INTERCAMBIAR | decidido 2026-11-17 | Comando de la tienda. En la confirmación de compra (`stat/00#0107`), forma corta CAMBIAR (PENDING.md). |
 | DARK (elemento) | OSCURIDAD | decidido 2026-11-17 | En la lista de elementos (junto a ACID, HOLY); como estado es CEGUERA. |

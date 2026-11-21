@@ -18,7 +18,7 @@ Cómo se aplica el parche: [tools/release/LEEME.txt](tools/release/LEEME.txt). C
 
 ## Avance
 
-Actualizado: 2026-11-17.
+Actualizado: 2026-11-20.
 
 ### Fases
 
@@ -30,8 +30,8 @@ Actualizado: 2026-11-17.
 | 3. Glosario y fichas | ✅ 287 términos, 7 personajes y 3 voces |
 | 4. Set de oro | ✅ 14 de 14 (oro-001) |
 | 5. Piloto | ✅ 4 lotes de 40 líneas (menús, objetos, equipo, diálogos) |
-| 6. Traducción | ✅ 100 % (2217 líneas; dudas en PENDING.md) |
-| 7. Prueba en el juego | ⏳ primera ronda corregida (anchos de menús, objetos y EQUIP; PENDING.md) |
+| 6. Traducción | ✅ 100 % (2216 líneas; dudas en PENDING.md) |
+| 7. Prueba en el juego | ⏳ segunda ronda: 9 diálogos que habían quedado en inglés y recuadro de la tienda (PENDING.md) |
 | 8. Entrega (parche xdelta) | ⏳ 0.9.3 publicada como versión de prueba ([releases](https://github.com/bmvargas-751/shadow-tower-esp/releases)); la 1.0, después de la fase 7 |
 
 ### Secciones
@@ -42,13 +42,13 @@ Actualizado: 2026-11-17.
 | Sección | Líneas | Traducidas | Avance |
 |---|---:|---:|---:|
 | Introducción | 6 | 6 | 100,0 % |
-| Interfaz y menús | 448 | 448 | 100,0 % |
-| Estadísticas | 106 | 106 | 100,0 % |
+| Interfaz y menús | 446 | 446 | 100,0 % |
+| Estadísticas | 102 | 102 | 100,0 % |
 | Nombres de criaturas | 153 | 153 | 100,0 % |
-| Objetos y equipo | 760 | 760 | 100,0 % |
-| Modo VS | 160 | 160 | 100,0 % |
-| Diálogos | 112 | 112 | 100,0 % |
+| Objetos y equipo | 758 | 758 | 100,0 % |
+| Modo VS | 158 | 158 | 100,0 % |
+| Diálogos | 121 | 121 | 100,0 % |
 | Descripciones de equipo | 321 | 321 | 100,0 % |
 | Descripciones de criaturas | 151 | 151 | 100,0 % |
-| **Total** | **2.217** | **2.217** | **100,0 %** |
+| **Total** | **2.216** | **2.216** | **100,0 %** |
 <!-- /loc:progress -->

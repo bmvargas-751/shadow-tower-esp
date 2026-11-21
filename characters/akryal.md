@@ -5,5 +5,5 @@
 - **Registro:** sobrio y formal, de presentación ritual: dos frases cortas, primero su función y después su nombre.
 - **Muletillas y tics:** ninguno. Al original le falta el punto final; es un descuido, no un rasgo.
 - **Groserías:** ninguna.
-- **Ejemplos:** `talk#0150`.
-- **Fuente:** `talk#0150` (seguridad alta). Para el género: `crt#0267`.
+- **Ejemplos:** `talk#0150`, `talk#0151`.
+- **Fuente:** `talk#0150` (seguridad alta), `talk#0151` (alta: la jarra robada por los espíritus del agua, como en `crt#0267`). Para el género: `crt#0267`.
