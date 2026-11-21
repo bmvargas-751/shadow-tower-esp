@@ -1,5 +1,6 @@
 {"key": "talk#0000", "es": "¿Vienes a destruir a todos los monstruos? Esta zona la construyeron los hombres, así que hay pocos, pero abajo hay montones."}
 {"key": "talk#0001", "es": "Hace mucho, gente que adoraba a los demonios usaba esto como altar. Una parte también se usó como prisión."}
+{"key": "talk#0002", "es": "Esta torre está dividida en seis mundos y cada uno tiene un soberano... Son tan poderosos como te imaginas."}
 {"key": "talk#0003", "es": "Podrás cambiarlos por todo tipo de objetos. Los demonios inferiores los cambian por almas. Pero yo no los necesito."}
 {"key": "talk#0006", "es": "¿Un humano?... En fin, ¿qué quieres?"}
 {"key": "talk#0007", "es": "Si no tienes asuntos conmigo, vete."}
@@ -19,6 +20,8 @@
 {"key": "talk#0026", "es": "Vaya. Sí que lograste conseguirlo."}
 {"key": "talk#0027", "es": "¿Eh? ¿Qué?"}
 {"key": "talk#0030", "es": "Soy la diablesa Auriel. Normalmente no le pediría esto a un humano, pero ¿escuchará mi súplica?"}
+{"key": "talk#0031", "es": "Una criatura llamada Duhrin me encerró en este cuerpo. Le ruego que rompa el sello y me devuelva a mi verdadero cuerpo."}
+{"key": "talk#0032", "es": "Este cuerpo... no puedo moverlo bien. Aun así... nunca pensé que me derrotaría ese pedazo de arcilla... ese desgraciado de Duhrin."}
 {"key": "talk#0036", "es": "Por favor, no me hagas daño. Hasta te daré esta llave."}
 {"key": "talk#0042", "es": "Se lo ruego, detenga la roca. Debería detenerse si clava esa espada en la pared."}
 {"key": "talk#0044", "es": "El rey Kells se adelantó... Yo me quedé y desde entonces sostengo la roca."}
@@ -56,6 +59,7 @@
 {"key": "talk#0121", "es": "Me llaman Disfraz. Será un placer destruirte ahora."}
 {"key": "talk#0122", "es": "No... puede... ser..."}
 {"key": "talk#0123", "es": "¿Entiendes? No tienes el poder para hacerlo."}
+{"key": "talk#0126", "es": "Al parecer, esta torre refleja el corazón de Belial. Los seis mundos son manifestaciones del corazón del Rey Demonio."}
 {"key": "talk#0127", "es": "¿Estás preparado para desafiarme en combate?"}
 {"key": "talk#0128", "es": "Ya veo... Ahora libraremos batalla..."}
 {"key": "talk#0132", "es": "Soy Necron y soy el Caos. Fui yo quien sedujo al Rey. Pero también soy un guerrero y serás mi próxima víctima."}
@@ -68,6 +72,7 @@
 {"key": "talk#0144", "es": "En esta torre solo hay agua en el Mundo de Agua. Aunque, en realidad, no es agua: es ácido. Ten cuidado o terminarás derretido."}
 {"key": "talk#0145", "es": "Te daré esto. Seguro que te será útil."}
 {"key": "talk#0150", "es": "Soy la guardiana. Mi nombre es Akryal."}
+{"key": "talk#0151", "es": "Esta es la única agua pura de la Torre. Solo se puede verter con la Jarra de Nadya, pero se la llevaron los espíritus del agua."}
 {"key": "talk#0156", "es": "Debería haber un lugar en la sala que te transporta. Si pasas por allí, llegarás a la zona de Necron."}
 {"key": "talk#0162", "es": "Ja, ¿vas a pelear conmigo sin armas?"}
 {"key": "talk#0163", "es": "Aún no termina. Incluso con nuestro gran poder, perder contra alguien como tú..."}
@@ -76,6 +81,9 @@
 {"key": "talk#0169", "es": "Maldito humano... No lo creo. No puedo creerlo."}
 {"key": "talk#0174", "es": "Qué defensas tan patéticas. Las aplastaré con mi magia."}
 {"key": "talk#0175", "es": "¿Crees que puedes resistir mi magia...?"}
+{"key": "talk#0180", "es": "Bienvenido al Mundo de Monstruos. Este es el reino del demonio Necron. El mundo de pesadilla de Belial."}
+{"key": "talk#0181", "es": "Te daré un regalo de mi amo... si volvemos a vernos, claro. Adiós."}
+{"key": "talk#0182", "es": "Te estaba esperando. Bien, deja que te dé esto."}
 {"key": "talk#0186", "es": "Aquí están la Muerte y el Conocimiento... Aquí se reúne la historia del hombre..."}
 {"key": "talk#0187", "es": "Es casi imposible saber qué busca uno en la vida. Tú también. De todos modos, lo único que encontrarás más adelante es la Muerte."}
 {"key": "talk#0192", "es": "Este lugar no es para los seres vivos. Aquí se reúnen los recuerdos. Ahora sellaré esa molesta magia tuya. Muerte y sabiduría... ja, ja, ja."}
@@ -107,6 +115,7 @@
 {"key": "talk#0316", "es": "Arde... la llama me está quemando..."}
 {"key": "talk#0317", "es": "Ofrécete a las aguas profundas. Solo quienes tienen valor pueden abrir el camino a la salvación..."}
 {"key": "talk#0318", "es": "Quienes tengan poca magia deben avanzar sobre este suelo."}
+{"key": "talk#0319", "es": "Sacrifica el alma de un dragón joven y conviértete en monstruo."}
 {"key": "talk#0320", "es": "Detén sus latidos enloquecidos o, si no, tu propio corazón se detendrá..."}
 {"key": "talk#0321", "es": "Solo el Conocimiento es poder total y solo el Conocimiento es verdad total."}
 {"key": "talk#0322", "es": "No puedes bajar. Abajo todo rebosa de veneno."}

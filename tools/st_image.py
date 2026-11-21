@@ -199,7 +199,10 @@ class Reader:
                     kinds[k] += 1
                     row.append(ch)
                 text.append(''.join(row).rstrip())
-            score = (kinds['dudoso'], -kinds['etiqueta'])
+            # una lectura sin tinta (umbral demasiado alto) nunca gana a una con texto: antes, una sola letra
+            # dudosa hacía que ganara la vacía y la imagen se perdía sin aviso (9 diálogos, prueba 0.9.3)
+            inked = kinds['etiqueta'] + kinds['parecido'] + kinds['dudoso']
+            score = (inked == 0, kinds['dudoso'], -kinds['etiqueta'])
             if best is None or score < best[0]:
                 best = (score, text, kinds)
             if kinds['dudoso'] == 0 and kinds['parecido'] == 0:
@@ -250,7 +253,11 @@ def export():
         prefix = FONTS[font][4]
         for i, t in images(font):
             text = rd.read(t)
+            if any(UNKNOWN in l for l in text):
+                print(f'AVISO {prefix}#{i:04d}: letras sin reconocer ({UNKNOWN}); etiquetarlas en tools/glyph_labels/')
             if not any(text):
+                if any(binarize(t)):
+                    print(f'AVISO {prefix}#{i:04d}: la imagen tiene tinta pero no se leyó ningún texto')
                 continue
             rows.append({'key': f'{prefix}#{i:04d}', 'en': layout(font, text),
                          'note': f'{os.path.basename(FONTS[font][0])} entrada {i}, imagen {t["w"]}×{t["h"]}'})

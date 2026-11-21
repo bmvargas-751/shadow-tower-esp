@@ -32,6 +32,12 @@ Soluciones provisionales, ya aplicadas, para lo que no entraba en pantalla (lím
 - [ ] `stat/00#0904`–`0915` (orquestador, ancho 8): etiquetas de EQUIP: MANO D./I., RES. D./I., BRAZ. D./I., ANIL. D./I., MAG. D./I.; la cabecera de peso, PESO.
 - [ ] `stat/00#0211`–`0216` (orquestador, ancho 12 y 11): GIRAR IZQ./DER., MOVER IZQ./DER., SUBIR VISTA, BAJAR VISTA (también en `fdat/480`).
 
+## Prueba 0.9.3 (2026-11-20)
+
+- [ ] `stat/00#0107` (orquestador, ancho): «TRADE» → «CAMBIAR» en la confirmación de la tienda, en vez de INTERCAMBIAR (glosario). Con 12 letras los dos recuadros tendrían que medir 88 px (TECH.md, «Confirmación de la tienda»). Ver en el juego cómo quedan COMPRAR/REPARAR/CAMBIAR y CANCELAR con los recuadros nuevos.
+- [ ] `talk#0002`, `0031`, `0032`, `0126`, `0151`, `0180`–`0182`, `0319` (orquestador, traducción fuera de lote): los 9 diálogos que el reconocedor había perdido (TECH.md). Traducidos con el glosario y las fichas, sin pasar por revisor ni corrector. Hablantes: Auriel (`0031`, `0032`, y `0126` por tu captura, aunque cae en el bloque de G15), Akryal (`0151`), el siervo lagarto (`0180`–`0182`, ficha nueva), G1 (`0002`) y una inscripción (`0319`). «that bastard Duhrin» → «ese desgraciado de Duhrin».
+- [ ] (orquestador, idea): los diálogos en negrita (`talk#0030`–`0032`, `0150`, `0180`–`0182`) se redibujan con la letra normal. Se podría imitar la negrita al dibujar.
+
 ## Términos sin regla (set de oro, 2026-11-17)
 
 - [ ] `equip#0003` (revisor, original): el original trae los signos de pie y pulgada invertidos (`2"11'`, visto en la imagen). Se lee como 2 pies 11 pulgadas → 89 CM.

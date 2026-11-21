@@ -22,7 +22,7 @@ El juego no marca el género del protagonista en estas líneas. **Decidido (2026
 
 | Grupo | Claves | Cómo habla |
 |---|---|---|
-| G1 | `talk#0000`, `0001`, `0003` | Tono casual y amable; informa sobre el lugar. Contracción coloquial «'em». «Your here» (`talk#0000`) es una errata del original, no un rasgo de habla. |
+| G1 | `talk#0000`–`0003` | Tono casual y amable; informa sobre el lugar. Contracción coloquial «'em». «Your here» (`talk#0000`) es una errata del original, no un rasgo de habla. |
 | G2 | `talk#0006`–`0010` | Tono de comerciante brusco y quejumbroso: recibe con desgano («Oh well»), despacha («go away») y se burla («You'll stink up my place»). Coletillas coloquiales al final: «no?» (`talk#0009`), «okay?» (`talk#0010`). |
 | G3 | `talk#0012`–`0015` | Tono de comerciante práctico pero cordial: le importa el cliente, no la raza; se preocupa por la salud del jugador. Coloquial: «gotta» (`talk#0014`). |
 | G4 | `talk#0018`–`0021` | Primero, preguntas secas; después, frases sueltas y abatidas con puntos suspensivos («The air...so heavy...»). Tono de abatimiento. |
@@ -51,7 +51,7 @@ El juego no marca el género del protagonista en estas líneas. **Decidido (2026
 | G27 | `talk#0216` | Tono oficial y tajante de guardia: prohíbe y ordena con exclamación. |
 | G28 | `talk#0222` | Tono grave y algo cansado; concede algo al jugador. «spoken too» es una errata del original (*to*). |
 | G29 | `talk#0228`, `0229` | Habla en plural («we»). Tono frío, de quien evalúa. |
-| Mensajes sueltos | `talk#0300`–`0322` (no existe `0319`) | Entradas sueltas, cada una de una voz distinta o sin voz. Tres tonos: frases solemnes, casi rituales, sobre el lugar o los caídos (`0300`–`0306`); lamentos en primera persona con puntos suspensivos (`0307`–`0316`); avisos y pistas, algunos en imperativo solemne («Offer yourself…», «Seek not the light», `0305`, `0317`) y otros llanos (`0322`). |
+| Mensajes sueltos | `talk#0300`–`0322` | Entradas sueltas, cada una de una voz distinta o sin voz. Tres tonos: frases solemnes, casi rituales, sobre el lugar o los caídos (`0300`–`0306`); lamentos en primera persona con puntos suspensivos (`0307`–`0316`); avisos y pistas, algunos en imperativo solemne («Offer yourself…», «Seek not the light», «Sacrifice the soul…», `0305`, `0317`, `0319`) y otros llanos (`0322`). |
 
 ## Groserías
 
