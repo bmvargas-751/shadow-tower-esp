@@ -98,4 +98,5 @@ Obligatorio: sin él, `loc.py prepare` no arma lotes.
 - [x] Versión de prueba 0.9.1: correcciones de la primera ronda en el juego (2026-11-17).
 - [x] Versión de prueba 0.9.2: alineación de menús (`ST.EXE`) y grebas en plural (2026-11-17).
 - [x] Versión de prueba 0.9.3: bolas de hielo (2026-11-17).
+- [x] Versión de prueba 0.9.4: nueve diálogos que quedaban en inglés y recuadro de la tienda (2026-11-20).
 - [ ] Publicación de la 1.0: cuando cierre la fase 7, CHANGELOG.md con la fecha y un *release* de GitHub con el `.zip` (lo confirma el usuario antes).
