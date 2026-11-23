@@ -3,7 +3,7 @@
 
 Uso (desde la raíz del proyecto):
   st_text.py export                  escribe el original en el `source` de loc.json
-  st_text.py import [--en]           de translation/ a ../shadow-tower-esp-local/build/files/
+  st_text.py import [--en]           de translation/ a ../local/shadow-tower/build/files/
                                      (--en: sin traducción, con el inglés; para la ida y vuelta)
   st_text.py roundtrip               export + import --en y compara byte por byte con el original
 
@@ -25,7 +25,7 @@ sys.path.insert(0, HERE)
 import tfile  # noqa: E402
 
 ROOT = os.path.dirname(HERE)
-LOCAL = os.path.join(os.path.dirname(ROOT), 'shadow-tower-esp-local')
+LOCAL = os.path.join(os.path.dirname(ROOT), 'local', 'shadow-tower')
 ORIG = os.path.join(LOCAL, 'files')
 OUT = os.path.join(LOCAL, 'build', 'files')
 

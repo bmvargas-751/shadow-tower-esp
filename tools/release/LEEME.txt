@@ -1,6 +1,6 @@
 SHADOW TOWER EN ESPAÑOL — versión {VERSION}
 Traducción al español neutro de Shadow Tower (PlayStation, versión USA, SLUS-00863).
-https://github.com/bmvargas-751/shadow-tower-esp
+https://github.com/nox-traducciones/shadow-tower
 
 
 QUÉ ESTÁ TRADUCIDO

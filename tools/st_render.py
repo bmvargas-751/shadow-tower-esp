@@ -5,10 +5,10 @@ Uso (desde la raíz del proyecto):
   st_render.py glyphs                     arma las plantillas de color de cada letra (carpeta local)
   st_render.py test                       redibuja el inglés con los cortes originales y compara celda por celda
   st_render.py preview CLAVE "texto" OUT  dibuja un texto en la imagen de CLAVE (p. ej. talk#0030) y guarda un PNG
-  st_render.py import [--en]              de translation/ a ../shadow-tower-esp-local/build/files/
+  st_render.py import [--en]              de translation/ a ../local/shadow-tower/build/files/
   st_render.py roundtrip                  import --en y compara byte por byte con el original
 
-Las plantillas salen de las imágenes del juego, así que viven en ../shadow-tower-esp-local/glyphs/ (no en el repo).
+Las plantillas salen de las imágenes del juego, así que viven en ../local/shadow-tower/glyphs/ (no en el repo).
 Cada plantilla guarda el brillo relativo (0..1) de cada píxel; al dibujar se elige el índice de la paleta de la
 imagen con el brillo más parecido. Un texto que no cambió conserva la imagen original sin tocarla.
 """

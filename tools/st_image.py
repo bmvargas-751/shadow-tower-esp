@@ -4,7 +4,7 @@
 Uso (desde la raíz del proyecto):
   st_image.py clusters FUENTE           lista los dibujos de celda (huella, apariciones, etiqueta)
   st_image.py sheet FUENTE SALIDA.png   lámina numerada de los dibujos sin etiqueta (para etiquetar)
-  st_image.py export                    escribe el texto reconocido en ../shadow-tower-esp-local/image_source.jsonl
+  st_image.py export                    escribe el texto reconocido en ../local/shadow-tower/image_source.jsonl
   st_image.py report                    cuántas celdas no se reconocen con seguridad
 
 FUENTE: talk (TALKMSG.T, celdas 6×12), equip (EQUIP.T, celdas 10×10) o crt (CRT.T, misma letra que equip).
@@ -31,7 +31,7 @@ import tfile  # noqa: E402
 import tim  # noqa: E402
 
 ROOT = os.path.dirname(HERE)
-LOCAL = os.path.join(os.path.dirname(ROOT), 'shadow-tower-esp-local')
+LOCAL = os.path.join(os.path.dirname(ROOT), 'local', 'shadow-tower')
 ORIG = os.path.join(LOCAL, 'files')
 LABELS = os.path.join(HERE, 'glyph_labels')
 

@@ -2,12 +2,12 @@
 """Imagen completa con la traducción (fase 7) para DuckStation.
 
 Uso (desde la raíz del proyecto):
-  st_build.py [NOMBRE]   → ../shadow-tower-esp-local/test/NOMBRE.{bin,cue} (por defecto shadow-tower-esp)
+  st_build.py [NOMBRE]   → ../local/shadow-tower/test/NOMBRE.{bin,cue} (por defecto shadow-tower-esp)
 
 Pasos:
   1. Reconstruye los 9 archivos con translation/ (st_text: texto codificado; st_exe: tablas de posición de los
      menús en ST.EXE; st_render: diálogos y descripciones; st_intro: introducción) en
-     ../shadow-tower-esp-local/build/files.
+     ../local/shadow-tower/build/files.
   2. Copia original.bin y reemplaza esos archivos (psxpatch recalcula EDC/ECC).
   3. Comprueba que lo que quedó en la imagen es lo que se escribió.
 No toca original.bin ni translation/.

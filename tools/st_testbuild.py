@@ -2,7 +2,7 @@
 """Imagen de prueba combinada para DuckStation (no toca translation/).
 
 Uso (desde la raíz del proyecto):
-  st_testbuild.py          → ../shadow-tower-esp-local/test/shadow-tower-prueba-5.{bin,cue} (todo junto)
+  st_testbuild.py          → ../local/shadow-tower/test/shadow-tower-prueba-5.{bin,cue} (todo junto)
   st_testbuild.py glyphs   → prueba-5a: solo Á/É en la entrada 0 de STAT.T
   st_testbuild.py move     → prueba-5b: solo la fuente de la entrada 3 movida a 0x4780 (256 filas)
   st_testbuild.py shrink   → prueba-5c: solo la fuente de la entrada 3 recortada a 64 filas (en 0x4600)

@@ -82,12 +82,12 @@ Obligatorio: sin él, `loc.py prepare` no arma lotes.
 
 ### Fase 7. Prueba en el juego
 
-- [x] Imagen completa con la traducción: `tools/st_build.py` → `../shadow-tower-esp-local/test/shadow-tower-esp.{bin,cue}` (2026-11-17).
+- [x] Imagen completa con la traducción: `tools/st_build.py` → `../local/shadow-tower/test/shadow-tower-esp.{bin,cue}` (2026-11-17).
 - [ ] Jugar con la traducción completa y anotar cortes, cajas que se pasan, glifos que faltan y texto que quedó sin traducir. Mirar también los puntos de «Para la prueba en el juego» de PENDING.md y una conversación redibujada (fase 1).
 
 ### Fase 8. Entrega
 
-- [x] Parche y paquete: `tools/st_patch.py` arma la imagen, crea el `.xdelta` (sin compresión secundaria, para que sirva en cualquier parcheador), lo comprueba aplicándolo sobre el original y deja `../shadow-tower-esp-local/dist/shadow-tower-esp-VERSIÓN.zip` con el parche, `LEEME.txt` (de `tools/release/`) y CHANGELOG.md. (2026-11-17: 1.0, parche de ~1 MB; la imagen sale idéntica en cada armado.)
+- [x] Parche y paquete: `tools/st_patch.py` arma la imagen, crea el `.xdelta` (sin compresión secundaria, para que sirva en cualquier parcheador), lo comprueba aplicándolo sobre el original y deja `../local/shadow-tower/dist/shadow-tower-esp-VERSIÓN.zip` con el parche, `LEEME.txt` (de `tools/release/`) y CHANGELOG.md. (2026-11-17: 1.0, parche de ~1 MB; la imagen sale idéntica en cada armado.)
 - [x] Registro de cambios: CHANGELOG.md.
 - [ ] Confirmar en la prueba del juego lo que afirma LEEME.txt: que las partidas de la versión en inglés sirven, y que el título, los créditos y los logos quedan en inglés.
 - [x] Versión de prueba 0.9.0: release de GitHub `v0.9.0` (marcado como *Latest*, con «versión de prueba» en el título y las notas) con el `.zip` (2026-11-17), para probar la descarga y el parcheo como cualquier jugador.

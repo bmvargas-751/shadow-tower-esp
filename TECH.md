@@ -30,7 +30,7 @@ Plantilla del kit: los números quedan; lo de cada regla se completa con lo que 
 ### Imagen y extracción
 
 - Imagen: `Shadow Tower.bin`, MODE2/2352, una pista (el .cue original apunta a «Shadow Tower (USA).bin»). SHA-1 `df441bf08b7079f8b3d36f1188f7eedd8cb73c50`.
-- Extracción con `tools/psxiso.py` (lector ISO9660 propio): 126 archivos, en `../shadow-tower-esp-local/files/`.
+- Extracción con `tools/psxiso.py` (lector ISO9660 propio): 126 archivos, en `../local/shadow-tower/files/`.
 - Ningún archivo tiene texto ASCII.
 
 ### Contenedor `.T` (`tools/tfile.py`)
@@ -93,7 +93,7 @@ Descartado (2026-11-16): las pocas cadenas que el escaneo encontró en `EQUIP.T`
 
 ### Texto en imágenes: reconocedor (`tools/st_image.py`, 2026-11-16)
 
-- Exporta a `../shadow-tower-esp-local/image_source.jsonl` (segunda fuente en `loc.json`).
+- Exporta a `../local/shadow-tower/image_source.jsonl` (segunda fuente en `loc.json`).
 
 | Prefijo | Origen | Imagen | Celda | Textos |
 |---|---|---|---|---:|
@@ -111,7 +111,7 @@ Descartado (2026-11-16): las pocas cadenas que el escaneo encontró en `EQUIP.T`
 
 ### Texto en imágenes: dibujador (`tools/st_render.py`, 2026-11-16)
 
-- `glyphs` arma las plantillas de color (brillo relativo por píxel, la variante más votada de cada letra, alineada por la línea de base) en `../shadow-tower-esp-local/glyphs/` (salen del juego: no van al repo).
+- `glyphs` arma las plantillas de color (brillo relativo por píxel, la variante más votada de cada letra, alineada por la línea de base) en `../local/shadow-tower/glyphs/` (salen del juego: no van al repo).
 - **Letras propias** (dibujadas para el proyecto, en el código): en la letra de los diálogos, las que el inglés nunca usa (z, J, Q, R, X, Z, dígitos menos el 7, `: ; - " ( ) /`) y las españolas (á é í ó ú ñ ü, Á É Í Ó Ú Ñ Ü, ¿ ¡). En la letra de equipo/criaturas (solo mayúsculas): Á É Í Ó Ú Ñ Ü; la letra se baja un píxel (se quita su fila más redundante) y la marca va en una sola fila arriba, con una fila de aire. **Por ver en el juego.**
 - Caja: diálogos hasta 33 caracteres y 5 renglones; el bloque se alinea a la izquierda y se centra en la caja (x = 5 + 6·k, k = redondeo de (123 − 3n)/6, n = renglón más largo), como el original. Equipo/criaturas: celdas desde x = −1 (como el original), hasta 25 caracteres (24 en las de 240 px) y 5 renglones. Corte por palabras; `\n` fuerza un renglón.
 - Color: cada píxel toma el índice de la paleta de la imagen con el brillo más parecido; el fondo es el índice más común.
@@ -122,14 +122,14 @@ Descartado (2026-11-16): las pocas cadenas que el escaneo encontró en `EQUIP.T`
 ### Introducción (`tools/st_intro.py`, 2026-11-16)
 
 - `ST/OPTXT/OPTXT.MIC`: bloques `[u32 tamaño][TIM]` desde el byte 0. Seis pantallas de texto (TIM 4 bpp 256×240, 1 o 2 renglones centrados, paleta de 16 tonos) y un fondo (16 bpp 320×240, sin texto).
-- El inglés (6 pantallas, 11 renglones) se transcribió a mano en `../shadow-tower-esp-local/optxt_transcript.json`; `st_image.py export` lo suma a `image_source.jsonl` con las claves `intro#0`…`intro#5`. El original trae la errata «challange» (pantalla 6).
+- El inglés (6 pantallas, 11 renglones) se transcribió a mano en `../local/shadow-tower/optxt_transcript.json`; `st_image.py export` lo suma a `image_source.jsonl` con las claves `intro#0`…`intro#5`. El original trae la errata «challange» (pantalla 6).
 - **Letra:** la del original es de máquina de escribir y solo trae las letras de esas 11 líneas. El español se dibuja completo con **Special Elite** (`tools/fonts/`, Apache 2.0, Astigmatic), tamaño 14, centrada en celdas fijas de 9 px como el original, con la paleta de la pantalla. El parche lleva solo las imágenes, no la fuente. Si no convence, la alternativa es reusar las letras del juego y dibujar las que faltan (unas 40).
 - Caja: hasta 3 renglones de 28 caracteres, centrados a la altura de los del original.
 - **Ida y vuelta idéntica** (`roundtrip`); `hooks.py` controla letras y caja de `intro#`.
 
 ### Imagen de prueba 2 (`tools/st_testbuild.py`, 2026-11-16) — pendiente de revisar en DuckStation
 
-`../shadow-tower-esp-local/test/shadow-tower-prueba-2.cue`. Qué mirar y qué significa:
+`../local/shadow-tower/test/shadow-tower-prueba-2.cue`. Qué mirar y qué significa:
 
 | Prueba | Dónde se ve | Bien | Mal |
 |---|---|---|---|
@@ -203,7 +203,7 @@ Prueba 8 (pendiente): las 9 letras de A en el menú y las 7 de B en el panel de 
 
 **Reconocedor corregido (2026-11-16):** en los renglones con origen 9 (831 de equipo y 696 de criaturas) se perdía la primera letra: la primera celda empieza en x = −1 y no se leía. `st_image.lines` ahora arranca las celdas antes del origen y el dibujador escribe desde esa misma celda (`EQUIP_X = −1`, 25 caracteres por renglón; 24 en las de 240 px): el texto redibujado empieza en la misma x que el original. Se resolvieron «HP/MP DRAIN» y «HP/MP RECOVERY». Una «i» degradada de `talk#0150` se leía como «!»: etiqueta explícita.
 
-**Imagen completa (fase 7, `tools/st_build.py`, 2026-11-17):** reconstruye los 8 archivos con `translation/` (4 de texto codificado con `st_text`, 3 de imágenes con `st_render` y `OPTXT.MIC` con `st_intro`), los escribe en una copia de `original.bin` y comprueba lo escrito. Resultado: `../shadow-tower-esp-local/test/shadow-tower-esp.{bin,cue}`, 584 imágenes y 6 pantallas redibujadas, sin errores. Pendiente de probar en DuckStation.
+**Imagen completa (fase 7, `tools/st_build.py`, 2026-11-17):** reconstruye los 8 archivos con `translation/` (4 de texto codificado con `st_text`, 3 de imágenes con `st_render` y `OPTXT.MIC` con `st_intro`), los escribe en una copia de `original.bin` y comprueba lo escrito. Resultado: `../local/shadow-tower/test/shadow-tower-esp.{bin,cue}`, 584 imágenes y 6 pantallas redibujadas, sin errores. Pendiente de probar en DuckStation.
 
 **Parche (fase 8, `tools/st_patch.py`, 2026-11-17):** comprueba el SHA-1 del original, arma la imagen con `st_build.build`, crea el parche con `xdelta3 -e -9 -S none` (sin compresión secundaria: Rom Patcher JS y otros parcheadores no la soportan) y lo aplica de vuelta para comparar. El armado es determinista: dos corridas dan la misma imagen (SHA-1 `6fe34831…` con la traducción del 2026-11-17). El paquete no lleva `.cue` (decidido por el usuario, 2026-11-17): DuckStation abre el `.bin` directo, y quien necesite uno usa el de su juego. `LEEME.txt` sale de `tools/release/LEEME.txt` con los hashes de las dos imágenes.
 
