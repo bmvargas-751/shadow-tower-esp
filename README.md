@@ -39,9 +39,6 @@ xdelta3 -d -s "Shadow Tower (USA).bin" shadow-tower-esp-*.xdelta shadow-tower-es
 ## Avance
 
 <!-- loc:progress -->
-Versión 0.9.4, publicada el 20 nov 2026 · [Cambios](CHANGELOG.md)\
-Etapa: Prueba en el juego · actualizado el 23 nov 2026
-
 | Sección | Líneas | Traducidas | Avance |
 |---|---:|---:|---:|
 | Interfaz | 548 | 548 | 100,0 % |
@@ -54,8 +51,6 @@ Etapa: Prueba en el juego · actualizado el 23 nov 2026
 | Sección | Líneas | Traducidas | Avance |
 |---|---:|---:|---:|
 | Modo VS | 158 | 158 | 100,0 % |
-
-**Total: 2.216 de 2.216 líneas (100,0 %)**
 <!-- /loc:progress -->
 
 ## Documentación
