@@ -3,8 +3,8 @@
   "source_language": "en",
   "target_language": "es",
   "source": [
-    "../shadow-tower-esp-local/source.jsonl",
-    "../shadow-tower-esp-local/image_source.jsonl"
+    "../local/shadow-tower/source.jsonl",
+    "../local/shadow-tower/image_source.jsonl"
   ],
   "translation": "translation",
   "work": "build/work/batches",

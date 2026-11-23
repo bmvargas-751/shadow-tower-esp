@@ -12,7 +12,7 @@ Necesitas tu propia copia de Shadow Tower para PlayStation, versión USA (SLUS-0
 
 **Windows:**
 
-1. Descarga el .zip de la [última versión](https://github.com/bmvargas-751/shadow-tower-esp/releases/latest) y descomprímelo.
+1. Descarga el .zip de la [última versión](https://github.com/nox-traducciones/shadow-tower/releases/latest) y descomprímelo.
 2. Abre Delta Patcher o xdelta UI. En **Original**, elige tu .bin; en **Patch**, el .xdelta del paquete.
 3. Guarda el resultado como «shadow-tower-esp.bin» y ábrelo en tu emulador (probado en DuckStation). Si pide un .cue, copia el de tu juego y cambia adentro el nombre del .bin.
 
@@ -27,7 +27,7 @@ Necesitas tu propia copia de Shadow Tower para PlayStation, versión USA (SLUS-0
 <details>
 <summary>Linux o macOS</summary>
 
-1. Descarga el .zip de la [última versión](https://github.com/bmvargas-751/shadow-tower-esp/releases/latest), descomprímelo y, en su carpeta, con tu .bin al lado:
+1. Descarga el .zip de la [última versión](https://github.com/nox-traducciones/shadow-tower/releases/latest), descomprímelo y, en su carpeta, con tu .bin al lado:
 
 ```sh
 xdelta3 -d -s "Shadow Tower (USA).bin" shadow-tower-esp-*.xdelta shadow-tower-esp.bin

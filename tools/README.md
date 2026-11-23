@@ -4,10 +4,10 @@ Las herramientas propias de Shadow Tower. Las del kit (lotes, validador, avance)
 
 ## Armar la imagen y el parche
 
-Hace falta la imagen USA en `../shadow-tower-esp-local/original.bin` (SHA-1 `df441bf08b7079f8b3d36f1188f7eedd8cb73c50`).
+Hace falta la imagen USA en `../local/shadow-tower/original.bin` (SHA-1 `df441bf08b7079f8b3d36f1188f7eedd8cb73c50`).
 
-- `python3 tools/st_build.py` → imagen traducida para probar, en `../shadow-tower-esp-local/test/`.
-- `python3 tools/st_patch.py [VERSIÓN]` → parche `.xdelta` comprobado y paquete `.zip` para publicar, en `../shadow-tower-esp-local/dist/`. Necesita `xdelta3` (`sudo apt install xdelta3`, o la variable `XDELTA3`).
+- `python3 tools/st_build.py` → imagen traducida para probar, en `../local/shadow-tower/test/`.
+- `python3 tools/st_patch.py [VERSIÓN]` → parche `.xdelta` comprobado y paquete `.zip` para publicar, en `../local/shadow-tower/dist/`. Necesita `xdelta3` (`sudo apt install xdelta3`, o la variable `XDELTA3`).
 
 Cómo se aplica el parche: [release/LEEME.txt](release/LEEME.txt) (va dentro del paquete).
 

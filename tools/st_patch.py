@@ -2,7 +2,7 @@
 """Parche xdelta de la traducción (fase 8) y su paquete de entrega.
 
 Uso (desde la raíz del proyecto):
-  st_patch.py [VERSIÓN]   → ../shadow-tower-esp-local/dist/shadow-tower-esp-VERSIÓN.zip
+  st_patch.py [VERSIÓN]   → ../local/shadow-tower/dist/shadow-tower-esp-VERSIÓN.zip
                             (la versión, por defecto, es la primera de CHANGELOG.md)
 
 Pasos:

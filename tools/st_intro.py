@@ -4,13 +4,13 @@
 Uso (desde la raíz del proyecto):
   st_intro.py rows                       muestra cuántas pantallas y renglones hay (sin el texto)
   st_intro.py preview N "texto" OUT.png  dibuja un texto en la pantalla N
-  st_intro.py import [--en]              de translation/ a ../shadow-tower-esp-local/build/files/
+  st_intro.py import [--en]              de translation/ a ../local/shadow-tower/build/files/
   st_intro.py roundtrip                  import --en y compara byte por byte
 
 Formato de OPTXT.MIC: bloques [u32 tamaño][TIM] desde el byte 0; los 6 primeros TIM son las pantallas
 de texto (4 bpp 256×240) y el séptimo, el fondo (16 bpp 320×240, sin texto).
 
-El inglés se transcribió a mano (6 pantallas, 11 renglones) en ../shadow-tower-esp-local/optxt_transcript.json.
+El inglés se transcribió a mano (6 pantallas, 11 renglones) en ../local/shadow-tower/optxt_transcript.json.
 El español se dibuja con Special Elite (tools/fonts/, licencia Apache 2.0) en celdas fijas de 9 px, como una
 máquina de escribir, cada renglón centrado y a la altura de los renglones del original. Una pantalla cuyo texto
 no cambió conserva su imagen original.
@@ -25,7 +25,7 @@ sys.path.insert(0, HERE)
 import tim  # noqa: E402
 
 ROOT = os.path.dirname(HERE)
-LOCAL = os.path.join(os.path.dirname(ROOT), 'shadow-tower-esp-local')
+LOCAL = os.path.join(os.path.dirname(ROOT), 'local', 'shadow-tower')
 MIC = 'ST/OPTXT/OPTXT.MIC'
 ORIG = os.path.join(LOCAL, 'files', MIC)
 OUT = os.path.join(LOCAL, 'build', 'files', MIC)

@@ -3,7 +3,7 @@
 
 Uso (desde la raíz del proyecto):
   st_exe.py show        muestra cada tabla: valores originales y los que salen de la traducción
-  st_exe.py import      escribe los ejecutables parcheados en ../shadow-tower-esp-local/build/files/
+  st_exe.py import      escribe los ejecutables parcheados en ../local/shadow-tower/build/files/
   st_exe.py roundtrip   import con el inglés: los ejecutables tienen que salir idénticos
 
 El juego no mide el texto que dibuja: cada pantalla copia una tabla fija de x (16 bits por opción) y suma una
