@@ -1,0 +1,42 @@
+{
+  "title": "Shadow Tower",
+  "platform": "PS1",
+  "translated_from": "Inglés oficial",
+  "owner": "FromSoftware",
+  "platform_long": "PlayStation",
+  "game_version": "USA (SLUS-00863)",
+  "untranslated": "Los créditos, los logos y la pantalla de título",
+  "tagline": "Un RPG en primera persona en el que bajas, piso a piso, por una torre maldita.",
+  "requirements": "Necesitas tu propia copia de Shadow Tower para PlayStation, versión USA (SLUS-00863), en una imagen .bin de una sola pista. Si la tienes en otro formato (.chd, .iso, .pbp), conviértela primero a .bin/.cue.",
+  "install": [
+    {
+      "system": "Windows",
+      "steps": [
+        "Descarga el .zip de la [última versión](https://github.com/bmvargas-751/shadow-tower-esp/releases/latest) y descomprímelo.",
+        "Abre Delta Patcher o xdelta UI. En **Original**, elige tu .bin; en **Patch**, el .xdelta del paquete.",
+        "Guarda el resultado como «shadow-tower-esp.bin» y ábrelo en tu emulador (probado en DuckStation). Si pide un .cue, copia el de tu juego y cambia adentro el nombre del .bin."
+      ]
+    },
+    {
+      "system": "En el navegador",
+      "steps": [
+        "Abre [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/) y elige tu .bin y el .xdelta del paquete.",
+        "Guarda el resultado como «shadow-tower-esp.bin»."
+      ]
+    },
+    {
+      "system": "Linux o macOS",
+      "steps": [
+        "Descarga el .zip de la [última versión](https://github.com/bmvargas-751/shadow-tower-esp/releases/latest), descomprímelo y, en su carpeta, con tu .bin al lado:"
+      ],
+      "code": "xdelta3 -d -s \"Shadow Tower (USA).bin\" shadow-tower-esp-*.xdelta shadow-tower-esp.bin"
+    }
+  ],
+  "downloads": [
+    {
+      "asset": "shadow-tower-esp-*.zip",
+      "label": "Descargar el parche",
+      "primary": true
+    }
+  ]
+}

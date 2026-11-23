@@ -1,54 +1,66 @@
-# shadow-tower-esp
+# Shadow Tower en español
 
-Traducción al español neutro de *Shadow Tower* (PlayStation, versión USA, SLUS-00863), hecha con el kit de traducción de juegos. El repo tiene solo la traducción, los documentos y las herramientas propias: ningún archivo del juego.
+Traducción fan al español neutro de *Shadow Tower*, basada en la versión oficial en inglés, para PlayStation (USA, SLUS-00863).
+Los créditos, los logos y la pantalla de título permanecen en inglés.
 
-- Método y decisiones: [PLAN.md](PLAN.md), [DECISIONS.md](DECISIONS.md)
-- Estilo y términos: [STYLE.md](STYLE.md), [GLOSSARY.md](GLOSSARY.md), [characters/](characters)
-- Técnica (formatos, fuentes, pruebas en el juego): [TECH.md](TECH.md)
-- Pendientes del usuario: [PENDING.md](PENDING.md)
+> Proyecto de fans, sin relación con FromSoftware. **No incluye el juego**: necesitas tu propia copia.
 
-## Armar la imagen y el parche
+## Instalar
 
-Hace falta la imagen USA en `../shadow-tower-esp-local/original.bin` (SHA-1 `df441bf08b7079f8b3d36f1188f7eedd8cb73c50`).
+<!-- loc:install -->
+Necesitas tu propia copia de Shadow Tower para PlayStation, versión USA (SLUS-00863), en una imagen .bin de una sola pista. Si la tienes en otro formato (.chd, .iso, .pbp), conviértela primero a .bin/.cue.
 
-- `python3 tools/st_build.py` → imagen traducida para probar, en `../shadow-tower-esp-local/test/`.
-- `python3 tools/st_patch.py [VERSIÓN]` → parche `.xdelta` comprobado y paquete `.zip` para publicar, en `../shadow-tower-esp-local/dist/`. Necesita `xdelta3` (`sudo apt install xdelta3`, o la variable `XDELTA3`).
+**Windows:**
 
-Cómo se aplica el parche: [tools/release/LEEME.txt](tools/release/LEEME.txt). Cambios: [CHANGELOG.md](CHANGELOG.md).
+1. Descarga el .zip de la [última versión](https://github.com/bmvargas-751/shadow-tower-esp/releases/latest) y descomprímelo.
+2. Abre Delta Patcher o xdelta UI. En **Original**, elige tu .bin; en **Patch**, el .xdelta del paquete.
+3. Guarda el resultado como «shadow-tower-esp.bin» y ábrelo en tu emulador (probado en DuckStation). Si pide un .cue, copia el de tu juego y cambia adentro el nombre del .bin.
+
+<details>
+<summary>En el navegador</summary>
+
+1. Abre [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/) y elige tu .bin y el .xdelta del paquete.
+2. Guarda el resultado como «shadow-tower-esp.bin».
+
+</details>
+
+<details>
+<summary>Linux o macOS</summary>
+
+1. Descarga el .zip de la [última versión](https://github.com/bmvargas-751/shadow-tower-esp/releases/latest), descomprímelo y, en su carpeta, con tu .bin al lado:
+
+```sh
+xdelta3 -d -s "Shadow Tower (USA).bin" shadow-tower-esp-*.xdelta shadow-tower-esp.bin
+```
+
+</details>
+<!-- /loc:install -->
 
 ## Avance
 
-Actualizado: 2026-11-20.
-
-### Fases
-
-| Fase | Estado |
-|---|---|
-| 0. Decisiones | ✅ |
-| 1. Prueba técnica | ✅ (falta ver una conversación redibujada en el juego) |
-| 2. Inventario y costo | ✅ 2244 líneas, ~950k tokens estimados |
-| 3. Glosario y fichas | ✅ 287 términos, 7 personajes y 3 voces |
-| 4. Set de oro | ✅ 14 de 14 (oro-001) |
-| 5. Piloto | ✅ 4 lotes de 40 líneas (menús, objetos, equipo, diálogos) |
-| 6. Traducción | ✅ 100 % (2216 líneas; dudas en PENDING.md) |
-| 7. Prueba en el juego | ⏳ segunda ronda: 9 diálogos que habían quedado en inglés y recuadro de la tienda (PENDING.md) |
-| 8. Entrega (parche xdelta) | ⏳ 0.9.4 publicada como versión de prueba ([releases](https://github.com/bmvargas-751/shadow-tower-esp/releases)); la 1.0, después de la fase 7 |
-
-### Secciones
-
 <!-- loc:progress -->
-**Etapa actual:** Fase 7. Prueba en el juego
+Versión 0.9.4, publicada el 20 nov 2026 · [Cambios](CHANGELOG.md)\
+Etapa: Prueba en el juego · actualizado el 23 nov 2026
 
 | Sección | Líneas | Traducidas | Avance |
 |---|---:|---:|---:|
-| Introducción | 6 | 6 | 100,0 % |
-| Interfaz y menús | 446 | 446 | 100,0 % |
-| Estadísticas | 102 | 102 | 100,0 % |
-| Nombres de criaturas | 153 | 153 | 100,0 % |
-| Objetos y equipo | 758 | 758 | 100,0 % |
+| Interfaz | 548 | 548 | 100,0 % |
+| Objetos y equipo | 1.079 | 1.079 | 100,0 % |
+| Criaturas | 304 | 304 | 100,0 % |
+| Historia | 127 | 127 | 100,0 % |
+
+**Propio de este juego**
+
+| Sección | Líneas | Traducidas | Avance |
+|---|---:|---:|---:|
 | Modo VS | 158 | 158 | 100,0 % |
-| Diálogos | 121 | 121 | 100,0 % |
-| Descripciones de equipo | 321 | 321 | 100,0 % |
-| Descripciones de criaturas | 151 | 151 | 100,0 % |
-| **Total** | **2.216** | **2.216** | **100,0 %** |
+
+**Total: 2.216 de 2.216 líneas (100,0 %)**
 <!-- /loc:progress -->
+
+## Documentación
+
+<!-- loc:docs -->
+Localización: [Glosario](GLOSSARY.md) · [Personajes](characters/) · [Estilo](STYLE.md) · [Decisiones](DECISIONS.md)\
+Desarrollo: [Plan](PLAN.md) · [Técnica](TECH.md) · [Herramientas](tools/README.md) · [Pendientes](PENDING.md)
+<!-- /loc:docs -->

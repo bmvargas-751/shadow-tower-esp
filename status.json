@@ -1,0 +1,151 @@
+{
+ "updated": "2026-11-23",
+ "status": "beta",
+ "stage": "Prueba en el juego",
+ "version": "0.9.4",
+ "lines": 2216,
+ "done": 2216,
+ "sections": [
+  {
+   "name": "Interfaz",
+   "lines": 548,
+   "done": 548,
+   "common": true
+  },
+  {
+   "name": "Objetos y equipo",
+   "lines": 1079,
+   "done": 1079,
+   "common": true
+  },
+  {
+   "name": "Criaturas",
+   "lines": 304,
+   "done": 304,
+   "common": true
+  },
+  {
+   "name": "Historia",
+   "lines": 127,
+   "done": 127,
+   "common": true
+  },
+  {
+   "name": "Modo VS",
+   "lines": 158,
+   "done": 158,
+   "common": false
+  }
+ ],
+ "phases": [
+  {
+   "n": 0,
+   "name": "Antes de empezar",
+   "state": "done",
+   "note": null
+  },
+  {
+   "n": 1,
+   "name": "Prueba técnica",
+   "state": "done",
+   "note": null
+  },
+  {
+   "n": 2,
+   "name": "Inventario y presupuesto",
+   "state": "done",
+   "note": "2.216 líneas"
+  },
+  {
+   "n": 3,
+   "name": "Documentos",
+   "state": "done",
+   "note": null
+  },
+  {
+   "n": 4,
+   "name": "Set de oro",
+   "state": "done",
+   "note": "14 de 14 (oro-001)"
+  },
+  {
+   "n": 5,
+   "name": "Piloto",
+   "state": "done",
+   "note": null
+  },
+  {
+   "n": 6,
+   "name": "Traducción",
+   "state": "done",
+   "note": "100,0 %"
+  },
+  {
+   "n": 7,
+   "name": "Prueba en el juego",
+   "state": "in_progress",
+   "note": null
+  },
+  {
+   "n": 8,
+   "name": "Entrega",
+   "state": "in_progress",
+   "note": null
+  }
+ ],
+ "changes": [
+  {
+   "version": "0.9.4",
+   "date": "2026-11-20",
+   "title": "Versión de prueba: cuarta ronda en el juego.",
+   "items": [
+    "Nueve diálogos que habían quedado en inglés, ahora en español (entre ellos, los del siervo de Necron, Auriel y Akryal).",
+    "Tienda: el recuadro de COMPRAR, REPARAR o CAMBIAR y CANCELAR queda alineado con el texto."
+   ]
+  },
+  {
+   "version": "0.9.3",
+   "date": "2026-11-17",
+   "title": "Versión de prueba: tercera ronda en el juego.",
+   "items": [
+    "BOLAS DE HIELO en vez de BOLAS HELADAS."
+   ]
+  },
+  {
+   "version": "0.9.2",
+   "date": "2026-11-17",
+   "title": "Versión de prueba: segunda ronda en el juego.",
+   "items": [
+    "Menú principal y OPTIONS alineados a la izquierda.",
+    "Configuración de botones centrada con el texto en español.",
+    "Bestiario: el tipo de criatura queda dentro del recuadro.",
+    "GREBAS en plural, como BOTAS."
+   ]
+  },
+  {
+   "version": "0.9.1",
+   "date": "2026-11-17",
+   "title": "Versión de prueba: correcciones de la primera ronda en el juego.",
+   "items": [
+    "Nombres de objetos acortados para que entren en la lista y en el panel del objeto.",
+    "Pantalla EQUIP: etiquetas y peso sin pisar el nombre del objeto ni los números.",
+    "Configuración de botones: los nombres ya no tapan los íconos.",
+    "Ficha de criatura: el tipo queda dentro del recuadro.",
+    "Descripciones de USE ITEM más cortas donde se salían.",
+    "«MEMORY CARD 1/2» en lugar de «RANURA DE MEMORY CARD»."
+   ]
+  },
+  {
+   "version": "0.9.0",
+   "date": "2026-11-17",
+   "title": "Versión de prueba: el juego completo en español neutro, todavía sin revisar entero en el juego. Puede haber textos cortados o que no entren en su cuadro; avísanos en los *issues* del repositorio.",
+   "items": [
+    "Menús, interfaz, mensajes del sistema y modo VS.",
+    "Objetos, equipo, magias, estadísticas, criaturas y lugares.",
+    "Todos los diálogos y las descripciones de equipo y de criaturas, redibujados en sus imágenes.",
+    "Introducción redibujada con la letra Special Elite.",
+    "Letras españolas (Á É Í Ó Ú Ñ Ü ¿ ¡) agregadas a las fuentes del juego."
+   ]
+  }
+ ]
+}

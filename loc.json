@@ -10,35 +10,33 @@
   "work": "build/work/batches",
   "sections": [
     {
-      "name": "Introducción",
-      "prefixes": [
-        "intro#"
-      ]
-    },
-    {
-      "name": "Interfaz y menús",
+      "name": "Interfaz",
       "prefixes": [
         "stat/00#",
-        "fdat/480#"
-      ]
-    },
-    {
-      "name": "Estadísticas",
-      "prefixes": [
+        "fdat/480#",
         "stat/01#"
-      ]
-    },
-    {
-      "name": "Nombres de criaturas",
-      "prefixes": [
-        "stat/02#"
       ]
     },
     {
       "name": "Objetos y equipo",
       "prefixes": [
         "stat/03#",
-        "stat/04#"
+        "stat/04#",
+        "equip#"
+      ]
+    },
+    {
+      "name": "Criaturas",
+      "prefixes": [
+        "stat/02#",
+        "crt#"
+      ]
+    },
+    {
+      "name": "Historia",
+      "prefixes": [
+        "intro#",
+        "talk#"
       ]
     },
     {
@@ -46,24 +44,6 @@
       "prefixes": [
         "stat/08#",
         "vs_etc/15#"
-      ]
-    },
-    {
-      "name": "Diálogos",
-      "prefixes": [
-        "talk#"
-      ]
-    },
-    {
-      "name": "Descripciones de equipo",
-      "prefixes": [
-        "equip#"
-      ]
-    },
-    {
-      "name": "Descripciones de criaturas",
-      "prefixes": [
-        "crt#"
       ]
     }
   ],
